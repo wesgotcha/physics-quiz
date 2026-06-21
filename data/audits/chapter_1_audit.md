@@ -1,0 +1,158 @@
+# Chapter 1 Audit - 第一章：质点运动学
+
+- Questions: DB 30 / public 30 / legacy 30 / PDF rows 30
+- Automatic hard issues: 0
+- Manual review items: 16
+- MathJax config issues: none
+- Automatic gate: PASS
+
+## Hard Issues
+
+None.
+
+## Manual Review Queue
+
+- Q3 PDF p.1: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 一质点在平面上运动，已知位置矢量 \(\vec r=at\,\vec i+(bt+c)\vec j\)（\(a,b\) 为常量），则该质点作（ ）。
+  - A: 匀速直线运动
+  - B: 变速直线运动
+  - C: 抛物线运动
+  - D: 一般曲线运动
+  - PDF excerpt: 一质点在平面上运动，已知质点位置矢量的表示式为 （其中a、b为 常量），则该质点作（ A ）。 (A) 匀速直线运动 (B) 变速直线运动 (C) 抛物线运动 (D) 一般曲线运动． S=6+8t−2t2
+- Q6 PDF p.1: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 一运动质点在某瞬时位于矢径 \(r(x,y)\) 的端点处，其速度大小（速率）为（ ）。
+  - A: \(\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2}\)
+  - B: \(\frac{d\vec r}{dt}\)
+  - C: \(\left|\frac{d\vec r}{dt}\right|\) 的相反数
+  - D: \(\frac{dr}{dt}\)
+  - PDF excerpt: 一运动质点在某瞬时位于矢径 的端点处, 其速度的大小（即“速率”）为（ A ） 2 2  dx + dy dr      dt   dt  dt (A) (B)  dr dr dt dt (C) (D)
+- Q8 PDF p.2: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 一质点在平面上作一般曲线运动，瞬时速度为 \(\vec v\)、瞬时速率为 \(v\)，某段时间内平均速度为 \(\bar{\vec v}\)、平均速率为 \(\bar v\)。它们之间的关系必定有（ ）。
+  - A: \(|\vec v|=v\)，\(|\bar{\vec v}|=\bar v\)
+  - B: \(|\vec v|\ne v\)，\(|\bar{\vec v}|=\bar v\)
+  - C: \(|\vec v|\ne v\)，\(|\bar{\vec v}|\ne\bar v\)
+  - D: \(|\vec v|=v\)，\(|\bar{\vec v}|\ne\bar v\)
+  - PDF excerpt: 一质点在平面上作一般曲线运动，其瞬时速度为 ，瞬时速率为 ，某一段时间内的  v v 平均速度为 ，平均速率为 ，它们之间的关系必定有（ D ）。     = = ≠ = v v, v v v v, v v （A） （B）     ≠ ≠ = ≠ v v, v v v v, v v （C） （D）
+- Q14 PDF p.3: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 根据瞬时速度矢量 \(\vec v\) 的定义，在直角坐标系下，其大小 \(|\vec v|\) 可表示为（ ）。
+  - A: \(\frac{dr}{dt}\)
+  - B: \(\frac{dx}{dt}+\frac{dy}{dt}+\frac{dz}{dt}\)
+  - C: \(\left|\frac{dx}{dt}\vec i\right|+\left|\frac{dy}{dt}\vec j\right|+\left|\frac{dz}{dt}\vec k\right|\)
+  - D: \(\sqrt{\left(\frac{dx}{dt}\right)^2+\left(\frac{dy}{dt}\right)^2+\left(\frac{dz}{dt}\right)^2}\)
+  - PDF excerpt: 根据瞬时速度矢量 v 的定义，在直角坐标系下，其大小 |v | 可表示为 （ D ） dr dx dy dz + + dt dt dt dt (A) ． (B) ． dx dy  dz  dx dy dz | i |+| j |+| k | ( )2 +( )2 +( )2 dt dt dt dt dt dt (C) . (D)
+- Q16 PDF p.3: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 速度为 \(v\) 的子弹打穿一块不动的木板后速度变为零，设木板对子弹的阻力恒定。当子弹射入木板的深度等于其厚度的一半时，子弹的速度是（ ）。
+  - A: \(v/4\)
+  - B: \(v/3\)
+  - C: \(v/2\)
+  - D: \(v/\sqrt{2}\)
+  - PDF excerpt: 速度为v 的子弹，打穿一块不动的木板后速度变为零，设木板对子弹的阻力是恒定的．那 么，当子弹射入木板的深度等于其厚度的一半时，子弹的速度是（ D ） v/4 v/3 v/2 v/ 2 (A) ; (B) ; (C) ; (D) .   v v
+- Q17 PDF p.3: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 一物体从某一确定高度以 \(v_0\) 的速度水平抛出，已知它落地时的速度为 \(v_t\)，那么它运动的时间是（ ）。
+  - A: \((v_t-v_0)/g\)
+  - B: \((v_t-v_0)/(2g)\)
+  - C: \(\sqrt{v_t^2-v_0^2}/g\)
+  - D: \(\sqrt{v_t^2-v_0^2}/(2g)\)
+  - PDF excerpt: 一物体从某一确定高度以 0 的速度水平抛出，已知它落地时的速度为 t ，那么它运动 的时间是（ C ） ( v −v ) /g ( v −v ) /2g ( v2 −v2 )1/2 /g ( v2 −v2 )1/2 /2g (A) t 0 ; (B) t 0 ; (C) t 0 ; (D) t 0 .
+- Q18 PDF p.4: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 飞轮作加速转动时，轮边缘上一点的运动方程为 \(s=0.1t^4\)，飞轮半径为 \(5\,\mathrm{m}\)，当此点速率 \(v=50\,\mathrm{m/s}\) 时，其切向加速度和法向加速度分别为（ ）。
+  - A: \(30\,\mathrm{m/s^2}\)，\(500\,\mathrm{m/s^2}\)
+  - B: \(30\,\mathrm{m/s^2}\)，\(450\,\mathrm{m/s^2}\)
+  - C: \(50\,\mathrm{m/s^2}\)，\(450\,\mathrm{m/s^2}\)
+  - D: \(50\,\mathrm{m/s^2}\)，\(500\,\mathrm{m/s^2}\)
+  - PDF excerpt: 飞轮作加速转动时，轮边缘上的一点的运动方程为 s=0.1 𝑡(cid:2872)，飞轮半径为5 m，当此点 的速率v = 50 m/s 时，其切向加速度和法向加速度分别为（ A ）。 (A) 30 m/s2,500 m/s2 (B) 30 m/s2,450 m/s2 (C) 50 m/s2,450 m/s2 (D) 50 m/s2,500 m/s2
+- Q19 PDF p.4: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 一质点做直线运动，某时刻的瞬时速度 \(v=2\,\mathrm{m\cdot s^{-1}}\)，瞬时加速度 \(a=-2\,\mathrm{m\cdot s^{-2}}\)，则 \(1\,\mathrm{s}\) 后质点的速度（ ）。
+  - A: 等于零
+  - B: 等于 \(-2\,\mathrm{m\cdot s^{-1}}\)
+  - C: 等于 \(2\,\mathrm{m\cdot s^{-1}}\)
+  - D: 不能确定
+  - PDF excerpt:  一质点做直线运动，某时刻的瞬时速度v=2m⋅s−1，瞬时加速度a =−2m⋅s−2，则1 s 后质点的速度（ D ）. (A) 等于零 (B) 等于−2m⋅s−1 (C)等于2m⋅s−1 (D)不能确定
+- Q20 PDF p.4: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 一质点沿半径为 \(R\) 的圆周做匀速率运动，每 \(t\) 秒转一圈，在 \(2t\) 时间间隔中，其平均速度大小和平均速率大小分别为（ ）。
+  - A: \(2\pi R/t\)，\(2\pi R/t\)
+  - B: \(0\)，\(2\pi R/t\)
+  - C: 0，0
+  - D: \(2\pi R/t\)，\(0\)
+  - PDF excerpt: 一质点沿半径为R的圆周做匀速率运动，每t秒转一圈，在2t时间间隔中，其平均速度 大小和平均速率大小分别为（ B ）. 2πR 2πR 2πR 2πR (A) , (B) 0, (C) 0,0 (D) ,0 t t t t   
+- Q22 PDF p.4: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 在相对地面静止的坐标系内，A、B 二船都以 \(2\,\mathrm{m/s}\) 速率匀速行驶，A 船沿 \(x\) 轴正向，B 船沿 \(y\) 轴正向。在 A 船上的坐标系中，B 船的速度为（\(\mathrm{m/s}\)）（ ）。
+  - A: \(2\vec i+2\vec j\)
+  - B: \(-2\vec i+2\vec j\)
+  - C: \(-2\vec i-2\vec j\)
+  - D: \(2\vec i-2\vec j\)
+  - PDF excerpt: 在相对地面静止的坐标系内，A、B 二船都以 2 m/s 速率匀速行驶，A 船沿 x 轴正向， B船沿y轴正向．今在A船上设置与静止坐标系方向相同的坐标系(x、y方向单位矢用 i、j 表 示)，那么在A船上的坐标系中，B船的速度（以m/s为单位）为 ( B ) (A) 2i+2j ． ( B) −2i+2j． (C) −2i−2j． (D) 2i−2j ．
+- Q23 PDF p.4: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 质点 \(p\) 在一直线上运动，其坐标 \(x\) 与时间 \(t\) 的关系为 \(x=-A\sin(\omega t)\)（SI，\(A\) 为常数），则任意时刻 \(t\)，质点的加速度 \(a\) 为（ ）。
+  - A: \(-A\omega^2\cos(\omega t)\)
+  - B: \(A\omega^2\sin(\omega t)\)
+  - C: \(-A\omega^2\sin(\omega t)\)
+  - D: \(A\omega^2\cos(\omega t)\)
+  - PDF excerpt: 质点p在一直线上运动，其坐标x与时间t的关系为： x =－A sinωt，(SI) (A为常数)， 则在任意时刻ｔ，质点的加速度a为 ( B ) (A) −Aω(cid:2870)cos𝜔𝑡． (B) Aω(cid:2870)sin𝜔𝑡 . (C) −Aω(cid:2870)sin𝜔𝑡． (D) Aω(cid:2870)cos𝜔𝑡.
+- Q26 PDF p.5: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 下列说法哪一条正确？（ ）
+  - A: 加速度恒定不变时，物体运动方向也不变
+  - B: 运动物体速率不变时，速度可以变化
+  - C: 平均速率总可以写成 \((v_1+v_2)/2\)
+  - D: 平均速率等于平均速度的大小
+  - PDF excerpt: 下列说法哪一条正确？（ B ） (A) 加速度恒定不变时，物体运动方向也不变． (B) 运动物体速率不变时，速度可以变化． (C) 平均速率表达式总可以写成 v(cid:3364) =(cid:4666)𝑣 +𝑣 (cid:4667)/2 (v 、v 分别为初、末速率)． (cid:2869) (cid:2870) 1 2 (D) 平均速率等于平均速度的大小．
+- Q27 PDF p.5: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 齿轮齿尖 P 做半径为 \(R\) 的圆周运动，路程 \(s=v_0t+\frac{1}{2}bt^2\)，其中 \(v_0\) 和 \(b\) 都为正的常量，则 \(t\) 时刻齿尖 P 的速度和加速度大小分别为（ ）。
+  - A: \(v=v_0-bt,\ a=\sqrt{b^2+\frac{(v_0+bt)^4}{R^2}}\)
+  - B: \(v=v_0+bt,\ a=\sqrt{b^2+\frac{(v_0-bt)^4}{R^2}}\)
+  - C: \(v=v_0+bt,\ a=\sqrt{b^2+\frac{(v_0+bt)^4}{R^2}}\)
+  - D: \(v=v_0-bt,\ a=\sqrt{b^2+\frac{(v_0-bt)^4}{R^2}}\)
+  - PDF excerpt: 在一个转动的齿轮上，一个齿尖 P 做半径为 R 的圆周运动，其路程 S 随时间的变化规 律为𝑠 =𝑣 𝑡+ (cid:2869) 𝑏𝑡(cid:2870)，其中v 和b都是正的常量，则t时刻齿尖P的速度和加速度大小分别 (cid:2868) 0 (cid:2870) 为 ( C ) (A) 𝑣 =𝑣 −𝑏𝑡, 𝑎 =(cid:3495)𝑏(cid:2870)+ (cid:4666)(cid:3049)(cid:3116)(cid:2878)(cid:3029)(cid:3047)(cid:4667)(cid:3120) ． (cid:2868) (cid:3019)(cid:3118) (B) 𝑣 =𝑣 +𝑏𝑡, 𝑎 =(cid:3495)𝑏(cid:2870)+ (cid:4
+- Q28 PDF p.5: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: A、B 两码头相距 \(1\,\mathrm{km}\)。甲划船往返，船相对河水速度 \(4\,\mathrm{km/h}\)；乙沿岸步行往返，步行速度 \(4\,\mathrm{km/h}\)。河水流速 \(2\,\mathrm{km/h}\)，方向从 A 到 B。下列结论正确的是（ ）。
+  - A: 甲比乙晚 10 分钟回到 A
+  - B: 甲和乙同时回到 A
+  - C: 甲比乙早 10 分钟回到 A
+  - D: 甲比乙早 2 分钟回到 A
+  - PDF excerpt: 一条河设置A、B两个码头，相距1km，甲、乙两人需要从码头A到码头B，再由B返 回。甲划船前去，船相对河水的速度为4km/h；而乙沿岸步行，步行速度也为4km/h。如河 水流速为 2km/h，方向从A到B。下述结论中哪个正确？ ( A ) (A) 甲比乙晚10分钟回到A (B) 甲和乙同时回到 A (C) 甲比乙早10分钟回到A (D) 甲比乙早 2分钟回到A
+- Q29 PDF p.6: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 质点沿半径 \(R\) 作圆周运动，运动方程为 \(\theta=3+2t^2\)（SI），则 \(t\) 时刻质点法向加速度大小和角加速度分别为（ ）。
+  - A: \(a_n=16Rt^2,\ \beta=4\)
+  - B: \(a_n=8Rt^2,\ \beta=3\)
+  - C: \(a_n=8Rt^2,\ \beta=4\)
+  - D: \(a_n=16Rt^2,\ \beta=3\)
+  - PDF excerpt: 质点沿半径R作圆周运动，运动方程为 θ=3+2t(cid:2870)（SI），则t时刻质点法向加速度 大小和角加速度分别为 ( A ) (A) a =16𝑅𝑡(cid:2870)，β=4 (B) a =8𝑅𝑡(cid:2870)，β=3. (cid:3041) (cid:3041) (C) a =8𝑅𝑡(cid:2870)，β=4 (D) a =16𝑅𝑡(cid:2870)，β=3 (cid:3041) (cid:3041)
+- Q30 PDF p.6: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 某物体的运动规律为 \(\frac{dv}{dt}=-kv^2t\)，\(k\) 为大于零的常量。当 \(t=0\) 时初速为 \(v_0\)，则速度 \(v\) 与时间 \(t\) 的函数关系是（ ）。
+  - A: \(\frac{1}{v}=\frac{kt^2}{2}+\frac{1}{v_0}\)
+  - B: \(v=-\frac{kt^2}{2}+v_0\)
+  - C: \(v=\frac{kt^2}{2}+v_0\)
+  - D: \(\frac{1}{v}=-\frac{kt^2}{2}+\frac{1}{v_0}\)
+  - PDF excerpt: 某物体的运动规律为(cid:3031)(cid:3049) =−𝑘𝑣(cid:2870)𝑡，式中的k为大于零的常量．当t=0时，初速为v ，则 0 (cid:3031)(cid:3047) 速度v与时间t的函数关系是 ( A ) (A) (cid:2869) = (cid:3038)(cid:3047)(cid:3118) + (cid:2869) (B) 𝑣 = − (cid:3038)(cid:3047)(cid:3118) +𝑣 (cid:2868) (cid:3049) (cid:2870) (cid:3049) (cid:2870) (cid:3116) (C) 𝑣 = (cid:3038)(cid:3047)(cid:3118) +𝑣 (D) (cid:2869) = − (cid:3

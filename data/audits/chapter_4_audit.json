@@ -1,0 +1,1289 @@
+{
+  "summary": {
+    "chapter_id": "4",
+    "chapter_name": "第四章：机械振动机械波",
+    "question_count": 37,
+    "public_question_count": 37,
+    "pdf_row_count": 37,
+    "legacy_question_count": 37,
+    "hard_issue_count": 0,
+    "manual_review_count": 20,
+    "mathjax_issues": [],
+    "passed_automatic_gate": true
+  },
+  "rows": [
+    {
+      "chapter_id": "4",
+      "number": 1,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 16,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "两个同方向同周期简谐运动其合振动的振幅为 （ ）",
+      "opts": {
+        "A": "$ \\Phi_2 - \\Phi_1 = 0 $ 时， $ A = A_2 - A_1 $；",
+        "B": "$ \\Phi_2 - \\Phi_1 = \\pi/2 $ 时， $ A = A_2 - A_1 $；",
+        "C": "$ \\Phi_2 - \\Phi_1 = 0 $ 时， $ A = A_2 + A_1 $；",
+        "D": "$ \\Phi_2 - \\Phi_1 = \\pi $ 时， $ A = A_2 + A_1 $ 。"
+      },
+      "pdf_excerpt": "两个同方向同周期简谐运动其合振动的振幅为 （ C ） （A）Ф -Ф =0时，A=A -A ； （B）Ф -Ф =π/2时，A=A -A ； 2 1 2 1 2 1 2 1 （C）Ф -Ф =0时，A=A +A ； （D）Ф -Ф =π时，A=A +A 。 2 1 2 1 2 1 2 1",
+      "legacy_q": "两个同方向同周期简谐运动其合振动的振幅为（ ）。",
+      "legacy_opts": {
+        "A": "φ₂-φ₁=0 时，A=A₂-A₁",
+        "B": "φ₂-φ₁=π/2 时，A=A₂-A₁",
+        "C": "φ₂-φ₁=0 时，A=A₂+A₁",
+        "D": "φ₂-φ₁=π 时，A=A₂+A₁"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 2,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 16,
+      "option_order_status": "needs_manual_review",
+      "legacy_option_status": "text_diff",
+      "option_positions": {},
+      "legacy_option_matches": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_NEEDS_MANUAL_REVIEW"
+      ],
+      "q": "如图所示，两列波长为 $ \\lambda $ 的相干波在 P 点相遇， $ S_1 $ 点的初位相是 $ \\phi_1 $， $ S_1 $ 到 P 点的距离是 $ r_1 $； $ S_2 $ 点的初位相是 $ \\phi_2 $， $ S_2 $ 到 P 点的距离是 $ r_2 $，以 k 代表零或正、负整数，则 P 点是干涉极大的条件为（ ）。",
+      "opts": {
+        "A": "$ r_{2}-r_{1}=k\\lambda $",
+        "B": "$ \\phi_{2}-\\phi_{1}=2k\\pi $",
+        "C": "$ \\phi_{2}-\\phi_{1}+(2\\pi/\\lambda)(r_{2}-r_{1})=2k\\pi $",
+        "D": "$ \\phi_{2}-\\phi_{1}+(2\\pi/\\lambda)(r_{1}-r_{2})=2k\\pi $"
+      },
+      "pdf_excerpt": "如图所示，两列波长为 λ 的相干波在 P 点相遇，S 点的初位相是 φ ，S 到 P 点的距 1 1 1 离是 r ；S 点的初位相是 φ ，S 到 P 点的距离是 r ，以 k代表零或正、负整数，则 P 1 2 2 2 2 点是干涉极大的条件为( D )。 r −r =kλ； 2 1 φ−φ=2kπ； 2 1 2π φ−φ+ (r −r)=2kπ； 2 1 λ 2 1 2π φ−φ+ (r −r)=2kπ 2 1 λ 1 2",
+      "legacy_q": "如图所示，两列波长为 λ 的相干波在 P 点相遇，S₁ 点的初位相是 φ₁，S₁ 到 P 点的距离是 r₁；S₂ 点的初位相是 φ₂，S₂ 到 P 点的距离是 r₂。以 k 代表零或正、负整数，则 P 点是干涉极大的条件为（ ）。",
+      "legacy_opts": {
+        "A": "r₂-r₁=kλ",
+        "B": "φ₂-φ₁=2kπ",
+        "C": "φ₂-φ₁+(2π/λ)(r₂-r₁)=2kπ",
+        "D": "φ₂-φ₁+(2π/λ)(r₁-r₂)=2kπ"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "4",
+      "number": 3,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 17,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "$ 0 x/m $",
+      "opts": {
+        "A": "在简谐波动过程中，每个质元都在作简谐振动",
+        "B": "在简谐波动过程中，每个质元的动能与势能之和保持不变",
+        "C": "在简谐振动中，谐振子动能与势能之和保持不变",
+        "D": "在简谐振动中，谐振子的振动频率由系统本身所决定"
+      },
+      "pdf_excerpt": "对于简谐波动过程和简谐振动，下列说法不正确的是 （ B ） （A）在简谐波动过程中，每个质元都在作简谐振动； （B）在简谐波动过程中，每个质元的动能与势能之和保持不变； （C）在简谐振动中，谐振子动能与势能之和保持不变； （D）在简谐振动中，谐振子的振动频率由系统本身所决定。",
+      "legacy_q": "对于简谐波动过程和简谐振动，下列说法不正确的是（ ）。",
+      "legacy_opts": {
+        "A": "在简谐波动过程中，每个质元都在作简谐振动",
+        "B": "在简谐波动过程中，每个质元的动能与势能之和保持不变",
+        "C": "在简谐振动中，谐振子动能与势能之和保持不变",
+        "D": "在简谐振动中，谐振子的振动频率由系统本身所决定"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 4,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 17,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一列沿x轴正方向传播的简谐横波，波速为60m/s，在t=0时波的图像如图所示，则（ ）",
+      "opts": {
+        "A": "此波频率为 40Hz，此时质元 b 的速度为零",
+        "B": "此波频率为 40Hz，此时质元 b 的速度向着 y 轴负方向",
+        "C": "此波频率为 20Hz，此时质元 a 的速度向着 y 轴正方向",
+        "D": "此波频率为 20Hz，此时质元 a 的速度为零"
+      },
+      "pdf_excerpt": "一列沿x轴正方向传播的简谐横波，波速为60m/s，在t=0时波的图像如图所示，则 （ C ） （A） 此波频率为40Hz，此时质元b的速度为零 （B） 此波频率为40Hz，此时质元b的速度向着y轴 负方向 （C） 此波频率为20Hz，此时质元a的速度向着y轴 正方向 （D） 此波频率为20Hz，此时质元a的速度为零",
+      "legacy_q": "一列沿 x 轴正方向传播的简谐横波，波速为 60 m/s，在 t=0 时波的图像如图所示，则（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "此波频率为 40Hz，此时质元 b 的速度为零",
+        "B": "此波频率为 40Hz，此时质元 b 的速度向着 y 轴负方向",
+        "C": "此波频率为 20Hz，此时质元 a 的速度向着 y 轴正方向",
+        "D": "此波频率为 20Hz，此时质元 a 的速度为零"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 5,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 17,
+      "option_order_status": "order_mismatch",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "PDF_OPTION_ORDER_CONFLICT_LEGACY_OK"
+      ],
+      "q": "弹簧振子在光滑水平面上作简谐振动时，弹性力在半个周期内所作的功是（ ）。",
+      "opts": {
+        "A": "0",
+        "B": "$ \\frac{1}{2}kA^{2} $",
+        "C": "$ \\frac{1}{4}kA^{2} $",
+        "D": "$ kA^{2} $"
+      },
+      "pdf_excerpt": "弹簧振子在光滑水平面上作简谐振动时，弹性力在半个周期内所作的功是( A )。 1kA2 1kA2 kA2 （A） 0 （B）2 （C）4 （D） y =0.05cos(6πt+0.06πx)",
+      "legacy_q": "弹簧振子在光滑水平面上作简谐振动时，弹性力在半个周期内所作的功是（ ）。",
+      "legacy_opts": {
+        "A": "0",
+        "B": "(1/2)kA²",
+        "C": "(1/4)kA²",
+        "D": "kA²"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "4",
+      "number": 6,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 17,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "机械波表达式是 $ y = 0.05\\cos(6\\pi t + 0.06\\pi x) $，式中 y 和 x 的单位是 m，t 的单位是 s，则下列结论正确的是：（ ）",
+      "opts": {
+        "A": "波长为 5m",
+        "B": "波速为 10m·s^{-1}",
+        "C": "周期为 $ \\frac{1}{3}s $",
+        "D": "波沿 x 正方向传播"
+      },
+      "pdf_excerpt": "机械波表达式是 ，式中 y 和 x 的单位是 m，t 的单位是 s， 则 下列结论正确的是： （ C ） 1 s （A）波长为5m （B）波速为10m⋅s-1 （C）周期为 3 （D）波沿x正方向传播",
+      "legacy_q": "机械波表达式是 y=0.05cos(6πt+0.06πx)，式中 y 和 x 的单位是 m，t 的单位是 s，则下列结论正确的是（ ）。",
+      "legacy_opts": {
+        "A": "波长为 5m",
+        "B": "波速为 10m·s⁻¹",
+        "C": "周期为 1/3 s",
+        "D": "波沿 x 正方向传播"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 7,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 17,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH",
+        "DIAGRAM_NEEDS_VISUAL_REVIEW"
+      ],
+      "q": "一横波以速度 u 沿 x 轴负方向传播，t 时刻波形图如图所示，则该时刻（ ） （图题，以原 PDF 图为准）",
+      "opts": {
+        "A": "A 点相位为 $ \\pi $；",
+        "B": "B 点静止不动；",
+        "C": "C 点相位为 $ \\frac{3\\pi}{2} $;",
+        "D": "D 点向上运动。"
+      },
+      "pdf_excerpt": "一横波以速度u沿x轴负方向传播，t时刻波形图如图所示，则该时刻 （ C ） π (A) A点相位为 ； (B) B点静止不动； 3π (C) C点相位为 2 ； (D) D点向上运动。",
+      "legacy_q": "一横波以速度 u 沿 x 轴负方向传播，t 时刻波形图如图所示，则该时刻（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "A 点相位为 π",
+        "B": "B 点静止不动",
+        "C": "C 点相位为 3π/2",
+        "D": "D 点向上运动"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 8,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 17,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "2004 年，在印度尼西亚的苏门答腊岛近海，地 震引发了海啸，造成了重大的人员伤亡，海啸实际上是一种波浪运动，也可称为地震海浪，下列说法中不正确是（ ）",
+      "opts": {
+        "A": "地震波和海啸都是由机械振动引起的机械波。",
+        "B": "波源停止振动时，海啸和地震波的传播立即停止。",
+        "C": "地震波和海啸都有纵波。",
+        "D": "从这个事件中可以看出机械波携带能量从振源向外传播。"
+      },
+      "pdf_excerpt": "2004年，在印度尼西亚的苏门答腊岛近海，地 震引发了海啸，造成了重大的人员伤亡，海啸实际上是一种波浪运动，也可称为地震海浪， 下列说法中不正确是（ B ） (A) 地震波和海啸都是由机械振动引起的机械波。 (B) 波源停止振动时，海啸和地震波的传播立即停止。 (C) 地震波和海啸都有纵波。 (D) 从这个事件中可以看出机械波携带能量从振源向外传播。",
+      "legacy_q": "2004 年印度尼西亚苏门答腊岛近海地震引发海啸。海啸实际上是一种波浪运动，也可称为地震海浪。下列说法中不正确的是（ ）。",
+      "legacy_opts": {
+        "A": "地震波和海啸都是由机械振动引起的机械波",
+        "B": "波源停止振动时，海啸和地震波的传播立即停止",
+        "C": "地震波和海啸都有纵波",
+        "D": "从这个事件中可以看出机械波携带能量从振源向外传播"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 9,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 18,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH",
+        "DIAGRAM_NEEDS_VISUAL_REVIEW"
+      ],
+      "q": "有一简谐振动如图所示，其对应的振动方程应该是（ ） （图题，以原 PDF 图为准）",
+      "opts": {
+        "A": "$ 10\\cos(\\frac{5}{6}\\pi t - \\frac{5}{3}\\pi) $",
+        "B": "$ 10\\cos(\\frac{5}{3}\\pi t + \\frac{1}{6}\\pi) $",
+        "C": "$ 10\\cos(\\frac{5}{6}\\pi t + \\frac{5}{3}\\pi) $",
+        "D": "$ 10\\cos(\\frac{5}{3}\\pi t - \\frac{5}{3}\\pi) $"
+      },
+      "pdf_excerpt": "有一简谐振动如图所示，其对应的振动方程应该是 ( C ) 5 5 5 1 10cos( πt− π) 10cos( πt+ π) 6 3 3 6 (A) (B) 5 5 5 5 10cos( πt+ π) 10cos( πt− π) 6 3 3 3 (C) (D) E",
+      "legacy_q": "有一简谐振动如图所示，其对应的振动方程应该是（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "10cos(5πt/6 - 5π/3)",
+        "B": "10cos(5πt/3 + π/6)",
+        "C": "10cos(5πt/6 + 5π/3)",
+        "D": "10cos(5πt/3 - 5π/3)"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 10,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 18,
+      "option_order_status": "order_mismatch",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "PDF_OPTION_ORDER_CONFLICT_LEGACY_OK"
+      ],
+      "q": "一弹簧振子作简谐振动，总能量为 $ E_{1} $，如果简谐振动振幅增加为原来的两倍，重物的质量增为原来的四倍，则它的总能量 $ E_{1} $ 变为（ ）。",
+      "opts": {
+        "A": "$ 4E_{1} $",
+        "B": "$ E_{1}/2 $",
+        "C": "$ 2E_{1} $",
+        "D": "$ E_{1}/4 $"
+      },
+      "pdf_excerpt": "一弹簧振子作简谐振动，总能量为 1，如果简谐振动振幅增加为原来的两倍，重物的 E 质量增为原来的四倍，则它的总能量 1变为( A )。 4E E /2 2E E /4 （A） 1 （B） 1 （C） 1 （D） 1",
+      "legacy_q": "一弹簧振子作简谐振动，总能量为 E₁。如果简谐振动振幅增加为原来的两倍，重物的质量增为原来的四倍，则它的总能量 E₁ 变为（ ）。",
+      "legacy_opts": {
+        "A": "4E₁",
+        "B": "E₁/2",
+        "C": "2E₁",
+        "D": "E₁/4"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "4",
+      "number": 11,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 18,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "一质点作简谐振动，其振动方程为 $ X=4.0\\cos\\left(\\pi t+\\pi/4\\right) $ 则该振动的振幅、初相位分别为 （ ）",
+      "opts": {
+        "A": "$ 4.0m，\\pi/4 rad $",
+        "B": "$ 4.0m，-\\pi/4 rad $",
+        "C": "$ 8.0m，\\pi/4 rad $",
+        "D": "$ 4.0m，-\\pi/4 rad $"
+      },
+      "pdf_excerpt": "一质点作简谐振动，其振动方程为X=4.0cos（πt +π/4）则该振动的振幅、初相位分别为 （ A ） （A） 4.0m π/4 rad ； （B）4.0m －π/4 rad ； （C） 8.0m π/4 rad ； （D）4.0m －π/4 rad 。",
+      "legacy_q": "一质点作简谐振动，其振动方程为 X=4.0cos(πt+π/4)，则该振动的振幅、初相位分别为（ ）。",
+      "legacy_opts": {
+        "A": "4.0m，π/4 rad",
+        "B": "4.0m，-π/4 rad",
+        "C": "8.0m，π/4 rad",
+        "D": "4.0m，-π/4 rad"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "4",
+      "number": 12,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 18,
+      "option_order_status": "order_mismatch",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "PDF_OPTION_ORDER_CONFLICT_LEGACY_OK",
+        "DIAGRAM_NEEDS_VISUAL_REVIEW"
+      ],
+      "q": "一列简谐横波沿 x 轴负方向传播，a、b 为波上的两个质元，某时刻波形如左图所示，右图是从此时刻开始计时，a、b 两个质元之一的振动图像，下列判断正确的是（ ） （图题，以原 PDF 图为准）",
+      "opts": {
+        "A": "波速为 $ 10 \\, m/s $，右图是质元 b 的振动图像；",
+        "B": "波速为 $ 10 \\, m/s $，右图是质元 a 的振动图像；",
+        "C": "波速为 $ 12.5 \\, m/s $，右图是质元 b 的振动图像；",
+        "D": "波速为 $ 12.5 \\, m/s $，右图是质元 a 的振动图像。"
+      },
+      "pdf_excerpt": "一列简谐横波沿x轴负方向传播，a、b为波上的两个质元，某时刻波形如左图所示，右 图是从此时刻开始计时，a、b两个质元之一的振动图像，下列判断正确的是( A ) （A） 波速为10m/s，右图是质元b的振动图像； （B） 波速为10m/s，右图是质元a的振动图像； （C） 波速为12.5m/s，右图是质元b的振动图像； （D） 波速为12.5m/s, 右图是质元a的振动图像。",
+      "legacy_q": "一列简谐横波沿 x 轴负方向传播，a、b 为波上两个质元，某时刻波形如左图所示，右图是从此时刻开始计时 a、b 两个质元之一的振动图像，下列判断正确的是（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "波速为 10m/s，右图是质元 b 的振动图像",
+        "B": "波速为 10m/s，右图是质元 a 的振动图像",
+        "C": "波速为 12.5m/s，右图是质元 b 的振动图像",
+        "D": "波速为 12.5m/s，右图是质元 a 的振动图像"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "4",
+      "number": 13,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 18,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "关下面于简谐振动的说法，错误的是 （ ）",
+      "opts": {
+        "A": "简谐振动是在线性回复力作用下的一种往返运动",
+        "B": "简谐振动是一种最简单的振动",
+        "C": "简谐振动的周期是角频率的倒数",
+        "D": "简谐振动是一种周期性的运动"
+      },
+      "pdf_excerpt": "关下面于简谐振动的说法，错误的是 ( C ) (A) 简谐振动是在线性回复力作用下的一种往返运动 (B) 简谐振动是一种最简单的振动 (C) 简谐振动的周期是角频率的倒数 (D) 简谐振动是一种周期性的运动",
+      "legacy_q": "关于简谐振动的说法，错误的是（ ）。",
+      "legacy_opts": {
+        "A": "简谐振动是在线性回复力作用下的一种往返运动",
+        "B": "简谐振动是一种最简单的振动",
+        "C": "简谐振动的周期是角频率的倒数",
+        "D": "简谐振动是一种周期性的运动"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 14,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 18,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "振源 S 上下振动，频率为 10Hz，产生了一列水平向右传播的横波，波速为 20m/s。沿波 传播方向上依次有 a, b 两个质点，它们之间的水平距离为 5.5m，当 a, b 两质点都振动起来后质点 a 具有向上的最大速度时，质点 b 应具有（ ）",
+      "opts": {
+        "A": "向上的最大速度",
+        "B": "向上的最大加速度",
+        "C": "向下的最大速度",
+        "D": "向下的最大加速度"
+      },
+      "pdf_excerpt": "振源S上下振动，频率为10Hz，产生了一列水平向右传播的横波，波速为20m/s。沿波 传播方向上依次有a, b两个质点，它们之间的水平距离为5.5m，当a, b两质点都振动起来 后质点a具有向上的最大速度时，质点b应具有（ D ） (A) 向上的最大速度 (B) 向上的最大加速度 (C) 向下的最大速度 (D) 向下的最大加速度",
+      "legacy_q": "振源 S 上下振动，频率为 10Hz，产生了一列水平向右传播的横波，波速为 20m/s。沿波传播方向上依次有 a、b 两个质点，它们之间的水平距离为 5.5m。当 a、b 两质点都振动起来后，质点 a 具有向上的最大速度时，质点 b 应具有（ ）。",
+      "legacy_opts": {
+        "A": "向上的最大速度",
+        "B": "向上的最大加速度",
+        "C": "向下的最大速度",
+        "D": "向下的最大加速度"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "4",
+      "number": 15,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 19,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一个弹簧振子原来的振动周期为 2s，要使其周期变为 1s，下列可以使用的办法是：（ ）。",
+      "opts": {
+        "A": "振幅减为原来的 1/4",
+        "B": "振子的质量减为原来的 1/4",
+        "C": "弹簧弹性系数减为原来的 $ \\frac{1}{4} $",
+        "D": "弹簧振子初速度减少为原来的 $ \\frac{1}{4} $"
+      },
+      "pdf_excerpt": "一个弹簧振子原来的振动周期为2s，要使其周期变为1s，下列可以使用的办法是：（ B ）。 (A) 振幅减为原来的1/4 (B) 振子的质量减为原来的 1/4 (C) 弹簧弹性系数减为原来的1/4 (D) 弹簧振子初速度减少为原来的1/4",
+      "legacy_q": "一个弹簧振子原来的振动周期为 2s，要使其周期变为 1s，下列可以使用的办法是（ ）。",
+      "legacy_opts": {
+        "A": "振幅减为原来的 1/4",
+        "B": "振子的质量减为原来的 1/4",
+        "C": "弹簧弹性系数减为原来的 1/4",
+        "D": "弹簧振子初速度减少为原来的 1/4"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 16,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 19,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "DIAGRAM_NEEDS_VISUAL_REVIEW"
+      ],
+      "q": "如图所示，弹簧振子以 O 为平衡位置，在 a 和 b 之间做简谐运动，则（ ） （图题，以原 PDF 图为准）",
+      "opts": {
+        "A": "在 a 点时加速度最大，速度最大",
+        "B": "在 O 点时速度最大，位移最大",
+        "C": "在 b 点时位移最大，回复力最大",
+        "D": "在 b 点时回复力最大，速度最大"
+      },
+      "pdf_excerpt": "如图所示，弹簧振子以O为平衡位置，在a和b之间做简谐运动，则（ C ） (A) 在a点时加速度最大，速度最大 (B) 在O点时速度最大，位移最大 (C) 在b点时位移最大，回复力最大 (D) 在b点时回复力最大，速度最大",
+      "legacy_q": "如图所示，弹簧振子以 O 为平衡位置，在 a 和 b 之间做简谐运动，则（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "在 a 点时加速度最大，速度最大",
+        "B": "在 O 点时速度最大，位移最大",
+        "C": "在 b 点时位移最大，回复力最大",
+        "D": "在 b 点时回复力最大，速度最大"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 17,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 19,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "在用单摆测定重力加速度的实验中，实验中给出了三个大小相同的球做摆球，分别是铝球、木球和铜球，正确的选择以及选择的理由是（ ）",
+      "opts": {
+        "A": "应该选木球，因为它轻，容易摆动",
+        "B": "应该选铜球，因为它密度大，摆动不容易停下来",
+        "C": "应该选铝球，因为它的质量居中",
+        "D": "选什么球都可以，因为摆动时间长短与材料无关。"
+      },
+      "pdf_excerpt": "在用单摆测定重力加速度的实验中，实验中给出了三个大小相同的球做摆球，分别是铝 球、木球和铜球，正确的选择以及选择的理由是（ B ） (A) 应该选木球，因为它轻，容易摆动 (B) 应该选铜球，因为它密度大，摆动不容易停下来 (C) 应该选铝球，因为它的质量居中 (D) 选什么球都可以，因为摆动时间长短与材料无关。",
+      "legacy_q": "在用单摆测定重力加速度的实验中，给出了三个大小相同的球做摆球，分别是铝球、木球和铜球。正确的选择以及选择的理由是（ ）。",
+      "legacy_opts": {
+        "A": "应该选木球，因为它轻，容易摆动",
+        "B": "应该选铜球，因为它密度大，摆动不容易停下来",
+        "C": "应该选铝球，因为它的质量居中",
+        "D": "选什么球都可以，因为摆动时间长短与材料无关"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 18,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 19,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "若保持单摆的摆长不变，将摆球的质量增加为原来的4倍，摆球经过平衡位置时的速度减小为原来的1/2，则单摆振动的（ ）",
+      "opts": {
+        "A": "频率不变，振幅不变",
+        "B": "频率不变，振幅改变",
+        "C": "频率改变，振幅改变",
+        "D": "频率改变，振幅不变"
+      },
+      "pdf_excerpt": "若保持单摆的摆长不变，将摆球的质量增加为原来的4倍，摆球经过平衡位置时的速度 减小为原来的1/2，则单摆振动的( B ) （A） 频率不变，振幅不变 （B）频率不变，振幅改变 （C） 频率改变，振幅改变 （D）频率改变，振幅不变 T (t < )",
+      "legacy_q": "若保持单摆的摆长不变，将摆球的质量增加为原来的 4 倍，摆球经过平衡位置时的速度减小为原来的 1/2，则单摆振动的（ ）。",
+      "legacy_opts": {
+        "A": "频率不变，振幅不变",
+        "B": "频率不变，振幅改变",
+        "C": "频率改变，振幅改变",
+        "D": "频率改变，振幅不变"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 19,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 19,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "有一弹簧振子由平衡位置开始做简谐运动，其周期为 T. 则振子在 $ t_{1} $ 时刻 $ t_{1} < 4 $ 与 $ t_{1} + \\frac{T}{2} $ 时刻相比较，相同的物理量是（ ）",
+      "opts": {
+        "A": "振子的动能",
+        "B": "振子的动量",
+        "C": "振子的速度",
+        "D": "振子的加速度"
+      },
+      "pdf_excerpt": "有一弹簧振子由平衡位置开始做简谐运动，其周期为 T．则振子在 t 1时刻 1 4 与 T t + 1 2 时刻相比较，相同的物理量是（ A ） (A) 振子的动能 (B) 振子的动量 (C) 振子的速度 (D) 振子的加速度",
+      "legacy_q": "有一弹簧振子由平衡位置开始做简谐运动，其周期为 T。则振子在 t₁ 时刻（t₁<T/4）与 t₁+T/2 时刻相比较，相同的物理量是（ ）。",
+      "legacy_opts": {
+        "A": "振子的动能",
+        "B": "振子的动量",
+        "C": "振子的速度",
+        "D": "振子的加速度"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "4",
+      "number": 20,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 19,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "DIAGRAM_NEEDS_VISUAL_REVIEW"
+      ],
+      "q": "某一质点作简谐运动，其位移 x 与时间 t 的关系曲线如图所示.由图可知，在 t =3s 时， （图题，以原 PDF 图为准）",
+      "opts": {
+        "A": "位移为负的最大值，加速度为正的最大值",
+        "B": "位移为正的最大值，加速度为负的最大值",
+        "C": "速度为负的最大值，加速度为零",
+        "D": "速度为正的最大值，加速度为零"
+      },
+      "pdf_excerpt": "某一质点作简谐运动，其位移x与时间t的关系曲线如图所示.由图可知，在t =3s时， 质点的（ D ） (A) 位移为负的最大值， 加速度为正的最大值 (B) 位移为正的最大值， 加速度为负的最大值 (C) 速度为负的最大值， 加速度为零 (D) 速度为正的最大值， 加速度为零",
+      "legacy_q": "某一质点作简谐运动，其位移 x 与时间 t 的关系曲线如图所示。由图可知，在 t=3s 时，质点的（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "位移为负的最大值，加速度为正的最大值",
+        "B": "位移为正的最大值，加速度为负的最大值",
+        "C": "速度为负的最大值，加速度为零",
+        "D": "速度为正的最大值，加速度为零"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "4",
+      "number": 21,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 19,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "如图所示，一个弹簧振子沿光滑的杆在水平方向 做简谐运动，振子的质量为 0.2kg，当它运动到平衡位置左侧 2cm 时，受到的回复力为 4.0N。 当它运动到平衡位置右侧 4cm 时，它的加速度大小和方向为（ ）",
+      "opts": {
+        "A": "$ 20m/s^{2} $，方向向右",
+        "B": "$ 20m/s^{2} $，方向向左",
+        "C": "$ 40m/s^{2} $，方向向右",
+        "D": "$ 40m/s^{2} $，方向向左"
+      },
+      "pdf_excerpt": "如图所示，一个弹簧振子沿光滑的杆在水平方向 做简谐运动，振子的质量为0.2kg，当它运动到平衡位置左侧2cm时，受到的回复力为4.0N。 当它运动到平衡位置右侧4cm时，它的加速度大小和方向为（ D ） (A) 20m/s2，方向向右 (B) 20m/s2，方向向左 (C) 40m/s2，方向向右 (D) 40m/s2，方向向左",
+      "legacy_q": "如图所示，一个弹簧振子沿光滑的杆在水平方向做简谐运动，振子的质量为 0.2kg。当它运动到平衡位置左侧 2cm 时，受到的回复力为 4.0N。当它运动到平衡位置右侧 4cm 时，它的加速度大小和方向为（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "20m/s²，方向向右",
+        "B": "20m/s²，方向向左",
+        "C": "40m/s²，方向向右",
+        "D": "40m/s²，方向向左"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "4",
+      "number": 22,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 20,
+      "option_order_status": "needs_manual_review",
+      "legacy_option_status": "ok",
+      "option_positions": {},
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_NEEDS_MANUAL_REVIEW",
+        "DIAGRAM_NEEDS_VISUAL_REVIEW"
+      ],
+      "q": "一列简谐横波沿 x 轴传播，质点 A 与质点 B 的平衡位置相距 1m。t=0 时刻的波形如图所示，质点 A 的速度沿 y 轴正方向；t=0.02s 时，质点 A 第一次到达正向最大位移处。由此可知下列说法错误的是（ ） （图题，以原 PDF 图为准）",
+      "opts": {
+        "A": "此波的传播速度为 $ 25 \\, m/s $",
+        "B": "此波沿 x 轴负方向传播",
+        "C": "t=0.04s 时刻，质点 B 又回到平衡位置",
+        "D": "从 t=0 时刻起，经过 0.04s，质点 B 沿波传播方向迁移到了 A 点"
+      },
+      "pdf_excerpt": "一列简谐横波沿 x 轴传播，质点 A与质点 B的平衡位置相距 1m。t=0 时刻的波形如图 所示，质点A的速度沿y轴正方向；t=0.02s时，质点A第一次到达正向最大位移处.由此可 知下列说法错误的是（ D ） y (Ａ) 此波的传播速度为25m/s (Ｂ) 此波沿x轴负方向传播 B A O x (Ｃ) t=0.04s时刻，质点 B又回到平衡位置 (Ｄ) 从t=0时刻起，经过0.04s，质点B沿波传播方向 迁移到了A点 π T X = Acos(ωt + ) t = 4 4",
+      "legacy_q": "一列简谐横波沿 x 轴传播，质点 A 与质点 B 的平衡位置相距 1m。t=0 时刻的波形如图所示，质点 A 的速度沿 y 轴正方向；t=0.02s 时，质点 A 第一次到达正向最大位移处。由此可知下列说法错误的是（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "此波的传播速度为 25m/s",
+        "B": "此波沿 x 轴负方向传播",
+        "C": "t=0.04s 时刻，质点 B 又回到平衡位置",
+        "D": "从 t=0 时刻起，经过 0.04s，质点 B 沿波传播方向迁移到了 A 点"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "4",
+      "number": 23,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 20,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "某一物体做简谐振动，振动方程为 $ X = A\\cos(\\omega t + \\frac{\\pi}{4}) $，在 $ t = \\frac{T}{4} $ 时刻物体的加速度为 （ ）。",
+      "opts": {
+        "A": "$ \\frac{-\\sqrt{3}A\\omega^2}{2} $",
+        "B": "$ \\frac{\\sqrt{3}A\\omega^2}{2} $",
+        "C": "$ \\frac{-\\sqrt{2}A\\omega^2}{2} $",
+        "D": "$ \\frac{\\sqrt{2}A\\omega^2}{2} $"
+      },
+      "pdf_excerpt": "某一物体做简谐振动，振动方程为 ，在 时刻物体的加速度为 （ D ）。 − 3Aω2 3Aω2 − 2Aω2 2Aω2 2 2 2 2 (A) (B) (C) (D)",
+      "legacy_q": "某一物体做简谐振动，振动方程为 X=Acos(ωt+π/4)，在 t=T/4 时刻物体的加速度为（ ）。",
+      "legacy_opts": {
+        "A": "-(√3/2)Aω²",
+        "B": "(√3/2)Aω²",
+        "C": "-(√2/2)Aω²",
+        "D": "(√2/2)Aω²"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "4",
+      "number": 24,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 20,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一平面简谐波表达式 $ y = -0.04\\cos\\left(100\\pi t + x/2\\right) $ m，则该波的波长和波速分别为 （ ）。",
+      "opts": {
+        "A": "$ 4 m, 200 m/s $",
+        "B": "$ 4\\pi $ m, $ 200\\pi $ m/s",
+        "C": "$ 4\\pi $ m, 200 m/s",
+        "D": "$ 4 $ m, $ 200\\pi $ m/s"
+      },
+      "pdf_excerpt": "一平面简谐波表达式 y = −0.04cos ( 100π t+ x/2 ) m，则该波的波长和波速分别为 （ B ）。 （A） 4 m, 200 m/s (B) 4π m, 200π m/s (C) 4π m, 200 m/s (D) 4 m, 200π m/s A",
+      "legacy_q": "一平面简谐波表达式 y=-0.04cos(100πt+x/2) m，则该波的波长和波速分别为（ ）。",
+      "legacy_opts": {
+        "A": "4 m，200 m/s",
+        "B": "4π m，200π m/s",
+        "C": "4π m，200 m/s",
+        "D": "4 m，200π m/s"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 25,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 20,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "一质点做简谐振动，振幅为 $ A $，在起始时刻质点的位移为 $ -\\frac{A}{2} $，且向 x 轴正方向运动，代表此简谐振动的旋转矢量图为（ ）.",
+      "opts": {
+        "A": "图 A",
+        "B": "图 B",
+        "C": "图 C",
+        "D": "图 D"
+      },
+      "pdf_excerpt": "一质点做简谐振动，振幅为 A，在起始时刻质点的位移为− ，且向 x 轴正方向运动， 2 代表此简谐振动的旋转矢量图为（ B ）. A O O x x A (A) (B) A O O x x A (C) (D)",
+      "legacy_q": "一质点做简谐振动，振幅为 A，在起始时刻质点的位移为 -A/2，且向 x 轴正方向运动。代表此简谐振动的旋转矢量图为（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "图 A",
+        "B": "图 B",
+        "C": "图 C",
+        "D": "图 D"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 26,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 20,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH",
+        "DIAGRAM_NEEDS_VISUAL_REVIEW"
+      ],
+      "q": "两个同周期简谐振动曲线如下图所示，振动曲线1的相位比振动曲线2的相位（ ）. （图题，以原 PDF 图为准）",
+      "opts": {
+        "A": "落后 $ \\frac{\\pi}{2} $",
+        "B": "超前 $ \\frac{\\pi}{2} $",
+        "C": "落后 $ \\pi $",
+        "D": "超前 $ \\pi $"
+      },
+      "pdf_excerpt": "两个同周期简谐振动曲线如下图所示，振动曲线1的相位比振动曲线2的相位（ B ）. π π （A）落后 （B）超前 2 2 （C）落后π （D）超前π",
+      "legacy_q": "两个同周期简谐振动曲线如下图所示，振动曲线 1 的相位比振动曲线 2 的相位（图题，图略）（ ）。",
+      "legacy_opts": {
+        "A": "落后 π/2",
+        "B": "超前 π/2",
+        "C": "落后 π",
+        "D": "超前 π"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 27,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 21,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一质点做简谐振动的周期是 T, 当由平衡位置向 x 轴正方向运动时, 从 1/2 最大位移处运动到最大位移处的这段路程所需的时间为 （ ）",
+      "opts": {
+        "A": "$ T/12 $",
+        "B": "$ \\frac{T}{8} $",
+        "C": "$ \\frac{T}{6} $",
+        "D": "$ \\frac{T}{4} $"
+      },
+      "pdf_excerpt": "一质点做简谐振动的周期是 T, 当由平衡位置向 x 轴正方向运动时，从 1/2 最大位移处 运动到最大位移处的这段路程所需的时间为（ C ） （A）T/12 （B）T/8 （C）T/6 （D） T/4 ν",
+      "legacy_q": "一质点做简谐振动的周期是 T，当由平衡位置向 x 轴正方向运动时，从 1/2 最大位移处运动到最大位移处的这段路程所需的时间为（ ）。",
+      "legacy_opts": {
+        "A": "T/12",
+        "B": "T/8",
+        "C": "T/6",
+        "D": "T/4"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 28,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 21,
+      "option_order_status": "ok",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW"
+      ],
+      "q": "当质点以频率 $ \\nu $ 做简谐振动时，它的动能的变化频率为 （ ）",
+      "opts": {
+        "A": "$ v/2 $",
+        "B": "v",
+        "C": "2v",
+        "D": "4v"
+      },
+      "pdf_excerpt": "当质点以频率 做简谐振动时，它的动能的变化频率为 （ C ） （A）v/2 （B）v （C）2v （D）4v",
+      "legacy_q": "当质点以频率 ν 做简谐振动时，它的动能的变化频率为（ ）。",
+      "legacy_opts": {
+        "A": "ν/2",
+        "B": "ν",
+        "C": "2ν",
+        "D": "4ν"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 29,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 21,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "谐振动过程中，动能和势能相等的位置的位移等于（ ）",
+      "opts": {
+        "A": "$ \\pm \\frac{A}{4} $",
+        "B": "$ \\pm \\frac{A}{2} $",
+        "C": "$ \\pm \\frac{\\sqrt{3}A}{2} $",
+        "D": "$ \\pm \\frac{\\sqrt{2}A}{2} $"
+      },
+      "pdf_excerpt": "谐振动过程中，动能和势能相等的位置的位移等于 （ D ） A A 3A 2A ± ± ± ± 4 2 2 2 (A) (B) (C) (D)",
+      "legacy_q": "谐振动过程中，动能和势能相等的位置的位移等于（ ）。",
+      "legacy_opts": {
+        "A": "±A/4",
+        "B": "±A/2",
+        "C": "±3A/2",
+        "D": "±√2A/2"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "4",
+      "number": 30,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 21,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "弹簧振子的振幅增大到原振幅的两倍时，其振动周期、振动能量、最大速度和最大加速度等物理量的变化为 （ ）",
+      "opts": {
+        "A": "其振动周期不变，振动能量为原来的2倍，最大速度为原来的2倍，最大加速度为原来的2倍；",
+        "B": "其振动周期为原来的2倍，振动能量为原来的4倍，最大速度为原来的2倍，最大加速度为原来的2倍；",
+        "C": "其振动周期不变，振动能量为原来的4倍，最大速度为原来的2倍，最大加速度为原来的2倍；",
+        "D": "其振动周期，振动能量，最大速度和最大加速度均不变。"
+      },
+      "pdf_excerpt": "弹簧振子的振幅增大到原振幅的两倍时，其振动周期、振动能量、最大速度和最大加速 度等物理量的变化为 （ C ） （A）其振动周期不变，振动能量为原来的2倍，最大速度为原来的2倍，最大加速度为原 来的2倍； （B）其振动周期为原来的2倍，振动能量为原来的4倍，最大速度为原来的2倍，最大加 速度为原来的2倍； （C）其振动周期不变，振动能量为原来的4倍，最大速度为原来的2倍，最大加速度为原 来的2倍； （D）其振动周期，振动能量，最大速度和最大加速度均不变。",
+      "legacy_q": "弹簧振子的振幅增大到原振幅的两倍时，其振动周期、振动能量、最大速度和最大加速度等物理量的变化为（ ）。",
+      "legacy_opts": {
+        "A": "周期不变，能量为原来的 2 倍，最大速度为原来的 2 倍，最大加速度为原来的 2 倍",
+        "B": "周期为原来的 2 倍，能量为原来的 4 倍，最大速度为原来的 2 倍，最大加速度为原来的 2 倍",
+        "C": "周期不变，能量为原来的 4 倍，最大速度为原来的 2 倍，最大加速度为原来的 2 倍",
+        "D": "周期、能量、最大速度和最大加速度均不变"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 31,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 21,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一平面简谐波在弹性媒质中传播，在媒质质元从平衡位置运动到最大位移处的过程中（ ）.",
+      "opts": {
+        "A": "它的动能转化为势能",
+        "B": "它的势能转化为动能",
+        "C": "它从相邻的一段质元获得能量其能量逐渐增大",
+        "D": "它把自己的能量传给相邻的一段质元，其能量逐渐减小"
+      },
+      "pdf_excerpt": "一平面简谐波在弹性媒质中传播，在媒质质元从平衡位置运动到最大位移处的过程中 （ D ）. （A）它的动能转化为势能 （B）它的势能转化为动能 （C）它从相邻的一段质元获得能量其能量逐渐增大 （D）它把自己的能量传给相邻的一段质元，其能量逐渐减小",
+      "legacy_q": "一平面简谐波在弹性媒质中传播，在媒质质元从平衡位置运动到最大位移处的过程中（ ）。",
+      "legacy_opts": {
+        "A": "它的动能转化为势能",
+        "B": "它的势能转化为动能",
+        "C": "它从相邻的一段质元获得能量，其能量逐渐增大",
+        "D": "它把自己的能量传给相邻的一段质元，其能量逐渐减小"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "4",
+      "number": 32,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 21,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "频率为 $ 100 \\, Hz $，传播速度为 $ 300 \\, m/s $ 的平面简谐波，波线上距离小于波长的两点振动的相位差为 $ \\pi/3 $，则此两点相距（ ）",
+      "opts": {
+        "A": "2.86 m",
+        "B": "2.19 m",
+        "C": "0.5 m",
+        "D": "0.25 m"
+      },
+      "pdf_excerpt": "频率为 100 Hz，传播速度为300 m/s的平面简谐波，波线上距离小于波长的两点振动 的相位差为π/3，则此两点相距（ C ） （A） 2.86 m （B） 2.19 m （C） 0.5 m （D） 0.25 m",
+      "legacy_q": "频率为 100Hz，传播速度为 300m/s 的平面简谐波，波线上距离小于波长的两点振动的相位差为 π/3，则此两点相距（ ）。",
+      "legacy_opts": {
+        "A": "2.86 m",
+        "B": "2.19 m",
+        "C": "0.5 m",
+        "D": "0.25 m"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 33,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 21,
+      "option_order_status": "order_mismatch",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "PDF_OPTION_ORDER_CONFLICT_LEGACY_OK"
+      ],
+      "q": "两个同方向同频率的简谐振动，其合振动的振幅为 20cm，合振动与第一个简谐振动的相位差为 $ \\varphi_1 - \\varphi_2 = \\frac{\\pi}{6} $。若第一个简谐振动的振幅为 $ 10\\sqrt{3} $ cm，则第二个简谐振动的振幅为（ ）m。(B)0.1 (C)0.2 (D)0.01",
+      "opts": {
+        "A": "0.1",
+        "B": "0.5",
+        "C": "0.2",
+        "D": "0.01"
+      },
+      "pdf_excerpt": "两个同方向同频率的简谐振动，其合振动的振幅为 20cm，合振动与第一个简谐振动的 相位差为 φ −𝜑 = (cid:3095)。若第一个简谐振动的振幅为10√3 cm，则第二个简谐振动的振幅为 (cid:2869) (cid:2870) (cid:2874) （ A）m。 （A） 0.1 （B） 0.5 （C） 0.2 （D） 0.01",
+      "legacy_q": "两个同方向同频率的简谐振动，其合振动的振幅为 20cm，合振动与第一个简谐振动的相位差为 φ₁-φ₂=π/6。若第一个简谐振动的振幅为 10√3 cm，则第二个简谐振动的振幅为（ ）m。",
+      "legacy_opts": {
+        "A": "0.1",
+        "B": "0.5",
+        "C": "0.2",
+        "D": "0.01"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "4",
+      "number": 34,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 22,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "有一弹簧振子，当把它水平放置时，它可以作简谐振动，若把它放在固定的光滑斜面上，则下面哪种情况是正确的？（ ）",
+      "opts": {
+        "A": "竖直放置可作简谐振动，放在光滑斜面上不能作简谐振动",
+        "B": "竖直放置不能作简谐振动，放在光滑斜面上可作简谐振动",
+        "C": "两种情况下都可作简谐振动",
+        "D": "两种情况都不能作简谐振动"
+      },
+      "pdf_excerpt": "有一弹簧振子，当把它水平放置时，它可以作简谐振动，若把它放在固定的光滑斜面上， 则下面哪种情况是正确的？（ C ） （A） 竖直放置可作简谐振动，放在光滑斜面上不能作简谐振动 （B） 竖直放置不能作简谐振动，放在光滑斜面上可作简谐振动 （C） 两种情况下都可作简谐振动 （D） 两种情况都不能作简谐振动",
+      "legacy_q": "有一弹簧振子，当把它水平放置时，它可以作简谐振动；若把它放在固定的光滑斜面上，则下面哪种情况是正确的？（ ）。",
+      "legacy_opts": {
+        "A": "竖直放置可作简谐振动，放在光滑斜面上不能作简谐振动",
+        "B": "竖直放置不能作简谐振动，放在光滑斜面上可作简谐振动",
+        "C": "两种情况下都可作简谐振动",
+        "D": "两种情况都不能作简谐振动"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "4",
+      "number": 35,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 22,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "以下不是干涉的相干条件的是（ ）。",
+      "opts": {
+        "A": "频率相同",
+        "B": "振幅相同",
+        "C": "有恒定的相位差",
+        "D": "振动方向相同"
+      },
+      "pdf_excerpt": "以下不是干涉的相干条件的是（ B ）。 （A） 频率相同 （B） 振幅相同 （C） 有恒定的相位差 （D） 振动方向相同",
+      "legacy_q": "以下不是干涉的相干条件的是（ ）。",
+      "legacy_opts": {
+        "A": "频率相同",
+        "B": "振幅相同",
+        "C": "有恒定的相位差",
+        "D": "振动方向相同"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 36,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 22,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "两个质点各自作简谐振动，它们的振幅相同、周期相同。第一个质点的振动方程为 $ x_{1} = A \\cos(\\omega t + \\alpha) $，当第一个质点从相对于其平衡位置的正位移处回到平衡位置时，第二个质点正在最大正位移处。则第二个质点的振动方程为（ ）。",
+      "opts": {
+        "A": "$ x_{2}=A\\cos\\left(\\omega t+\\alpha+\\frac{1}{2}\\pi\\right) $",
+        "B": "$ x_{2}=A\\cos\\left(\\omega t+\\alpha-\\frac{1}{2}\\pi\\right) $",
+        "C": "$ x_{2}=A\\cos\\left(\\omega t+\\alpha-\\frac{3}{2}\\pi\\right) $",
+        "D": "$ x_{2}=A\\cos\\left(\\omega t+\\alpha+\\pi\\right) $"
+      },
+      "pdf_excerpt": "两个质点各自作简谐振动,它们的振幅相同、周期相同。第一个质点的振动方程为 𝑥 = (cid:2869) 𝐴𝑐𝑜𝑠(cid:4666)𝜔𝑡+𝛼(cid:4667) ，当第一个质点从相对于其平衡位置的正位移处回到平衡位置时,第二个质点 正在最大正位移处。则第二个质点的振动方程为( B )。 （A） 𝑥 =𝐴𝑐𝑜𝑠(cid:4672)𝜔𝑡+𝛼+ (cid:2869) 𝜋(cid:4673) （B）𝑥 =𝐴𝑐𝑜𝑠(cid:4672)𝜔𝑡+𝛼− (cid:2869) 𝜋(cid:4673) (cid:2870) (cid:2870) (cid:2870) (cid:2870) （C） 𝑥 =𝐴𝑐𝑜𝑠(cid:4672)𝜔𝑡+𝛼− (cid:2871) 𝜋(cid:4673) （D）𝑥 =𝐴𝑐𝑜𝑠(cid:4666)𝜔𝑡+𝛼+𝜋(cid:4667) (cid:2870) (cid:2870) (cid:2870)",
+      "legacy_q": "两个质点各自作简谐振动，它们的振幅相同、周期相同。第一个质点的振动方程为 x₁=Acos(ωt+α)。当第一个质点从相对于其平衡位置的正位移处回到平衡位置时，第二个质点正在最大正位移处。则第二个质点的振动方程为（ ）。",
+      "legacy_opts": {
+        "A": "x₂=Acos(ωt+α+π/2)",
+        "B": "x₂=Acos(ωt+α-π/2)",
+        "C": "x₂=Acos(ωt+α-3π/2)",
+        "D": "x₂=Acos(ωt+α+π)"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "4",
+      "number": 37,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 22,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "把单摆摆球从平衡位置向位移正方向拉开，使摆线与竖直方向成一微小角度 $ \\theta $，然后由静止放手任其振动，从放手时开始计时，若用余弦函数表示其运动方程，则该单摆振动的初位相为（ ）",
+      "opts": {
+        "A": "$ \\theta $",
+        "B": "$ \\pi $",
+        "C": "$ \\pi/2 $",
+        "D": "0"
+      },
+      "pdf_excerpt": "把单摆摆球从平衡位置向位移正方向拉开， 使摆线与竖直方向成一微小角度θ，然后由 静止放手任其振动，从放手时开始计时， 若用余弦函数表示其运动方程，则该单摆振动的 初位相为 ( D ) (A) θ (B) π (C) π/2 (D) 0",
+      "legacy_q": "把单摆摆球从平衡位置向位移正方向拉开，使摆线与竖直方向成一微小角度 θ，然后由静止放手任其振动。从放手时开始计时，若用余弦函数表示其运动方程，则该单摆振动的初位相为（ ）。",
+      "legacy_opts": {
+        "A": "θ",
+        "B": "π",
+        "C": "π/2",
+        "D": "0"
+      },
+      "legacy_answer": "D"
+    }
+  ]
+}

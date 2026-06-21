@@ -1,0 +1,149 @@
+# Chapter 5 Audit - 第五章：气体动理论
+
+- Questions: DB 30 / public 30 / legacy 30 / PDF rows 30
+- Automatic hard issues: 0
+- Manual review items: 15
+- MathJax config issues: none
+- Automatic gate: PASS
+
+## Hard Issues
+
+None.
+
+## Manual Review Queue
+
+- Q3 PDF p.22: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: $ 1 \, mol $ 空气（视为理想气体），在温度为 $ T $ 时，其分子具有的平动动能为（ ）
+  - A: $ 5 \, RT/2 $
+  - B: $ 3 \, RT/2 $
+  - C: $ 2 \, RT/2 $
+  - D: $ RT/2 $
+  - PDF excerpt: 1mol 空气（视为理想气体），在温度为T 时，其分子具有的平动动能为( B ) 5RT /2 3RT/2 2RT/2 RT/2 (A) (B) (C) (D)
+- Q4 PDF p.23: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 对于室温下的双原子分子理想气体，在等压膨胀的情况下，系统对外所作的功与系统内能的变化之比等于（ ）
+  - A: $ 2/5 $
+  - B: $ 1/2 $
+  - C: $ 2/3 $
+  - D: $ 2/7 $
+  - PDF excerpt: 对于室温下的双原子分子理想气体，在等压膨胀的情况下，系统对外所作的功与系统内 能的变化之比等于 ( A ) （A） 2/5； （B） 1/2； （C） 2/3； （D） 2/7。
+- Q6 PDF p.23: DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 如图所示，两个大小不同的容器用均匀的细管相连，管中有一水银滴作为活塞，大容器装有氧气，小容器装有氢气. 当温度相同时，水银滴静止于细管中央，则此时这两种气体中（ ） （图题，以原 PDF 图为准）
+  - A: 氧气的分子数密度较大.
+  - B: 氢气的分子数密度较大.
+  - C: 分子数密度一样大.
+  - D: 那种的分子数密度较大是无法判断的.
+  - PDF excerpt: 如图所示，两个大小不同的容器用均匀的细管相连，管中有一水银滴作为活塞，大容器 装有氧气，小容器装有氢气. 当温度相同时，水银滴静止于细管中央，则此时这两种气体中 （ C ） （A） 氧气的分子数密度较大． （B） 氢气的分子数密度较大． （C） 分子数密度一样大． （D） 那种的分子数密度较大是无法判断的.
+- Q7 PDF p.23: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 压强为 p、体积为 V 的氦气的内能为（ ）
+  - A: $ \frac{5}{2} $ pV.
+  - B: $ \frac{3}{2} $ pV.
+  - C: pV.
+  - D: $ \frac{1}{2} $ pV.
+  - PDF excerpt: 压强为p、体积为V的氦气的内能为（ B ） 5 3 1 (A) 2 pV ． (B) 2 pV． (C) pV ． (D) 2 pV．
+- Q10 PDF p.24: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 压强为 p、体积为 V 的氢气（视为刚性分子理想气体）的内能为（ ）：
+  - A: $ 5pV/2. $
+  - B: $ 3pV/2. $
+  - C: pV.
+  - D: $ pV/2. $
+  - PDF excerpt: 压强为p、体积为V的氢气（视为刚性分子理想气体）的内能为（ A ）： (A) 5pV/2 ． (B) 3pV/2． (C) pV ． (D) pV/2．
+- Q11 PDF p.24: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 一瓶单原子分子理想气体的压强、体积、温度与另一瓶刚性双原子分子理想气体的压强、体积、温度完全相同，则两瓶理想气体的（ ）
+  - A: 摩尔数相同，内能不同
+  - B: 摩尔数不同，内能不同
+  - C: 摩尔数相同，内能相同
+  - D: 摩尔数不同，内能相同
+  - PDF excerpt: 一瓶单原子分子理想气体的压强、体积、温度与另一瓶刚性双原子分子理想气体的压强、 体积、温度完全相同，则两瓶理想气体的（ A ） （A）摩尔数相同，内能不同 （B）摩尔数不同，内能不同 （C）摩尔数相同，内能相同 （D）摩尔数不同，内能相同
+- Q12 PDF p.24: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 1mol 氢气，在温度为 $ 27^{\circ} $C 时的内能是（普适气体常量 $ R=8.31\,\text{J}\cdot\text{mol}\cdot\text{K}^{-1} $）（ ）
+  - A: 6232.5J;
+  - B: 3789.5J;
+  - C: 2493.0J;
+  - D: 7479.0J。
+  - PDF excerpt: 1mol氢气，在温度为27℃ 时的内能是 （普适气体常量R=8.31 J∙mol∙K-1） ( A ) (A) 6232.5J； (B) 3789.5J； (C) 2493.0J； (D) 7479.0J。
+- Q16 PDF p.24: PDF_OPTION_ORDER_CONFLICT_LEGACY_OK
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 两瓶不同类的气体,设分子平均平动动能相同,但气体的密度不同,则下列说法正确的是（ ）。
+  - A: 它们的温度相同，压强不同。
+  - B: 它们的温度不同，压强不同。
+  - C: 它们的温度相同，压强相同。
+  - D: 它们的温度不同，压强相同。
+  - PDF excerpt: 两瓶不同类的气体,设分子平均平动动能相同,但气体的密度不同,则下列说法正确的是 ( A )。 (A) 它们的温度相同，压强不同。 (B) 它们的温度不同，压强不同。 (C) 它们的温度相同，压强相同。 (D) 它们的温度不同，压强相同。
+- Q19 PDF p.25: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 一定量的理想气体储于某一容器中，温度为 $ T $，气体分子的质量为 $ m $。根据理想气体的分子模型和统计假设，分子速度在 x 方向的分量平方的平均值（ ）。
+  - A: $ \overline{\nu_x^2} = \sqrt{\frac{3kT}{m}} $
+  - B: $ \overline{\nu_x^2} = \frac{1}{3} \sqrt{\frac{3kT}{m}} $
+  - C: $ \overline{\nu_x^2} = 3kT / m $
+  - D: $ \overline{\nu_x^2} = kT / m $
+  - PDF excerpt: 一定量的理想气体储于某一容器中，温度为T，气体分子的质量为m．根据理想气体的 分子模型和统计假设，分子速度在x方向的分量平方的平均值（ D ）. 3kT 1 3kT (A) v2 = (B) v2 = (C) v2 =3kT /m (D) v2 =kT /m x m x 3 m x x
+- Q20 PDF p.25: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 一个容器内同时储有 1 mol 氢气和 1 mol 氦气，若两种气体各自对器壁产生的压强分别为 $ p_1 $ 和 $ p_2 $，则两者的大小关系是（ ）.
+  - A: $ p_1 > p_2 $
+  - B: $ p_1 < p_2 $
+  - C: $ p_1 = p_2 $
+  - D: 不确定的
+  - PDF excerpt: 一个容器内同时储有1 mol氢气和1 mol氦气，若两种气体各自对器壁产生的压强分别 为p 和p ，则两者的大小关系是( C ). 1 2 (A) p > p (B) p < p (C) p ＝p (D) 不确定的 1 2 1 2 1 2
+- Q22 PDF p.25: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 温度、压强相同的氦气和氧气，它们分子的平均动能 $ \varepsilon_{k} $ 和平均平动动能 $ \overline{w} $ 有如下关系（ ）. 有如下关系(C).
+  - A: $ \bar{\varepsilon}_{k} $ 和 $ \overline{w} $ 都相等
+  - B: $ \bar{\varepsilon}_{k} $ 相等，而 $ \overline{w} $ 不相等
+  - C: $ \overline{w} $ 相等，而 $ \bar{\varepsilon}_{k} $ 不相等
+  - D: $ \bar{\varepsilon}_{k} $ 和 $ \overline{w} $ 都不相等
+  - PDF excerpt: 温度、压强相同的氦气和氧气，它们分子的平均动能 k和平均平动动能 有如下关系（ C ）. ε ε w w (A) k和 都相等 (B) k相等，而 不相等 ε ε w w (C) 相等，而 k不相等 (D) k和 都不相等
+- Q23 PDF p.26: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 1 mol 刚性双原子分子理想气体，当温度为 T 时，其内能为（ ）
+  - A: $ \frac{3}{2}RT $
+  - B: $ \frac{3}{2}kT $
+  - C: $ \frac{5}{2}RT $
+  - D: $ \frac{5}{2}kT $
+  - PDF excerpt: 1 mol刚性双原子分子理想气体，当温度为T时，其内能为（ C ） 3 3 5 5 (A) RT (B) kT (C) RT (D) kT 2 2 2 2
+- Q25 PDF p.26: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 将一滴墨水滴入一杯清水中，过一会儿，整杯水都变黑了，那么下面说法正确的是（ ）:
+  - A: 如果水的温度越低，整杯水变黑所需要的时间越短
+  - B: 如果水的温度为 $ 0^{\circ} $C，则不会发生这种现象
+  - C: 这是一种扩散现象，说明分子是不停运动着
+  - D: 这是一种扩散现象，说明物质分子可发生变化
+  - PDF excerpt: 将一滴墨水滴入一杯清水中，过一会儿，整杯水都变黑了，那么下面说法正确的是 ( C )： (A) 如果水的温度越低，整杯水变黑所需要的时间越短 (B) 如果水的温度为0℃，则不会发生这种现象 (C) 这是一种扩散现象，说明分子是不停运动着 (D) 这是一种扩散现象，说明物质分子可发生变化
+- Q27 PDF p.26: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 下列对于气体分子热运动服从统计规律理解正确的是（ ）
+  - A: 大量无序运动的气体分子组成的系统在总体上所呈现的规律性，称为统计规律
+  - B: 统计规律对所含分子数极少的系统仍然适用
+  - C: 统计规律可以由数学方法推导出来
+  - D: 对某些量进行统计平均时，分子数越多，出现的涨落现象越明显
+  - PDF excerpt: 下列对于气体分子热运动服从统计规律理解正确的是 ( A ) (A) 大量无序运动的气体分子组成的系统在总体上所呈现的规律性，称为统计规律 (B) 统计规律对所含分子数极少的系统仍然适用 (C) 统计规律可以由数学方法推导出来 (D) 对某些量进行统计平均时，分子数越多，出现的涨落现象越明显
+- Q29 PDF p.27: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 在相同的温度和压强下，各为单位体积的氢气（视为刚性双原子分子体）与氢气的内能之比为___、各为单位质量的氢气和氦气的内能之比为___。（ ）
+  - A: $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{3} $, $ \frac{E_{H_2}}{E_{H_e}} = 5 $
+  - B: $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{2} $, $ \frac{E_{H_2}}{E_{H_e}} = \frac{10}{3} $
+  - C: $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{3} $, $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{3} $
+  - D: $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{3} $, $ \frac{E_{H_2}}{E_{H_e}} = \frac{10}{3} $
+  - PDF excerpt: 在相同的温度和压强下，各为单位体积的氢气(视为刚性双原子分子体)与氦气的内能之 比为________、各为单位质量的氢气和氦气的内能之比为________。 （ D ） (A) (cid:3006)(cid:3257)(cid:3118) = (cid:2873) , (cid:3006)(cid:3257)(cid:3118) = 5 (B) (cid:3006)(cid:3257)(cid:3118) = (cid:2873) , (cid:3006)(cid:3257)(cid:3118) = (cid:2869)(cid:2868) (cid:3006)(cid:3257)(cid:3280) (cid:2871) (cid:3006)(cid:3257)(cid:3280) (cid:3006)(ci

@@ -4,6 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
+    "build:db": "node scripts/build-db.js",
+    "ocr:electric": "python scripts/ocr_chapter_vl.py --name electric --first-page 36 --last-page 49",
+    "parse:electric": "node scripts/parse-vl-electric.js",
+    "parse:chapter": "node scripts/parse-vl-chapter.js",
+    "audit:chapter": "node scripts/audit-chapter.js",
     "split": "node scripts/split-static-page.js"
   }
 }

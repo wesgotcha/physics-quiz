@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chapter 9 Audit</title>
+<style>
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f6f7f9;color:#172033}
+main{max-width:1180px;margin:0 auto;padding:24px}
+h1{font-size:24px;margin:0 0 12px}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:16px 0 22px}
+.metric{background:white;border:1px solid #dde2ea;border-radius:8px;padding:12px}
+.metric b{display:block;font-size:20px;margin-top:4px}
+.q{background:white;border:1px solid #dde2ea;border-radius:8px;margin:14px 0;padding:14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tag{font-size:12px;border-radius:999px;padding:3px 8px;background:#edf2f7}
+.bad{background:#ffe8e8;color:#8a1f1f}.warn{background:#fff4cc;color:#765700}.ok{background:#e7f6ec;color:#166534}
+.gate{background:#fff;border:1px solid #dde2ea;border-radius:8px;padding:12px;margin:0 0 14px;line-height:1.55}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+button{border:1px solid #cbd5e1;background:#fff;border-radius:6px;padding:7px 10px;cursor:pointer}
+button.active{background:#172033;color:white;border-color:#172033}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.opts div{margin:6px 0;line-height:1.55}
+.pdf{font-size:13px;line-height:1.55;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:10px;white-space:pre-wrap}
+@media(max-width:780px){.grid{grid-template-columns:1fr}}
+</style>
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]'],['$$','$$']],processEscapes:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+function setFilter(kind){
+  document.querySelectorAll('.toolbar button').forEach(btn=>btn.classList.toggle('active',btn.dataset.filter===kind));
+  document.querySelectorAll('.q').forEach(card=>{
+    const tags=(card.dataset.review||'').split(',');
+    const show=kind==='all'||tags.includes(kind);
+    card.style.display=show?'block':'none';
+  });
+}
+window.addEventListener('DOMContentLoaded',()=>setFilter('all'));
+</script>
+</head>
+<body>
+<main>
+<h1>第 9 章审核：第九章：波动光学</h1>
+<div class="summary">
+<div class="metric">题数<b>26</b></div>
+<div class="metric">PDF 对照<b>26</b></div>
+<div class="metric">硬问题<b>0</b></div>
+<div class="metric">人工复核<b>11</b></div>
+<div class="metric">自动门<b>PASS</b></div>
+</div>
+<div class="gate">
+<b>人工状态：待放行。</b>
+自动门只证明题数、答案、旧库选项顺序、JSON 和 MathJax 配置没有硬错误；本页仍需人工确认公式视觉渲染、图题含义和 PDF 摘录中的可疑排版。确认本章通过后，才开始下一章。
+</div>
+<div class="toolbar">
+<button data-filter="all" onclick="setFilter('all')">全部待审</button>
+<button data-filter="DIAGRAM_NEEDS_VISUAL_REVIEW" onclick="setFilter('DIAGRAM_NEEDS_VISUAL_REVIEW')">图题</button>
+<button data-filter="OPTION_ORDER_PARTIAL_MATCH" onclick="setFilter('OPTION_ORDER_PARTIAL_MATCH')">选项弱匹配</button>
+<button data-filter="OPTION_ORDER_NEEDS_MANUAL_REVIEW" onclick="setFilter('OPTION_ORDER_NEEDS_MANUAL_REVIEW')">选项需人工</button>
+<button data-filter="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK" onclick="setFilter('PDF_OPTION_ORDER_CONFLICT_LEGACY_OK')">PDF/旧库冲突</button>
+</div>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q4</span>
+<span class="tag">PDF p.59</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 在杨氏双缝干涉实验中，与屏上条纹宽度成反比的是（ ）</p>
+<div class="opts">
+<div><b>A.</b> 双缝间距</div>
+<div><b>B.</b> 双缝所在平面到屏的距离</div>
+<div><b>C.</b> 光源波长</div>
+<div><b>D.</b> 以上都不是</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">在杨氏双缝干涉实验中，与屏上条纹宽度成反比的是 ( A ) （A） 双缝间距 （B） 双缝所在平面到屏的距离 （C） 光源波长 （D） 以上都不是</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK">
+<div class="meta">
+<span class="tag warn">Q5</span>
+<span class="tag">PDF p.60</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">PDF_OPTION_ORDER_CONFLICT_LEGACY_OK</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一条光路中，放入一折射率为 n，厚度为 d 的透明薄片，放入后，这条光路的光程改变了（ ）</p>
+<div class="opts">
+<div><b>A.</b> $ (n-1)d $</div>
+<div><b>B.</b> $ 2nd $</div>
+<div><b>C.</b> $ 2(n-1)d+\lambda/2 $</div>
+<div><b>D.</b> $ nd $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一条光路中，放入一折射率为n，厚度为d的透明薄片，放入后，这条光路的光程改变了 （ A ） (A) (n-1) d (B) 2nd (C) 2(n-1)d+λ/2 (D) nd</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q8</span>
+<span class="tag">PDF p.60</span>
+<span class="tag">答案 B / PDF B</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一束光强为 $ I_{0} $ 的自然光垂直穿过两个偏振片，且此两偏振片的偏振化方向成 $ 45^{\circ} $ 角，则穿过两个偏振片后的光强 I 为 （ ）</p>
+<div class="opts">
+<div><b>A.</b> $ I_{0}/4\sqrt{2} $</div>
+<div><b>B.</b> $ I_{0}/4 $</div>
+<div><b>C.</b> $ I_{0}/2 $</div>
+<div><b>D.</b> $ \sqrt{2}I_{0}/2 $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一束光强为I 的自然光垂直穿过两个偏振片，且此两偏振片的偏振化方向成45°角，则穿 0 过两个偏振片后的光强I为 ( B ) (A) I /4 2 (B) I /4 (C) I /2 (D) 2I /2 0 0 0 0</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK">
+<div class="meta">
+<span class="tag warn">Q9</span>
+<span class="tag">PDF p.60</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">PDF_OPTION_ORDER_CONFLICT_LEGACY_OK</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 把双缝干涉实验装置放在折射率为 n 的水中，两缝间距离为 d，双缝到屏的距离为 D (D&gt;&gt;d)，所用单色光在真空中的波长为 $ \lambda $，则屏上干涉条纹中相邻的明纹之间的距离 （ ）</p>
+<div class="opts">
+<div><b>A.</b> $ \lambda D/(nd) $</div>
+<div><b>B.</b> $ n\lambda D/d $</div>
+<div><b>C.</b> $ \lambda d/(nD) $</div>
+<div><b>D.</b> $ \lambda D/(2nd) $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">把双缝干涉实验装置放在折射率为 n 的水中，两缝间距离为 d，双缝到屏的距离为 D (D&gt;&gt;d)，所用单色光在真空中的波长为λ，则屏上干涉条纹中相邻的明纹之间的距离 ( A ) （A）λD/(nd) （B）nλD/d （C）λd/(nD) （D）λD/(2nd)</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q12</span>
+<span class="tag">PDF p.60</span>
+<span class="tag">答案 B / PDF B</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一束波长为 $ \lambda $ 的单色光由空气垂直入射到折射率为 n 的透明薄膜上，透明薄膜放在空气中，要使反射光得到干涉加强，则薄膜最小的厚度为（ ）</p>
+<div class="opts">
+<div><b>A.</b> $ \lambda/4 $</div>
+<div><b>B.</b> $ \lambda/(4n) $</div>
+<div><b>C.</b> $ \lambda/2 $</div>
+<div><b>D.</b> $ \lambda/(2n) $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一束波长为 的单色光由空气垂直入射到折射率为n的透明薄膜上，透明薄膜放在空气 中，要使反射光得到干涉加强，则薄膜最小的厚度为( B ) λ/4 λ/(4n) λ/2 λ/(2n) (A) (B) (C) (D)</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q14</span>
+<span class="tag">PDF p.61</span>
+<span class="tag">答案 B / PDF B</span>
+<span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 在双缝干涉实验中，若单色光源 S 到两缝 S1 和 S2 的距离相等，则观察屏上中央明条纹位于图中 O 处，现将光源 S 向下移动到示意图中的 S' 位置，则（ ） （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> 中央明纹向上移动，且条纹间距增大</div>
+<div><b>B.</b> 中央明纹向上移动，且条纹间距不变</div>
+<div><b>C.</b> 中央明纹向下移动，且条纹间距增大</div>
+<div><b>D.</b> 中央明纹向下移动，且条纹间距不变</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">在双缝干涉实验中，若单色光源S到两缝S1和S2的距离相等，则观察屏上中央明条纹 位于图中O处， 现将光源S向下移动到示意图中的S´位置，则 （ B ） (A) 中央明纹向上移动，且条纹间距增大 (B) 中央明纹向上移动，且条纹间距不变 (C) 中央明纹向下移动，且条纹间距增大 (D) 中央明纹向下移动，且条纹间距不变 3</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q15</span>
+<span class="tag">PDF p.61</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 光以 $ 60^{\circ} $的入射角由空气照射到折射率为 $ \sqrt{3} $的介质时，可知折射角为（ ）。(A) $ 30^{\circ} $ (B) $ 45^{\circ} $ (C) $ 15^{\circ} $ (D) 条件不足，无法判断</p>
+<div class="opts">
+<div><b>A.</b> 30°</div>
+<div><b>B.</b> 45°</div>
+<div><b>C.</b> 15°</div>
+<div><b>D.</b> 条件不足，无法判断</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">光以60°的入射角由空气照射到折射率为 的介质时，可知折射角为( A )。 (A) 30° (B) 45° (C) 15° (D) 条件不足，无法判断</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q16</span>
+<span class="tag">PDF p.61</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 杨氏双缝的间距为 0.3mm，双缝距离屏幕 1500mm，若第四到第七明纹距离为 7.5mm，则入射光波长是（ ）</p>
+<div class="opts">
+<div><b>A.</b> 500nm</div>
+<div><b>B.</b> 450nm</div>
+<div><b>C.</b> 550nm</div>
+<div><b>D.</b> 480nm</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">杨氏双缝的间距为 0.3mm，双缝距离屏幕 1500mm，若第四到第七明纹距离为 7.5mm， 则入射光波长是( A ) （A）500nm （B）450nm （C）550nm （D）480nm</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q21</span>
+<span class="tag">PDF p.62</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一束白光在真空中通过双缝后在屏上观察到的干涉条纹，除中央白色亮纹外，两侧还有彩色条纹，其原因是（ ）:</p>
+<div class="opts">
+<div><b>A.</b> 各色光的波长不同，因而各色光分别产生的干涉条纹的间距不同</div>
+<div><b>B.</b> 各色光的速度不同，因而各色光分别产生的干涉条纹的间距不同</div>
+<div><b>C.</b> 各色光的强度不同，因而各色光分别产生的干涉条纹的间距不同</div>
+<div><b>D.</b> 上述说法都不正确</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一束白光在真空中通过双缝后在屏上观察到的干涉条纹，除中央白色亮纹外，两侧还有 彩色条纹，其原因是( A ): (A) 各色光的波长不同，因而各色光分别产生的干涉条纹的间距不同 (B) 各色光的速度不同，因而各色光分别产生的干涉条纹的间距不同 (C) 各色光的强度不同，因而各色光分别产生的干涉条纹的间距不同 (D) 上述说法都不正确</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q22</span>
+<span class="tag">PDF p.62</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 在空气中,一束波长为 $ \lambda $ 的平行单色光垂直照射到薄膜上,经上、下两表面反射的光束发生干涉。若薄膜的厚度为 d，其折射率 $ n_1 &gt; 1 $，则两束反射光在相遇点的光程差为 （ ）</p>
+<div class="opts">
+<div><b>A.</b> $ 2n_1d $</div>
+<div><b>B.</b> $ 2n_1d + \lambda $</div>
+<div><b>C.</b> $ 2n_1d + \lambda/2 $</div>
+<div><b>D.</b> 条件不足无法计算</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">在空气中,一束波长为λ的平行单色光垂直照射到薄膜上,经上、下两表面反射的光束发 生干涉。若薄膜的厚度为d，其折射率 n &gt; 1，则两束反射光在相遇点的光程差为( C ) 1 (A) 2n 𝑑 (B) 2n 𝑑+𝜆 (C) 2n 𝑑+𝜆/2 (D) 条件不足无法计算 (cid:2869) (cid:2869) (cid:2869)</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q25</span>
+<span class="tag">PDF p.63</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 薄膜干涉属于（ ）干涉</p>
+<div class="opts">
+<div><b>A.</b> 分振幅法</div>
+<div><b>B.</b> 分波阵面法</div>
+<div><b>C.</b> 分频率法</div>
+<div><b>D.</b> 分波长法</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">薄膜干涉属于（ A ）干涉 (A) 分振幅法 (B) 分波阵面法 (C) 分频率法 (D) 分波长法</div>
+</div>
+</div>
+</section>
+</main>
+</body>
+</html>
