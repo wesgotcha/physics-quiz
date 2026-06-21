@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>题库管理</title>
+<style>
+:root{--bg:#f7f7fb;--card:#fff;--line:#d9dce5;--text:#151822;--muted:#667085;--accent:#2563eb;--bad:#b42318}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Arial,sans-serif}.wrap{max-width:1180px;margin:0 auto;padding:18px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.title{font-weight:900;font-size:1.25rem}.small{color:var(--muted);font-weight:650}.toolbar{display:flex;gap:8px;flex-wrap:wrap}button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 12px;font-weight:800;cursor:pointer}button.primary{background:var(--accent);border-color:var(--accent);color:#fff}.panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px}textarea{width:100%;height:calc(100vh - 170px);min-height:480px;border:1px solid var(--line);border-radius:8px;padding:12px;font:14px/1.5 Consolas,"SFMono-Regular",Menlo,monospace;resize:vertical;background:#fff;color:#111827}.status{min-height:24px;margin-top:8px;color:var(--muted);font-weight:700}.status.bad{color:var(--bad)}a{color:var(--accent);font-weight:800;text-decoration:none}@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}textarea{height:65vh}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div>
+      <div class="title">题库管理</div>
+      <div class="small">编辑后保存到 <code>data/physics_quiz_db.json</code></div>
+    </div>
+    <div class="toolbar">
+      <button onclick="loadDb()">重新加载</button>
+      <button onclick="formatJson()">格式化</button>
+      <button class="primary" onclick="saveDb()">保存</button>
+      <button onclick="location.href='/'">返回刷题</button>
+    </div>
+  </div>
+  <div class="panel">
+    <textarea id="editor" spellcheck="false"></textarea>
+    <div class="status" id="status"></div>
+  </div>
+</div>
+<script>
+const editor=document.getElementById('editor');
+const statusEl=document.getElementById('status');
+
+function setStatus(text,bad=false){
+  statusEl.textContent=text;
+  statusEl.className='status'+(bad?' bad':'');
+}
+
+async function loadDb(){
+  try{
+    setStatus('加载中...');
+    const res=await fetch('/api/db');
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    const db=await res.json();
+    editor.value=JSON.stringify(db,null,2);
+    setStatus('已加载。');
+  }catch(err){
+    setStatus('加载失败：'+err.message,true);
+  }
+}
+
+function parseEditor(){
+  try{
+    return JSON.parse(editor.value);
+  }catch(err){
+    setStatus('JSON 格式错误：'+err.message,true);
+    throw err;
+  }
+}
+
+function formatJson(){
+  const db=parseEditor();
+  editor.value=JSON.stringify(db,null,2);
+  setStatus('已格式化。');
+}
+
+async function saveDb(){
+  try{
+    const db=parseEditor();
+    setStatus('保存中...');
+    const res=await fetch('/api/db',{
+      method:'PUT',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(db)
+    });
+    const body=await res.json().catch(()=>({}));
+    if(!res.ok) throw new Error(body.error || ('HTTP '+res.status));
+    editor.value=JSON.stringify(db,null,2);
+    setStatus('已保存。');
+  }catch(err){
+    setStatus('保存失败：'+err.message,true);
+  }
+}
+
+loadDb();
+</script>
+</body>
+</html>
