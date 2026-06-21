@@ -55,75 +55,7 @@ function initPicker(){
 }
 function escapeHtml(s){return String(s ?? '').replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
 function renderMathText(s){
-  const text=String(s ?? '');
-  const token=/[A-Za-z0-9_Α-Ωα-ωᵢ₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾√△πλμθωβταδεσρφΦΔΣ∑∮∞≈≠≤≥·×+\-*/=<>()[\]{}|.,: ]+/g;
-  let html='', last=0, match;
-  while((match=token.exec(text))){
-    html+=escapeHtml(text.slice(last, match.index));
-    const raw=match[0];
-    html+=shouldRenderMath(raw) ? `\\(${toLatex(raw)}\\)` : escapeHtml(raw);
-    last=token.lastIndex;
-  }
-  return html+escapeHtml(text.slice(last));
-}
-function shouldRenderMath(raw){
-  const t=raw.trim();
-  if(t.length<2) return false;
-  return /[=+\-*/√∑∮∞≈≠≤≥×·₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻πλμθωβταΔΣ]/.test(t)
-    || /[A-Za-zΑ-Ωα-ω]\s*[₀-₉⁰¹²³⁴⁵⁶⁷⁸⁹]/.test(t)
-    || /[A-Za-zΑ-Ωα-ω]\s*\/\s*[A-Za-zΑ-Ωα-ω0-9]/.test(t);
-}
-function toLatex(raw){
-  let t=raw.trim();
-  t=t.replace(/([A-Za-zΑ-Ωα-ω])\u0304\u20d7/g,'\\bar{\\vec{$1}}')
-     .replace(/([A-Za-zΑ-Ωα-ω])\u20d7/g,'\\vec{$1}')
-     .replace(/([A-Za-zΑ-Ωα-ω])\u0304/g,'\\bar{$1}');
-  t=convertScripts(t);
-  t=t.replace(/√\s*\[([^\]]+)\]/g,'\\sqrt{$1}')
-     .replace(/√\s*\(([^)]+)\)/g,'\\sqrt{$1}')
-     .replace(/√\s*([A-Za-zΑ-Ωα-ω0-9]+)/g,'\\sqrt{$1}')
-     .replace(/ᵢ/g,'_{i}')
-     .replace(/△/g,'\\Delta ')
-     .replace(/π/g,'\\pi ')
-     .replace(/λ/g,'\\lambda ')
-     .replace(/μ/g,'\\mu ')
-     .replace(/θ/g,'\\theta ')
-     .replace(/ω/g,'\\omega ')
-     .replace(/β/g,'\\beta ')
-     .replace(/τ/g,'\\tau ')
-     .replace(/α/g,'\\alpha ')
-     .replace(/δ/g,'\\delta ')
-     .replace(/ε/g,'\\varepsilon ')
-     .replace(/σ/g,'\\sigma ')
-     .replace(/ρ/g,'\\rho ')
-     .replace(/φ/g,'\\varphi ')
-     .replace(/Φ/g,'\\Phi ')
-     .replace(/Δ/g,'\\Delta ')
-     .replace(/Σ/g,'\\Sigma ')
-     .replace(/∑/g,'\\sum ')
-     .replace(/∮/g,'\\oint ')
-     .replace(/∞/g,'\\infty ')
-     .replace(/≈/g,'\\approx ')
-     .replace(/≠/g,'\\ne ')
-     .replace(/≤/g,'\\le ')
-     .replace(/≥/g,'\\ge ')
-     .replace(/×/g,'\\times ')
-     .replace(/·/g,'\\cdot ');
-  return t;
-}
-function convertScripts(t){
-  const sup={'⁰':'0','¹':'1','²':'2','³':'3','⁴':'4','⁵':'5','⁶':'6','⁷':'7','⁸':'8','⁹':'9','⁺':'+','⁻':'-','⁼':'=','⁽':'(','⁾':')'};
-  const sub={'₀':'0','₁':'1','₂':'2','₃':'3','₄':'4','₅':'5','₆':'6','₇':'7','₈':'8','₉':'9'};
-  let out='';
-  for(let i=0;i<t.length;i++){
-    const map=sup[t[i]] ? sup : sub[t[i]] ? sub : null;
-    if(!map){out+=t[i]; continue;}
-    let buf='';
-    while(i<t.length && map[t[i]]){buf+=map[t[i]]; i++;}
-    i--;
-    out+=(map===sup?'^{':'_{')+buf+'}';
-  }
-  return out;
+  return escapeHtml(s);
 }
 function typesetMath(root=document.body){
   if(window.MathJax?.typesetPromise) MathJax.typesetPromise([root]).catch(console.warn);
@@ -177,7 +109,8 @@ function backToSetup(){clearTimeout(jumpTimer); document.getElementById('practic
 async function loadDatabase(){
   try{
     document.getElementById('scoreLine').textContent='加载题库中';
-    const res=await fetch('/api/db');
+    let res=await fetch('/api/db');
+    if(!res.ok) res=await fetch('data/physics_quiz_db.json');
     if(!res.ok) throw new Error('HTTP '+res.status);
     DB=await res.json();
     initPicker();
@@ -185,7 +118,7 @@ async function loadDatabase(){
   }catch(err){
     console.error(err);
     document.getElementById('scoreLine').textContent='题库加载失败';
-    alert('题库加载失败，请确认后端服务已启动。');
+    alert('题库加载失败，请确认题库数据文件可访问。');
   }
 }
 loadDatabase();</script>
