@@ -1,0 +1,1043 @@
+{
+  "summary": {
+    "chapter_id": "1",
+    "chapter_name": "第一章：质点运动学",
+    "question_count": 30,
+    "public_question_count": 30,
+    "pdf_row_count": 30,
+    "legacy_question_count": 30,
+    "hard_issue_count": 0,
+    "manual_review_count": 16,
+    "mathjax_issues": [],
+    "passed_automatic_gate": true
+  },
+  "rows": [
+    {
+      "chapter_id": "1",
+      "number": 1,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 1,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一质点做匀速率圆周运动时，有（ ）。",
+      "opts": {
+        "A": "切向加速度不变，法向加速度不变",
+        "B": "切向加速度改变，法向加速度不变",
+        "C": "切向加速度不变，法向加速度改变",
+        "D": "切向加速度改变，法向加速度改变"
+      },
+      "pdf_excerpt": "一质点做匀速率圆周运动时，有( C )。 （A）切向加速度不变，法向加速度不变 （B）切向加速度改变，法向加速度不变 （C）切向加速度不变，法向加速度改变 （D）切向加速度改变，法向加速度改变",
+      "legacy_q": "一质点做匀速率圆周运动时，有（ ）。",
+      "legacy_opts": {
+        "A": "切向加速度不变，法向加速度不变",
+        "B": "切向加速度改变，法向加速度不变",
+        "C": "切向加速度不变，法向加速度改变",
+        "D": "切向加速度改变，法向加速度改变"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "1",
+      "number": 2,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 1,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "某质点的轨道方程为 \\(y=3x-5x^2+6\\)（SI），则该质点作（ ）。",
+      "opts": {
+        "A": "匀加速直线运动",
+        "B": "匀减速直线运动",
+        "C": "圆周运动",
+        "D": "抛体运动"
+      },
+      "pdf_excerpt": "某质点的轨道方程为y= 3x – 5x2 + 6 (SI)，则该质点作( D ) （A）匀加速直线运动, （B）匀减速直线运动； （C）圆周运动； （D）抛体运动；    r =(at +c)i +btj",
+      "legacy_q": "某质点的轨道方程为 y = 3x - 5x² + 6（SI），则该质点作（ ）。",
+      "legacy_opts": {
+        "A": "匀加速直线运动",
+        "B": "匀减速直线运动",
+        "C": "圆周运动",
+        "D": "抛体运动"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "1",
+      "number": 3,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 1,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "一质点在平面上运动，已知位置矢量 \\(\\vec r=at\\,\\vec i+(bt+c)\\vec j\\)（\\(a,b\\) 为常量），则该质点作（ ）。",
+      "opts": {
+        "A": "匀速直线运动",
+        "B": "变速直线运动",
+        "C": "抛物线运动",
+        "D": "一般曲线运动"
+      },
+      "pdf_excerpt": "一质点在平面上运动，已知质点位置矢量的表示式为 （其中a、b为 常量），则该质点作（ A ）。 (A) 匀速直线运动 (B) 变速直线运动 (C) 抛物线运动 (D) 一般曲线运动． S=6+8t−2t2",
+      "legacy_q": "一质点在平面上运动，已知位置矢量 r = at i + (bt + c) j（a、b 为常量），则该质点作（ ）。",
+      "legacy_opts": {
+        "A": "匀速直线运动",
+        "B": "变速直线运动",
+        "C": "抛物线运动",
+        "D": "一般曲线运动"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "1",
+      "number": 4,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 1,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一小球沿斜面向上运动，其运动方程为 \\(s=6+8t-2t^2\\)（SI），则小球运动到最高点（速度为零）的时刻为（ ）。",
+      "opts": {
+        "A": "\\(t=4\\,\\mathrm{s}\\)",
+        "B": "\\(t=2\\,\\mathrm{s}\\)",
+        "C": "\\(t=8\\,\\mathrm{s}\\)",
+        "D": "\\(t=5\\,\\mathrm{s}\\)"
+      },
+      "pdf_excerpt": "一小球沿斜面向上运动，其运动方程为 (SI)，则小球运动到最高点（速 度为零）的时刻 （ B ） (A) t=4s; (B) t=2s; (C) t=8s; (D) t=5s.",
+      "legacy_q": "一小球沿斜面向上运动，其运动方程为 s = 6 + 8t - 2t²（SI），则小球运动到最高点（速度为零）的时刻为（ ）。",
+      "legacy_opts": {
+        "A": "t = 4 s",
+        "B": "t = 2 s",
+        "C": "t = 8 s",
+        "D": "t = 5 s"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 5,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 1,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "质点做匀速率圆周运动时，其速度和加速度的变化情况为（ ）。",
+      "opts": {
+        "A": "速度不变，加速度在变化",
+        "B": "加速度不变，速度在变化",
+        "C": "二者都在变化",
+        "D": "二者都不变"
+      },
+      "pdf_excerpt": "质点做匀速率圆周运动时，其速度和加速度的变化情况为（ C ） （A）速度不变，加速度在变化； （B）加速度不变，速度在变化； （C）二者都在变化； （D）二者都不变。 ( ) r x,y",
+      "legacy_q": "质点做匀速率圆周运动时，其速度和加速度的变化情况为（ ）。",
+      "legacy_opts": {
+        "A": "速度不变，加速度在变化",
+        "B": "加速度不变，速度在变化",
+        "C": "二者都在变化",
+        "D": "二者都不变"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "1",
+      "number": 6,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 1,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "一运动质点在某瞬时位于矢径 \\(r(x,y)\\) 的端点处，其速度大小（速率）为（ ）。",
+      "opts": {
+        "A": "\\(\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2}\\)",
+        "B": "\\(\\frac{d\\vec r}{dt}\\)",
+        "C": "\\(\\left|\\frac{d\\vec r}{dt}\\right|\\) 的相反数",
+        "D": "\\(\\frac{dr}{dt}\\)"
+      },
+      "pdf_excerpt": "一运动质点在某瞬时位于矢径 的端点处, 其速度的大小（即“速率”）为（ A ） 2 2  dx + dy dr      dt   dt  dt (A) (B)  dr dr dt dt (C) (D)",
+      "legacy_q": "一运动质点在某瞬时位于矢径 r(x,y) 的端点处，其速度大小（速率）为（ ）。",
+      "legacy_opts": {
+        "A": "√[(dx/dt)² + (dy/dt)²]",
+        "B": "dr⃗/dt",
+        "C": "|dr⃗/dt| 的相反数",
+        "D": "dr/dt"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "1",
+      "number": 7,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 2,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "某质点作直线运动的运动学方程为 \\(x=5t^3-7t+6\\)（SI），则该质点作（ ）。",
+      "opts": {
+        "A": "匀加速直线运动，加速度在 \\(t=1\\,\\mathrm{s}\\) 时沿 \\(x\\) 轴正方向",
+        "B": "匀加速直线运动，加速度在 \\(t=1\\,\\mathrm{s}\\) 时沿 \\(x\\) 轴负方向",
+        "C": "变加速直线运动，加速度在 \\(t=1\\,\\mathrm{s}\\) 时沿 \\(x\\) 轴正方向",
+        "D": "变加速直线运动，加速度在 \\(t=1\\,\\mathrm{s}\\) 时沿 \\(x\\) 轴负方向"
+      },
+      "pdf_excerpt": "某质点作直线运动的运动学方程为x＝5t3-7t+ 6 (SI)，则该质点作 ( C ) （A）匀加速直线运动，加速度在t=1s时沿x轴正方向． （B）匀加速直线运动，加速度在t=1s时沿x轴负方向． （C）变加速直线运动，加速度在t=1s时沿x轴正方向． （D）变加速直线运动，加速度在t=1s时沿x轴负方向．  v v",
+      "legacy_q": "某质点作直线运动的运动学方程为 x = 5t³ - 7t + 6（SI），则该质点作（ ）。",
+      "legacy_opts": {
+        "A": "匀加速直线运动，加速度在 t=1s 时沿 x 轴正方向",
+        "B": "匀加速直线运动，加速度在 t=1s 时沿 x 轴负方向",
+        "C": "变加速直线运动，加速度在 t=1s 时沿 x 轴正方向",
+        "D": "变加速直线运动，加速度在 t=1s 时沿 x 轴负方向"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "1",
+      "number": 8,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 2,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "一质点在平面上作一般曲线运动，瞬时速度为 \\(\\vec v\\)、瞬时速率为 \\(v\\)，某段时间内平均速度为 \\(\\bar{\\vec v}\\)、平均速率为 \\(\\bar v\\)。它们之间的关系必定有（ ）。",
+      "opts": {
+        "A": "\\(|\\vec v|=v\\)，\\(|\\bar{\\vec v}|=\\bar v\\)",
+        "B": "\\(|\\vec v|\\ne v\\)，\\(|\\bar{\\vec v}|=\\bar v\\)",
+        "C": "\\(|\\vec v|\\ne v\\)，\\(|\\bar{\\vec v}|\\ne\\bar v\\)",
+        "D": "\\(|\\vec v|=v\\)，\\(|\\bar{\\vec v}|\\ne\\bar v\\)"
+      },
+      "pdf_excerpt": "一质点在平面上作一般曲线运动，其瞬时速度为 ，瞬时速率为 ，某一段时间内的  v v 平均速度为 ，平均速率为 ，它们之间的关系必定有（ D ）。     = = ≠ = v v, v v v v, v v （A） （B）     ≠ ≠ = ≠ v v, v v v v, v v （C） （D）",
+      "legacy_q": "一质点在平面上作一般曲线运动，瞬时速度为 v⃗、瞬时速率为 v，某段时间内平均速度为 v̄⃗、平均速率为 v̄。它们之间的关系必定有（ ）。",
+      "legacy_opts": {
+        "A": "|v⃗| = v，|v̄⃗| = v̄",
+        "B": "|v⃗| ≠ v，|v̄⃗| = v̄",
+        "C": "|v⃗| ≠ v，|v̄⃗| ≠ v̄",
+        "D": "|v⃗| = v，|v̄⃗| ≠ v̄"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "1",
+      "number": 9,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 2,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "在高台上分别沿 15° 仰角方向和水平方向，以同样速率投出两颗小石子，忽略空气阻力，则它们落地时速度（ ）。",
+      "opts": {
+        "A": "大小不同，方向不同",
+        "B": "大小相同，方向不同",
+        "C": "大小相同，方向相同",
+        "D": "大小不同，方向相同"
+      },
+      "pdf_excerpt": "在高台上分别沿 15°仰角方向和水平方向，以同样速率投出两颗小石子，忽略空气阻力， 则它们落地时速度（ B ） （A）大小不同，方向不同； （B）大小相同，方向不同； （C）大小相同，方向相同； （D）大小不同，方向相同。 x=5t2 −3t3",
+      "legacy_q": "在高台上分别沿 15° 仰角方向和水平方向，以同样速率投出两颗小石子，忽略空气阻力，则它们落地时速度（ ）。",
+      "legacy_opts": {
+        "A": "大小不同，方向不同",
+        "B": "大小相同，方向不同",
+        "C": "大小相同，方向相同",
+        "D": "大小不同，方向相同"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 10,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 2,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一质点沿 \\(x\\) 轴运动，其运动方程为 \\(x=3t^2-5t^3\\)，其中 \\(t\\) 以 \\(\\mathrm{s}\\) 为单位。当 \\(t=1\\,\\mathrm{s}\\) 时，该质点正在（ ）。",
+      "opts": {
+        "A": "加速",
+        "B": "减速",
+        "C": "匀速",
+        "D": "静止"
+      },
+      "pdf_excerpt": "一质点沿x 轴运动，其运动方程为 ，其中t 以s 为单位。当t = 1s 时，该 质点正在（ B ）。 （A）加速 （B）减速 （C）匀速 （D） 静止",
+      "legacy_q": "一质点沿 x 轴运动，其运动方程为 x = 3t² - 5t³，其中 t 以 s 为单位。当 t = 1s 时，该质点正在（ ）。",
+      "legacy_opts": {
+        "A": "加速",
+        "B": "减速",
+        "C": "匀速",
+        "D": "静止"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 11,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 2,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一质点在平面上运动，其轨道方程为 \\(x^2+4y^2=1\\)，则以下哪个运动方程对应于该轨道方程？",
+      "opts": {
+        "A": "\\(x=\\cos(t)/2,\\ y=\\sin(t)\\)",
+        "B": "\\(x=\\cos(t),\\ y=\\sin(t)/2\\)",
+        "C": "\\(x=\\cos(t),\\ y=2\\sin(t)\\)",
+        "D": "\\(x=\\cos(2t),\\ y=\\sin(t)/2\\)"
+      },
+      "pdf_excerpt": "一质点在平面上运动，其轨道方程为x2+4y2=1，则以下哪个运动方程对应于该轨道方程？ ( B ) ( A ) x=cos(t)/2, y=sin(t)； （B） x=cos(t), y=sin(t)/2； ( C ) x=cos(t), y=2sin(t)； （D） x=cos(2t), y=sin(t)/2.    r =at2i +bt2j a b",
+      "legacy_q": "一质点在平面上运动，其轨道方程为 x² + 4y² = 1，则以下哪个运动方程对应于该轨道方程？",
+      "legacy_opts": {
+        "A": "x = cos(t)/2，y = sin(t)",
+        "B": "x = cos(t)，y = sin(t)/2",
+        "C": "x = cos(t)，y = 2sin(t)",
+        "D": "x = cos(2t)，y = sin(t)/2"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 12,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 3,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一质点在平面上运动，已知位置矢量 \\(\\vec r=at^2\\vec i+bt^2\\vec j\\)（\\(a,b\\) 为常量），则该质点作（ ）。",
+      "opts": {
+        "A": "匀速直线运动",
+        "B": "变速直线运动",
+        "C": "抛物线运动",
+        "D": "一般曲线运动"
+      },
+      "pdf_excerpt": "一质点在平面上运动，已知质点位置矢量的表示式为 (其中 、 为常 量)，则该质点作 ( B )。 (A)匀速直线运动； （B）变速直线运动； (C)抛物线运动； (D)一般曲线运动。    r =at2i +bt3j",
+      "legacy_q": "一质点在平面上运动，已知位置矢量 r = at² i + bt² j（a、b 为常量），则该质点作（ ）。",
+      "legacy_opts": {
+        "A": "匀速直线运动",
+        "B": "变速直线运动",
+        "C": "抛物线运动",
+        "D": "一般曲线运动"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 13,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 3,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "已知质点位置矢量 \\(\\vec r=at^2\\vec i+bt^3\\vec j\\)（\\(a,b\\) 为常量），则该质点在平面内作（ ）。",
+      "opts": {
+        "A": "匀速直线运动",
+        "B": "变速直线运动",
+        "C": "抛物线运动",
+        "D": "以上答案都不对"
+      },
+      "pdf_excerpt": "已知质点位置矢量的表示式为 （其中a、b为常量），则该质点在平面内 作（ D ） （A） 匀速直线运动． （B） 变速直线运动． （C） 抛物线运动． （D） 以上答案都不对  ",
+      "legacy_q": "已知质点位置矢量 r = at² i + bt³ j（a、b 为常量），则该质点在平面内作（ ）。",
+      "legacy_opts": {
+        "A": "匀速直线运动",
+        "B": "变速直线运动",
+        "C": "抛物线运动",
+        "D": "以上答案都不对"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "1",
+      "number": 14,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 3,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": false,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "根据瞬时速度矢量 \\(\\vec v\\) 的定义，在直角坐标系下，其大小 \\(|\\vec v|\\) 可表示为（ ）。",
+      "opts": {
+        "A": "\\(\\frac{dr}{dt}\\)",
+        "B": "\\(\\frac{dx}{dt}+\\frac{dy}{dt}+\\frac{dz}{dt}\\)",
+        "C": "\\(\\left|\\frac{dx}{dt}\\vec i\\right|+\\left|\\frac{dy}{dt}\\vec j\\right|+\\left|\\frac{dz}{dt}\\vec k\\right|\\)",
+        "D": "\\(\\sqrt{\\left(\\frac{dx}{dt}\\right)^2+\\left(\\frac{dy}{dt}\\right)^2+\\left(\\frac{dz}{dt}\\right)^2}\\)"
+      },
+      "pdf_excerpt": "根据瞬时速度矢量 v 的定义，在直角坐标系下，其大小 |v | 可表示为 （ D ） dr dx dy dz + + dt dt dt dt (A) ． (B) ． dx dy  dz  dx dy dz | i |+| j |+| k | ( )2 +( )2 +( )2 dt dt dt dt dt dt (C) . (D)",
+      "legacy_q": "根据瞬时速度矢量 v⃗ 的定义，在直角坐标系下，其大小 |v⃗| 可表示为（ ）。",
+      "legacy_opts": {
+        "A": "dr/dt",
+        "B": "dx/dt + dy/dt + dz/dt",
+        "C": "|(dx/dt)i + (dy/dt)j + (dz/dt)k| 写成代数和",
+        "D": "√[(dx/dt)² + (dy/dt)² + (dz/dt)²]"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "1",
+      "number": 15,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 3,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "下列说法正确的是（ ）。",
+      "opts": {
+        "A": "斜向上抛的物体，在最高点速度最小，加速度最大",
+        "B": "若物体作匀速圆周运动，则速度不变",
+        "C": "物体沿一个圆周运动，其瞬时法向加速度可能为零",
+        "D": "物体加速度越大，则速度越大"
+      },
+      "pdf_excerpt": "下列说法正确的是 （ C ）。 （A）斜向上抛的物体，在最高点速度最小，加速度最大； （B）若物体作匀速圆周运动，则速度不变； （C）物体沿一个圆周运动，其瞬时法向加速度可能为零； （D）物体加速度越大，则速度越大。",
+      "legacy_q": "下列说法正确的是（ ）。",
+      "legacy_opts": {
+        "A": "斜向上抛的物体，在最高点速度最小，加速度最大",
+        "B": "若物体作匀速圆周运动，则速度不变",
+        "C": "物体沿一个圆周运动，其瞬时法向加速度可能为零",
+        "D": "物体加速度越大，则速度越大"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "1",
+      "number": 16,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 3,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "速度为 \\(v\\) 的子弹打穿一块不动的木板后速度变为零，设木板对子弹的阻力恒定。当子弹射入木板的深度等于其厚度的一半时，子弹的速度是（ ）。",
+      "opts": {
+        "A": "\\(v/4\\)",
+        "B": "\\(v/3\\)",
+        "C": "\\(v/2\\)",
+        "D": "\\(v/\\sqrt{2}\\)"
+      },
+      "pdf_excerpt": "速度为v 的子弹，打穿一块不动的木板后速度变为零，设木板对子弹的阻力是恒定的．那 么，当子弹射入木板的深度等于其厚度的一半时，子弹的速度是（ D ） v/4 v/3 v/2 v/ 2 (A) ; (B) ; (C) ; (D) .   v v",
+      "legacy_q": "速度为 v 的子弹打穿一块不动的木板后速度变为零，设木板对子弹的阻力恒定。当子弹射入木板的深度等于其厚度的一半时，子弹的速度是（ ）。",
+      "legacy_opts": {
+        "A": "v/4",
+        "B": "v/3",
+        "C": "v/2",
+        "D": "v/√2"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "1",
+      "number": 17,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 3,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "一物体从某一确定高度以 \\(v_0\\) 的速度水平抛出，已知它落地时的速度为 \\(v_t\\)，那么它运动的时间是（ ）。",
+      "opts": {
+        "A": "\\((v_t-v_0)/g\\)",
+        "B": "\\((v_t-v_0)/(2g)\\)",
+        "C": "\\(\\sqrt{v_t^2-v_0^2}/g\\)",
+        "D": "\\(\\sqrt{v_t^2-v_0^2}/(2g)\\)"
+      },
+      "pdf_excerpt": "一物体从某一确定高度以 0 的速度水平抛出，已知它落地时的速度为 t ，那么它运动 的时间是（ C ） ( v −v ) /g ( v −v ) /2g ( v2 −v2 )1/2 /g ( v2 −v2 )1/2 /2g (A) t 0 ; (B) t 0 ; (C) t 0 ; (D) t 0 .",
+      "legacy_q": "一物体从某一确定高度以 v₀ 的速度水平抛出，已知它落地时的速度为 vₜ，那么它运动的时间是（ ）。",
+      "legacy_opts": {
+        "A": "(vₜ - v₀)/g",
+        "B": "(vₜ - v₀)/(2g)",
+        "C": "√(vₜ² - v₀²)/g",
+        "D": "√(vₜ² - v₀²)/(2g)"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "1",
+      "number": 18,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 4,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "飞轮作加速转动时，轮边缘上一点的运动方程为 \\(s=0.1t^4\\)，飞轮半径为 \\(5\\,\\mathrm{m}\\)，当此点速率 \\(v=50\\,\\mathrm{m/s}\\) 时，其切向加速度和法向加速度分别为（ ）。",
+      "opts": {
+        "A": "\\(30\\,\\mathrm{m/s^2}\\)，\\(500\\,\\mathrm{m/s^2}\\)",
+        "B": "\\(30\\,\\mathrm{m/s^2}\\)，\\(450\\,\\mathrm{m/s^2}\\)",
+        "C": "\\(50\\,\\mathrm{m/s^2}\\)，\\(450\\,\\mathrm{m/s^2}\\)",
+        "D": "\\(50\\,\\mathrm{m/s^2}\\)，\\(500\\,\\mathrm{m/s^2}\\)"
+      },
+      "pdf_excerpt": "飞轮作加速转动时，轮边缘上的一点的运动方程为 s=0.1 𝑡(cid:2872)，飞轮半径为5 m，当此点 的速率v = 50 m/s 时，其切向加速度和法向加速度分别为（ A ）。 (A) 30 m/s2,500 m/s2 (B) 30 m/s2,450 m/s2 (C) 50 m/s2,450 m/s2 (D) 50 m/s2,500 m/s2",
+      "legacy_q": "飞轮作加速转动时，轮边缘上一点的运动方程为 s = 0.1t⁴，飞轮半径为 5 m，当此点速率 v = 50 m/s 时，其切向加速度和法向加速度分别为（ ）。",
+      "legacy_opts": {
+        "A": "30 m/s²，500 m/s²",
+        "B": "30 m/s²，450 m/s²",
+        "C": "50 m/s²，450 m/s²",
+        "D": "50 m/s²，500 m/s²"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "1",
+      "number": 19,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 4,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": true,
+        "B": false,
+        "C": false,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "一质点做直线运动，某时刻的瞬时速度 \\(v=2\\,\\mathrm{m\\cdot s^{-1}}\\)，瞬时加速度 \\(a=-2\\,\\mathrm{m\\cdot s^{-2}}\\)，则 \\(1\\,\\mathrm{s}\\) 后质点的速度（ ）。",
+      "opts": {
+        "A": "等于零",
+        "B": "等于 \\(-2\\,\\mathrm{m\\cdot s^{-1}}\\)",
+        "C": "等于 \\(2\\,\\mathrm{m\\cdot s^{-1}}\\)",
+        "D": "不能确定"
+      },
+      "pdf_excerpt": " 一质点做直线运动，某时刻的瞬时速度v=2m⋅s−1，瞬时加速度a =−2m⋅s−2，则1 s 后质点的速度（ D ）. (A) 等于零 (B) 等于−2m⋅s−1 (C)等于2m⋅s−1 (D)不能确定",
+      "legacy_q": "一质点做直线运动，某时刻的瞬时速度 v = 2 m·s⁻¹，瞬时加速度 a = -2 m·s⁻²，则 1 s 后质点的速度（ ）。",
+      "legacy_opts": {
+        "A": "等于零",
+        "B": "等于 -2 m·s⁻¹",
+        "C": "等于 2 m·s⁻¹",
+        "D": "不能确定"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "1",
+      "number": 20,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 4,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "一质点沿半径为 \\(R\\) 的圆周做匀速率运动，每 \\(t\\) 秒转一圈，在 \\(2t\\) 时间间隔中，其平均速度大小和平均速率大小分别为（ ）。",
+      "opts": {
+        "A": "\\(2\\pi R/t\\)，\\(2\\pi R/t\\)",
+        "B": "\\(0\\)，\\(2\\pi R/t\\)",
+        "C": "0，0",
+        "D": "\\(2\\pi R/t\\)，\\(0\\)"
+      },
+      "pdf_excerpt": "一质点沿半径为R的圆周做匀速率运动，每t秒转一圈，在2t时间间隔中，其平均速度 大小和平均速率大小分别为（ B ）. 2πR 2πR 2πR 2πR (A) , (B) 0, (C) 0,0 (D) ,0 t t t t   ",
+      "legacy_q": "一质点沿半径为 R 的圆周做匀速率运动，每 t 秒转一圈，在 2t 时间间隔中，其平均速度大小和平均速率大小分别为（ ）。",
+      "legacy_opts": {
+        "A": "2πR/t，2πR/t",
+        "B": "0，2πR/t",
+        "C": "0，0",
+        "D": "2πR/t，0"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 21,
+      "db_answer": "D",
+      "pdf_answer": "D",
+      "pdf_page": 4,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "质点做曲线运动，\\(\\vec r\\) 表示位置矢量，\\(\\vec v\\) 表示速度，\\(\\vec a\\) 表示加速度，\\(s\\) 表示路程，\\(a_\\tau\\) 表示切向加速度。下列表达式中正确的是：① \\(\\frac{d\\vec v}{dt}=\\vec a\\)，② \\(\\frac{d\\vec r}{dt}=\\vec v\\)，③ \\(\\frac{ds}{dt}=v\\)，④ \\(\\left|\\frac{d\\vec v}{dt}\\right|=a_\\tau\\)。",
+      "opts": {
+        "A": "只有 ①、④ 是对的",
+        "B": "只有 ②、④ 是对的",
+        "C": "只有 ② 是对的",
+        "D": "只有 ③ 是对的"
+      },
+      "pdf_excerpt": "质点做曲线运动，r表示位置矢量，v 表示速度，a表示加速度，s表示路程，a 表示 τ 切向加速度，下列表达式中（ D ）. ① dv/d t =a， ② dr/dt =v，  ③ ds/d t =v， ④ dv/dt =a ． τ (A) 只有①、④是对的． (B) 只有②、④是对的． (C) 只有②是对的． (D) 只有③是对的．",
+      "legacy_q": "质点做曲线运动，r⃗ 表示位置矢量，v⃗ 表示速度，a⃗ 表示加速度，s 表示路程，aτ 表示切向加速度。下列表达式中正确的是：①dv/dt=a，②dr/dt=v，③ds/dt=v，④|dv⃗/dt|=aτ。",
+      "legacy_opts": {
+        "A": "只有①、④是对的",
+        "B": "只有②、④是对的",
+        "C": "只有②是对的",
+        "D": "只有③是对的"
+      },
+      "legacy_answer": "D"
+    },
+    {
+      "chapter_id": "1",
+      "number": 22,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 4,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "在相对地面静止的坐标系内，A、B 二船都以 \\(2\\,\\mathrm{m/s}\\) 速率匀速行驶，A 船沿 \\(x\\) 轴正向，B 船沿 \\(y\\) 轴正向。在 A 船上的坐标系中，B 船的速度为（\\(\\mathrm{m/s}\\)）（ ）。",
+      "opts": {
+        "A": "\\(2\\vec i+2\\vec j\\)",
+        "B": "\\(-2\\vec i+2\\vec j\\)",
+        "C": "\\(-2\\vec i-2\\vec j\\)",
+        "D": "\\(2\\vec i-2\\vec j\\)"
+      },
+      "pdf_excerpt": "在相对地面静止的坐标系内，A、B 二船都以 2 m/s 速率匀速行驶，A 船沿 x 轴正向， B船沿y轴正向．今在A船上设置与静止坐标系方向相同的坐标系(x、y方向单位矢用 i、j 表 示)，那么在A船上的坐标系中，B船的速度（以m/s为单位）为 ( B ) (A) 2i+2j ． ( B) −2i+2j． (C) −2i−2j． (D) 2i−2j ．",
+      "legacy_q": "在相对地面静止的坐标系内，A、B 二船都以 2 m/s 速率匀速行驶，A 船沿 x 轴正向，B 船沿 y 轴正向。在 A 船上的坐标系中，B 船的速度为（m/s）（ ）。",
+      "legacy_opts": {
+        "A": "2i + 2j",
+        "B": "-2i + 2j",
+        "C": "-2i - 2j",
+        "D": "2i - 2j"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 23,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 4,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "text_diff",
+      "legacy_option_matches": {
+        "A": false,
+        "B": false,
+        "C": false,
+        "D": false
+      },
+      "issues": [],
+      "review": [
+        "LEGACY_OPTION_TEXT_DIFF_REVIEW",
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "质点 \\(p\\) 在一直线上运动，其坐标 \\(x\\) 与时间 \\(t\\) 的关系为 \\(x=-A\\sin(\\omega t)\\)（SI，\\(A\\) 为常数），则任意时刻 \\(t\\)，质点的加速度 \\(a\\) 为（ ）。",
+      "opts": {
+        "A": "\\(-A\\omega^2\\cos(\\omega t)\\)",
+        "B": "\\(A\\omega^2\\sin(\\omega t)\\)",
+        "C": "\\(-A\\omega^2\\sin(\\omega t)\\)",
+        "D": "\\(A\\omega^2\\cos(\\omega t)\\)"
+      },
+      "pdf_excerpt": "质点p在一直线上运动，其坐标x与时间t的关系为： x =－A sinωt，(SI) (A为常数)， 则在任意时刻ｔ，质点的加速度a为 ( B ) (A) −Aω(cid:2870)cos𝜔𝑡． (B) Aω(cid:2870)sin𝜔𝑡 . (C) −Aω(cid:2870)sin𝜔𝑡． (D) Aω(cid:2870)cos𝜔𝑡.",
+      "legacy_q": "质点 p 在一直线上运动，其坐标 x 与时间 t 的关系为 x = -A sin(ωt)（SI，A 为常数），则任意时刻 t，质点的加速度 a 为（ ）。",
+      "legacy_opts": {
+        "A": "-Aω² cos(ωt)",
+        "B": "Aω² sin(ωt)",
+        "C": "-Aω² sin(ωt)",
+        "D": "Aω² cos(ωt)"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 24,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 5,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "以下几种运动形式中，加速度保持不变的运动是（ ）。",
+      "opts": {
+        "A": "单摆的运动",
+        "B": "匀速率圆周运动",
+        "C": "抛体运动",
+        "D": "行星的椭圆轨道运动"
+      },
+      "pdf_excerpt": "以下几种运动形式中，加速度保持不变的运动是（ C ） (A) 单摆的运动． (B) 匀速率圆周运动． (C) 抛体运动． (D) 行星的椭圆轨道运动．",
+      "legacy_q": "以下几种运动形式中，加速度保持不变的运动是（ ）。",
+      "legacy_opts": {
+        "A": "单摆的运动",
+        "B": "匀速率圆周运动",
+        "C": "抛体运动",
+        "D": "行星的椭圆轨道运动"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "1",
+      "number": 25,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 5,
+      "option_order_status": "ok",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [],
+      "q": "一质点沿 \\(x\\) 轴作直线运动，其 \\(v-t\\) 曲线如题图所示。若 \\(t=0\\) 时质点位于坐标原点，则 \\(t=4.5\\,\\mathrm{s}\\) 时，质点在 \\(x\\) 轴上的位置为（ ）。",
+      "opts": {
+        "A": "\\(5\\,\\mathrm{m}\\)",
+        "B": "\\(-5\\,\\mathrm{m}\\)",
+        "C": "\\(2\\,\\mathrm{m}\\)",
+        "D": "\\(-2\\,\\mathrm{m}\\)"
+      },
+      "pdf_excerpt": "一质点沿x轴作直线运动，其v-t曲线如图所示，如t=0时，质点位于坐标原点，则t=4.5 s 时，质点在x轴上的位置为（ C ） (A) 5m (B) -5 m (C) 2m (D) -2 m",
+      "legacy_q": "一质点沿 x 轴作直线运动，其 v-t 曲线如题图所示。若 t=0 时质点位于坐标原点，则 t=4.5s 时，质点在 x 轴上的位置为（ ）。",
+      "legacy_opts": {
+        "A": "5 m",
+        "B": "-5 m",
+        "C": "2 m",
+        "D": "-2 m"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "1",
+      "number": 26,
+      "db_answer": "B",
+      "pdf_answer": "B",
+      "pdf_page": 5,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "下列说法哪一条正确？（ ）",
+      "opts": {
+        "A": "加速度恒定不变时，物体运动方向也不变",
+        "B": "运动物体速率不变时，速度可以变化",
+        "C": "平均速率总可以写成 \\((v_1+v_2)/2\\)",
+        "D": "平均速率等于平均速度的大小"
+      },
+      "pdf_excerpt": "下列说法哪一条正确？（ B ） (A) 加速度恒定不变时，物体运动方向也不变． (B) 运动物体速率不变时，速度可以变化． (C) 平均速率表达式总可以写成 v(cid:3364) =(cid:4666)𝑣 +𝑣 (cid:4667)/2 (v 、v 分别为初、末速率)． (cid:2869) (cid:2870) 1 2 (D) 平均速率等于平均速度的大小．",
+      "legacy_q": "下列说法哪一条正确？（ ）",
+      "legacy_opts": {
+        "A": "加速度恒定不变时，物体运动方向也不变",
+        "B": "运动物体速率不变时，速度可以变化",
+        "C": "平均速率总可以写成 (v₁+v₂)/2",
+        "D": "平均速率等于平均速度的大小"
+      },
+      "legacy_answer": "B"
+    },
+    {
+      "chapter_id": "1",
+      "number": 27,
+      "db_answer": "C",
+      "pdf_answer": "C",
+      "pdf_page": 5,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "齿轮齿尖 P 做半径为 \\(R\\) 的圆周运动，路程 \\(s=v_0t+\\frac{1}{2}bt^2\\)，其中 \\(v_0\\) 和 \\(b\\) 都为正的常量，则 \\(t\\) 时刻齿尖 P 的速度和加速度大小分别为（ ）。",
+      "opts": {
+        "A": "\\(v=v_0-bt,\\ a=\\sqrt{b^2+\\frac{(v_0+bt)^4}{R^2}}\\)",
+        "B": "\\(v=v_0+bt,\\ a=\\sqrt{b^2+\\frac{(v_0-bt)^4}{R^2}}\\)",
+        "C": "\\(v=v_0+bt,\\ a=\\sqrt{b^2+\\frac{(v_0+bt)^4}{R^2}}\\)",
+        "D": "\\(v=v_0-bt,\\ a=\\sqrt{b^2+\\frac{(v_0-bt)^4}{R^2}}\\)"
+      },
+      "pdf_excerpt": "在一个转动的齿轮上，一个齿尖 P 做半径为 R 的圆周运动，其路程 S 随时间的变化规 律为𝑠 =𝑣 𝑡+ (cid:2869) 𝑏𝑡(cid:2870)，其中v 和b都是正的常量，则t时刻齿尖P的速度和加速度大小分别 (cid:2868) 0 (cid:2870) 为 ( C ) (A) 𝑣 =𝑣 −𝑏𝑡, 𝑎 =(cid:3495)𝑏(cid:2870)+ (cid:4666)(cid:3049)(cid:3116)(cid:2878)(cid:3029)(cid:3047)(cid:4667)(cid:3120) ． (cid:2868) (cid:3019)(cid:3118) (B) 𝑣 =𝑣 +𝑏𝑡, 𝑎 =(cid:3495)𝑏(cid:2870)+ (cid:4666)(cid:3049)(cid:3116)(cid:2879)(cid:3029)(cid:3047)(cid:4667)(cid:3120) (cid:2868) (cid:3019)(cid:3118) (C) 𝑣 =𝑣 +𝑏𝑡, 𝑎 =(cid:3495)𝑏(cid:2870)+ (cid:4666)(cid:3049)(cid:3116)(cid:2878)(cid:3029)(cid:3047)(cid:4667)(cid:3120) (cid:2868) (cid:3019)(cid:3118) (D). 𝑣 =𝑣 −𝑏𝑡, 𝑎 =(cid:3495)𝑏(cid:2870)+ (cid:4666)(cid:3049)(cid:3116)(cid:2879)(cid:3029)(cid:3047)(cid:4667)(cid:3120) (cid:2868) (cid:3019)(cid:3118)",
+      "legacy_q": "齿轮齿尖 P 做半径为 R 的圆周运动，路程 s = v₀t + (1/2)bt²，其中 v₀ 和 b 都为正的常量，则 t 时刻齿尖 P 的速度和加速度大小分别为（ ）。",
+      "legacy_opts": {
+        "A": "v=v₀-bt，a=√[b²+(v₀+bt)⁴/R²]",
+        "B": "v=v₀+bt，a=√[b²+(v₀-bt)⁴/R²]",
+        "C": "v=v₀+bt，a=√[b²+(v₀+bt)⁴/R²]",
+        "D": "v=v₀-bt，a=√[b²+(v₀-bt)⁴/R²]"
+      },
+      "legacy_answer": "C"
+    },
+    {
+      "chapter_id": "1",
+      "number": 28,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 5,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "A、B 两码头相距 \\(1\\,\\mathrm{km}\\)。甲划船往返，船相对河水速度 \\(4\\,\\mathrm{km/h}\\)；乙沿岸步行往返，步行速度 \\(4\\,\\mathrm{km/h}\\)。河水流速 \\(2\\,\\mathrm{km/h}\\)，方向从 A 到 B。下列结论正确的是（ ）。",
+      "opts": {
+        "A": "甲比乙晚 10 分钟回到 A",
+        "B": "甲和乙同时回到 A",
+        "C": "甲比乙早 10 分钟回到 A",
+        "D": "甲比乙早 2 分钟回到 A"
+      },
+      "pdf_excerpt": "一条河设置A、B两个码头，相距1km，甲、乙两人需要从码头A到码头B，再由B返 回。甲划船前去，船相对河水的速度为4km/h；而乙沿岸步行，步行速度也为4km/h。如河 水流速为 2km/h，方向从A到B。下述结论中哪个正确？ ( A ) (A) 甲比乙晚10分钟回到A (B) 甲和乙同时回到 A (C) 甲比乙早10分钟回到A (D) 甲比乙早 2分钟回到A",
+      "legacy_q": "A、B 两码头相距 1 km。甲划船往返，船相对河水速度 4 km/h；乙沿岸步行往返，步行速度 4 km/h。河水流速 2 km/h，方向从 A 到 B。下列结论正确的是（ ）。",
+      "legacy_opts": {
+        "A": "甲比乙晚 10 分钟回到 A",
+        "B": "甲和乙同时回到 A",
+        "C": "甲比乙早 10 分钟回到 A",
+        "D": "甲比乙早 2 分钟回到 A"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "1",
+      "number": 29,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 6,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "质点沿半径 \\(R\\) 作圆周运动，运动方程为 \\(\\theta=3+2t^2\\)（SI），则 \\(t\\) 时刻质点法向加速度大小和角加速度分别为（ ）。",
+      "opts": {
+        "A": "\\(a_n=16Rt^2,\\ \\beta=4\\)",
+        "B": "\\(a_n=8Rt^2,\\ \\beta=3\\)",
+        "C": "\\(a_n=8Rt^2,\\ \\beta=4\\)",
+        "D": "\\(a_n=16Rt^2,\\ \\beta=3\\)"
+      },
+      "pdf_excerpt": "质点沿半径R作圆周运动，运动方程为 θ=3+2t(cid:2870)（SI），则t时刻质点法向加速度 大小和角加速度分别为 ( A ) (A) a =16𝑅𝑡(cid:2870)，β=4 (B) a =8𝑅𝑡(cid:2870)，β=3. (cid:3041) (cid:3041) (C) a =8𝑅𝑡(cid:2870)，β=4 (D) a =16𝑅𝑡(cid:2870)，β=3 (cid:3041) (cid:3041)",
+      "legacy_q": "质点沿半径 R 作圆周运动，运动方程为 θ = 3 + 2t²（SI），则 t 时刻质点法向加速度大小和角加速度分别为（ ）。",
+      "legacy_opts": {
+        "A": "an = 16Rt²，β = 4",
+        "B": "an = 8Rt²，β = 3",
+        "C": "an = 8Rt²，β = 4",
+        "D": "an = 16Rt²，β = 3"
+      },
+      "legacy_answer": "A"
+    },
+    {
+      "chapter_id": "1",
+      "number": 30,
+      "db_answer": "A",
+      "pdf_answer": "A",
+      "pdf_page": 6,
+      "option_order_status": "partial_match",
+      "legacy_option_status": "ok",
+      "legacy_option_matches": {
+        "A": true,
+        "B": true,
+        "C": true,
+        "D": true
+      },
+      "issues": [],
+      "review": [
+        "OPTION_ORDER_PARTIAL_MATCH"
+      ],
+      "q": "某物体的运动规律为 \\(\\frac{dv}{dt}=-kv^2t\\)，\\(k\\) 为大于零的常量。当 \\(t=0\\) 时初速为 \\(v_0\\)，则速度 \\(v\\) 与时间 \\(t\\) 的函数关系是（ ）。",
+      "opts": {
+        "A": "\\(\\frac{1}{v}=\\frac{kt^2}{2}+\\frac{1}{v_0}\\)",
+        "B": "\\(v=-\\frac{kt^2}{2}+v_0\\)",
+        "C": "\\(v=\\frac{kt^2}{2}+v_0\\)",
+        "D": "\\(\\frac{1}{v}=-\\frac{kt^2}{2}+\\frac{1}{v_0}\\)"
+      },
+      "pdf_excerpt": "某物体的运动规律为(cid:3031)(cid:3049) =−𝑘𝑣(cid:2870)𝑡，式中的k为大于零的常量．当t=0时，初速为v ，则 0 (cid:3031)(cid:3047) 速度v与时间t的函数关系是 ( A ) (A) (cid:2869) = (cid:3038)(cid:3047)(cid:3118) + (cid:2869) (B) 𝑣 = − (cid:3038)(cid:3047)(cid:3118) +𝑣 (cid:2868) (cid:3049) (cid:2870) (cid:3049) (cid:2870) (cid:3116) (C) 𝑣 = (cid:3038)(cid:3047)(cid:3118) +𝑣 (D) (cid:2869) = − (cid:3038)(cid:3047)(cid:3118) + (cid:2869) (cid:2868) (cid:2870) (cid:3049) (cid:2870) (cid:3049) (cid:3116)",
+      "legacy_q": "某物体的运动规律为 dv/dt = -kv²t，k 为大于零的常量。当 t=0 时初速为 v₀，则速度 v 与时间 t 的函数关系是（ ）。",
+      "legacy_opts": {
+        "A": "1/v = kt²/2 + 1/v₀",
+        "B": "v = -kt²/2 + v₀",
+        "C": "v = kt²/2 + v₀",
+        "D": "1/v = -kt²/2 + 1/v₀"
+      },
+      "legacy_answer": "A"
+    }
+  ]
+}

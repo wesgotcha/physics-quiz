@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chapter 4 Audit</title>
+<style>
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f6f7f9;color:#172033}
+main{max-width:1180px;margin:0 auto;padding:24px}
+h1{font-size:24px;margin:0 0 12px}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:16px 0 22px}
+.metric{background:white;border:1px solid #dde2ea;border-radius:8px;padding:12px}
+.metric b{display:block;font-size:20px;margin-top:4px}
+.q{background:white;border:1px solid #dde2ea;border-radius:8px;margin:14px 0;padding:14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tag{font-size:12px;border-radius:999px;padding:3px 8px;background:#edf2f7}
+.bad{background:#ffe8e8;color:#8a1f1f}.warn{background:#fff4cc;color:#765700}.ok{background:#e7f6ec;color:#166534}
+.gate{background:#fff;border:1px solid #dde2ea;border-radius:8px;padding:12px;margin:0 0 14px;line-height:1.55}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+button{border:1px solid #cbd5e1;background:#fff;border-radius:6px;padding:7px 10px;cursor:pointer}
+button.active{background:#172033;color:white;border-color:#172033}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.opts div{margin:6px 0;line-height:1.55}
+.pdf{font-size:13px;line-height:1.55;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:10px;white-space:pre-wrap}
+@media(max-width:780px){.grid{grid-template-columns:1fr}}
+</style>
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]'],['$$','$$']],processEscapes:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+function setFilter(kind){
+  document.querySelectorAll('.toolbar button').forEach(btn=>btn.classList.toggle('active',btn.dataset.filter===kind));
+  document.querySelectorAll('.q').forEach(card=>{
+    const tags=(card.dataset.review||'').split(',');
+    const show=kind==='all'||tags.includes(kind);
+    card.style.display=show?'block':'none';
+  });
+}
+window.addEventListener('DOMContentLoaded',()=>setFilter('all'));
+</script>
+</head>
+<body>
+<main>
+<h1>第 4 章审核：第四章：机械振动机械波</h1>
+<div class="summary">
+<div class="metric">题数<b>37</b></div>
+<div class="metric">PDF 对照<b>37</b></div>
+<div class="metric">硬问题<b>0</b></div>
+<div class="metric">人工复核<b>20</b></div>
+<div class="metric">自动门<b>PASS</b></div>
+</div>
+<div class="gate">
+<b>人工状态：待放行。</b>
+自动门只证明题数、答案、旧库选项顺序、JSON 和 MathJax 配置没有硬错误；本页仍需人工确认公式视觉渲染、图题含义和 PDF 摘录中的可疑排版。确认本章通过后，才开始下一章。
+</div>
+<div class="toolbar">
+<button data-filter="all" onclick="setFilter('all')">全部待审</button>
+<button data-filter="DIAGRAM_NEEDS_VISUAL_REVIEW" onclick="setFilter('DIAGRAM_NEEDS_VISUAL_REVIEW')">图题</button>
+<button data-filter="OPTION_ORDER_PARTIAL_MATCH" onclick="setFilter('OPTION_ORDER_PARTIAL_MATCH')">选项弱匹配</button>
+<button data-filter="OPTION_ORDER_NEEDS_MANUAL_REVIEW" onclick="setFilter('OPTION_ORDER_NEEDS_MANUAL_REVIEW')">选项需人工</button>
+<button data-filter="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK" onclick="setFilter('PDF_OPTION_ORDER_CONFLICT_LEGACY_OK')">PDF/旧库冲突</button>
+</div>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q1</span>
+<span class="tag">PDF p.16</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 两个同方向同周期简谐运动其合振动的振幅为 （ ）</p>
+<div class="opts">
+<div><b>A.</b> $ \Phi_2 - \Phi_1 = 0 $ 时， $ A = A_2 - A_1 $；</div>
+<div><b>B.</b> $ \Phi_2 - \Phi_1 = \pi/2 $ 时， $ A = A_2 - A_1 $；</div>
+<div><b>C.</b> $ \Phi_2 - \Phi_1 = 0 $ 时， $ A = A_2 + A_1 $；</div>
+<div><b>D.</b> $ \Phi_2 - \Phi_1 = \pi $ 时， $ A = A_2 + A_1 $ 。</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">两个同方向同周期简谐运动其合振动的振幅为 （ C ） （A）Ф -Ф =0时，A=A -A ； （B）Ф -Ф =π/2时，A=A -A ； 2 1 2 1 2 1 2 1 （C）Ф -Ф =0时，A=A +A ； （D）Ф -Ф =π时，A=A +A 。 2 1 2 1 2 1 2 1</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="LEGACY_OPTION_TEXT_DIFF_REVIEW,OPTION_ORDER_NEEDS_MANUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q2</span>
+<span class="tag">PDF p.16</span>
+<span class="tag">答案 D / PDF D</span>
+<span class="tag warn">LEGACY_OPTION_TEXT_DIFF_REVIEW</span><span class="tag warn">OPTION_ORDER_NEEDS_MANUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 如图所示，两列波长为 $ \lambda $ 的相干波在 P 点相遇， $ S_1 $ 点的初位相是 $ \phi_1 $， $ S_1 $ 到 P 点的距离是 $ r_1 $； $ S_2 $ 点的初位相是 $ \phi_2 $， $ S_2 $ 到 P 点的距离是 $ r_2 $，以 k 代表零或正、负整数，则 P 点是干涉极大的条件为（ ）。</p>
+<div class="opts">
+<div><b>A.</b> $ r_{2}-r_{1}=k\lambda $</div>
+<div><b>B.</b> $ \phi_{2}-\phi_{1}=2k\pi $</div>
+<div><b>C.</b> $ \phi_{2}-\phi_{1}+(2\pi/\lambda)(r_{2}-r_{1})=2k\pi $</div>
+<div><b>D.</b> $ \phi_{2}-\phi_{1}+(2\pi/\lambda)(r_{1}-r_{2})=2k\pi $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">如图所示，两列波长为 λ 的相干波在 P 点相遇，S 点的初位相是 φ ，S 到 P 点的距 1 1 1 离是 r ；S 点的初位相是 φ ，S 到 P 点的距离是 r ，以 k代表零或正、负整数，则 P 1 2 2 2 2 点是干涉极大的条件为( D )。 r −r =kλ； 2 1 φ−φ=2kπ； 2 1 2π φ−φ+ (r −r)=2kπ； 2 1 λ 2 1 2π φ−φ+ (r −r)=2kπ 2 1 λ 1 2</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK">
+<div class="meta">
+<span class="tag warn">Q5</span>
+<span class="tag">PDF p.17</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">PDF_OPTION_ORDER_CONFLICT_LEGACY_OK</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 弹簧振子在光滑水平面上作简谐振动时，弹性力在半个周期内所作的功是（ ）。</p>
+<div class="opts">
+<div><b>A.</b> 0</div>
+<div><b>B.</b> $ \frac{1}{2}kA^{2} $</div>
+<div><b>C.</b> $ \frac{1}{4}kA^{2} $</div>
+<div><b>D.</b> $ kA^{2} $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">弹簧振子在光滑水平面上作简谐振动时，弹性力在半个周期内所作的功是( A )。 1kA2 1kA2 kA2 （A） 0 （B）2 （C）4 （D） y =0.05cos(6πt+0.06πx)</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q6</span>
+<span class="tag">PDF p.17</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 机械波表达式是 $ y = 0.05\cos(6\pi t + 0.06\pi x) $，式中 y 和 x 的单位是 m，t 的单位是 s，则下列结论正确的是：（ ）</p>
+<div class="opts">
+<div><b>A.</b> 波长为 5m</div>
+<div><b>B.</b> 波速为 10m·s^{-1}</div>
+<div><b>C.</b> 周期为 $ \frac{1}{3}s $</div>
+<div><b>D.</b> 波沿 x 正方向传播</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">机械波表达式是 ，式中 y 和 x 的单位是 m，t 的单位是 s， 则 下列结论正确的是： （ C ） 1 s （A）波长为5m （B）波速为10m⋅s-1 （C）周期为 3 （D）波沿x正方向传播</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH,DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q7</span>
+<span class="tag">PDF p.17</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span><span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一横波以速度 u 沿 x 轴负方向传播，t 时刻波形图如图所示，则该时刻（ ） （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> A 点相位为 $ \pi $；</div>
+<div><b>B.</b> B 点静止不动；</div>
+<div><b>C.</b> C 点相位为 $ \frac{3\pi}{2} $;</div>
+<div><b>D.</b> D 点向上运动。</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一横波以速度u沿x轴负方向传播，t时刻波形图如图所示，则该时刻 （ C ） π (A) A点相位为 ； (B) B点静止不动； 3π (C) C点相位为 2 ； (D) D点向上运动。</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="LEGACY_OPTION_TEXT_DIFF_REVIEW,OPTION_ORDER_PARTIAL_MATCH,DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q9</span>
+<span class="tag">PDF p.18</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">LEGACY_OPTION_TEXT_DIFF_REVIEW</span><span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span><span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 有一简谐振动如图所示，其对应的振动方程应该是（ ） （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> $ 10\cos(\frac{5}{6}\pi t - \frac{5}{3}\pi) $</div>
+<div><b>B.</b> $ 10\cos(\frac{5}{3}\pi t + \frac{1}{6}\pi) $</div>
+<div><b>C.</b> $ 10\cos(\frac{5}{6}\pi t + \frac{5}{3}\pi) $</div>
+<div><b>D.</b> $ 10\cos(\frac{5}{3}\pi t - \frac{5}{3}\pi) $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">有一简谐振动如图所示，其对应的振动方程应该是 ( C ) 5 5 5 1 10cos( πt− π) 10cos( πt+ π) 6 3 3 6 (A) (B) 5 5 5 5 10cos( πt+ π) 10cos( πt− π) 6 3 3 3 (C) (D) E</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK">
+<div class="meta">
+<span class="tag warn">Q10</span>
+<span class="tag">PDF p.18</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">PDF_OPTION_ORDER_CONFLICT_LEGACY_OK</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一弹簧振子作简谐振动，总能量为 $ E_{1} $，如果简谐振动振幅增加为原来的两倍，重物的质量增为原来的四倍，则它的总能量 $ E_{1} $ 变为（ ）。</p>
+<div class="opts">
+<div><b>A.</b> $ 4E_{1} $</div>
+<div><b>B.</b> $ E_{1}/2 $</div>
+<div><b>C.</b> $ 2E_{1} $</div>
+<div><b>D.</b> $ E_{1}/4 $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一弹簧振子作简谐振动，总能量为 1，如果简谐振动振幅增加为原来的两倍，重物的 E 质量增为原来的四倍，则它的总能量 1变为( A )。 4E E /2 2E E /4 （A） 1 （B） 1 （C） 1 （D） 1</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q11</span>
+<span class="tag">PDF p.18</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一质点作简谐振动，其振动方程为 $ X=4.0\cos\left(\pi t+\pi/4\right) $ 则该振动的振幅、初相位分别为 （ ）</p>
+<div class="opts">
+<div><b>A.</b> $ 4.0m，\pi/4 rad $</div>
+<div><b>B.</b> $ 4.0m，-\pi/4 rad $</div>
+<div><b>C.</b> $ 8.0m，\pi/4 rad $</div>
+<div><b>D.</b> $ 4.0m，-\pi/4 rad $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一质点作简谐振动，其振动方程为X=4.0cos（πt +π/4）则该振动的振幅、初相位分别为 （ A ） （A） 4.0m π/4 rad ； （B）4.0m －π/4 rad ； （C） 8.0m π/4 rad ； （D）4.0m －π/4 rad 。</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK,DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q12</span>
+<span class="tag">PDF p.18</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">PDF_OPTION_ORDER_CONFLICT_LEGACY_OK</span><span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一列简谐横波沿 x 轴负方向传播，a、b 为波上的两个质元，某时刻波形如左图所示，右图是从此时刻开始计时，a、b 两个质元之一的振动图像，下列判断正确的是（ ） （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> 波速为 $ 10 \, m/s $，右图是质元 b 的振动图像；</div>
+<div><b>B.</b> 波速为 $ 10 \, m/s $，右图是质元 a 的振动图像；</div>
+<div><b>C.</b> 波速为 $ 12.5 \, m/s $，右图是质元 b 的振动图像；</div>
+<div><b>D.</b> 波速为 $ 12.5 \, m/s $，右图是质元 a 的振动图像。</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一列简谐横波沿x轴负方向传播，a、b为波上的两个质元，某时刻波形如左图所示，右 图是从此时刻开始计时，a、b两个质元之一的振动图像，下列判断正确的是( A ) （A） 波速为10m/s，右图是质元b的振动图像； （B） 波速为10m/s，右图是质元a的振动图像； （C） 波速为12.5m/s，右图是质元b的振动图像； （D） 波速为12.5m/s, 右图是质元a的振动图像。</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q16</span>
+<span class="tag">PDF p.19</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 如图所示，弹簧振子以 O 为平衡位置，在 a 和 b 之间做简谐运动，则（ ） （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> 在 a 点时加速度最大，速度最大</div>
+<div><b>B.</b> 在 O 点时速度最大，位移最大</div>
+<div><b>C.</b> 在 b 点时位移最大，回复力最大</div>
+<div><b>D.</b> 在 b 点时回复力最大，速度最大</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">如图所示，弹簧振子以O为平衡位置，在a和b之间做简谐运动，则（ C ） (A) 在a点时加速度最大，速度最大 (B) 在O点时速度最大，位移最大 (C) 在b点时位移最大，回复力最大 (D) 在b点时回复力最大，速度最大</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q19</span>
+<span class="tag">PDF p.19</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 有一弹簧振子由平衡位置开始做简谐运动，其周期为 T. 则振子在 $ t_{1} $ 时刻 $ t_{1} &lt; 4 $ 与 $ t_{1} + \frac{T}{2} $ 时刻相比较，相同的物理量是（ ）</p>
+<div class="opts">
+<div><b>A.</b> 振子的动能</div>
+<div><b>B.</b> 振子的动量</div>
+<div><b>C.</b> 振子的速度</div>
+<div><b>D.</b> 振子的加速度</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">有一弹簧振子由平衡位置开始做简谐运动，其周期为 T．则振子在 t 1时刻 1 4 与 T t + 1 2 时刻相比较，相同的物理量是（ A ） (A) 振子的动能 (B) 振子的动量 (C) 振子的速度 (D) 振子的加速度</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q20</span>
+<span class="tag">PDF p.19</span>
+<span class="tag">答案 D / PDF D</span>
+<span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 某一质点作简谐运动，其位移 x 与时间 t 的关系曲线如图所示.由图可知，在 t =3s 时， （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> 位移为负的最大值，加速度为正的最大值</div>
+<div><b>B.</b> 位移为正的最大值，加速度为负的最大值</div>
+<div><b>C.</b> 速度为负的最大值，加速度为零</div>
+<div><b>D.</b> 速度为正的最大值，加速度为零</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">某一质点作简谐运动，其位移x与时间t的关系曲线如图所示.由图可知，在t =3s时， 质点的（ D ） (A) 位移为负的最大值， 加速度为正的最大值 (B) 位移为正的最大值， 加速度为负的最大值 (C) 速度为负的最大值， 加速度为零 (D) 速度为正的最大值， 加速度为零</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_NEEDS_MANUAL_REVIEW,DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q22</span>
+<span class="tag">PDF p.20</span>
+<span class="tag">答案 D / PDF D</span>
+<span class="tag warn">OPTION_ORDER_NEEDS_MANUAL_REVIEW</span><span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一列简谐横波沿 x 轴传播，质点 A 与质点 B 的平衡位置相距 1m。t=0 时刻的波形如图所示，质点 A 的速度沿 y 轴正方向；t=0.02s 时，质点 A 第一次到达正向最大位移处。由此可知下列说法错误的是（ ） （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> 此波的传播速度为 $ 25 \, m/s $</div>
+<div><b>B.</b> 此波沿 x 轴负方向传播</div>
+<div><b>C.</b> t=0.04s 时刻，质点 B 又回到平衡位置</div>
+<div><b>D.</b> 从 t=0 时刻起，经过 0.04s，质点 B 沿波传播方向迁移到了 A 点</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一列简谐横波沿 x 轴传播，质点 A与质点 B的平衡位置相距 1m。t=0 时刻的波形如图 所示，质点A的速度沿y轴正方向；t=0.02s时，质点A第一次到达正向最大位移处.由此可 知下列说法错误的是（ D ） y (Ａ) 此波的传播速度为25m/s (Ｂ) 此波沿x轴负方向传播 B A O x (Ｃ) t=0.04s时刻，质点 B又回到平衡位置 (Ｄ) 从t=0时刻起，经过0.04s，质点B沿波传播方向 迁移到了A点 π T X = Acos(ωt + ) t = 4 4</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="LEGACY_OPTION_TEXT_DIFF_REVIEW,OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q23</span>
+<span class="tag">PDF p.20</span>
+<span class="tag">答案 D / PDF D</span>
+<span class="tag warn">LEGACY_OPTION_TEXT_DIFF_REVIEW</span><span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 某一物体做简谐振动，振动方程为 $ X = A\cos(\omega t + \frac{\pi}{4}) $，在 $ t = \frac{T}{4} $ 时刻物体的加速度为 （ ）。</p>
+<div class="opts">
+<div><b>A.</b> $ \frac{-\sqrt{3}A\omega^2}{2} $</div>
+<div><b>B.</b> $ \frac{\sqrt{3}A\omega^2}{2} $</div>
+<div><b>C.</b> $ \frac{-\sqrt{2}A\omega^2}{2} $</div>
+<div><b>D.</b> $ \frac{\sqrt{2}A\omega^2}{2} $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">某一物体做简谐振动，振动方程为 ，在 时刻物体的加速度为 （ D ）。 − 3Aω2 3Aω2 − 2Aω2 2Aω2 2 2 2 2 (A) (B) (C) (D)</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q25</span>
+<span class="tag">PDF p.20</span>
+<span class="tag">答案 B / PDF B</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一质点做简谐振动，振幅为 $ A $，在起始时刻质点的位移为 $ -\frac{A}{2} $，且向 x 轴正方向运动，代表此简谐振动的旋转矢量图为（ ）.</p>
+<div class="opts">
+<div><b>A.</b> 图 A</div>
+<div><b>B.</b> 图 B</div>
+<div><b>C.</b> 图 C</div>
+<div><b>D.</b> 图 D</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一质点做简谐振动，振幅为 A，在起始时刻质点的位移为− ，且向 x 轴正方向运动， 2 代表此简谐振动的旋转矢量图为（ B ）. A O O x x A (A) (B) A O O x x A (C) (D)</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH,DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q26</span>
+<span class="tag">PDF p.20</span>
+<span class="tag">答案 B / PDF B</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span><span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 两个同周期简谐振动曲线如下图所示，振动曲线1的相位比振动曲线2的相位（ ）. （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> 落后 $ \frac{\pi}{2} $</div>
+<div><b>B.</b> 超前 $ \frac{\pi}{2} $</div>
+<div><b>C.</b> 落后 $ \pi $</div>
+<div><b>D.</b> 超前 $ \pi $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">两个同周期简谐振动曲线如下图所示，振动曲线1的相位比振动曲线2的相位（ B ）. π π （A）落后 （B）超前 2 2 （C）落后π （D）超前π</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="LEGACY_OPTION_TEXT_DIFF_REVIEW">
+<div class="meta">
+<span class="tag warn">Q28</span>
+<span class="tag">PDF p.21</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">LEGACY_OPTION_TEXT_DIFF_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 当质点以频率 $ \nu $ 做简谐振动时，它的动能的变化频率为 （ ）</p>
+<div class="opts">
+<div><b>A.</b> $ v/2 $</div>
+<div><b>B.</b> v</div>
+<div><b>C.</b> 2v</div>
+<div><b>D.</b> 4v</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">当质点以频率 做简谐振动时，它的动能的变化频率为 （ C ） （A）v/2 （B）v （C）2v （D）4v</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="LEGACY_OPTION_TEXT_DIFF_REVIEW,OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q29</span>
+<span class="tag">PDF p.21</span>
+<span class="tag">答案 D / PDF D</span>
+<span class="tag warn">LEGACY_OPTION_TEXT_DIFF_REVIEW</span><span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 谐振动过程中，动能和势能相等的位置的位移等于（ ）</p>
+<div class="opts">
+<div><b>A.</b> $ \pm \frac{A}{4} $</div>
+<div><b>B.</b> $ \pm \frac{A}{2} $</div>
+<div><b>C.</b> $ \pm \frac{\sqrt{3}A}{2} $</div>
+<div><b>D.</b> $ \pm \frac{\sqrt{2}A}{2} $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">谐振动过程中，动能和势能相等的位置的位移等于 （ D ） A A 3A 2A ± ± ± ± 4 2 2 2 (A) (B) (C) (D)</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK">
+<div class="meta">
+<span class="tag warn">Q33</span>
+<span class="tag">PDF p.21</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">PDF_OPTION_ORDER_CONFLICT_LEGACY_OK</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 两个同方向同频率的简谐振动，其合振动的振幅为 20cm，合振动与第一个简谐振动的相位差为 $ \varphi_1 - \varphi_2 = \frac{\pi}{6} $。若第一个简谐振动的振幅为 $ 10\sqrt{3} $ cm，则第二个简谐振动的振幅为（ ）m。(B)0.1 (C)0.2 (D)0.01</p>
+<div class="opts">
+<div><b>A.</b> 0.1</div>
+<div><b>B.</b> 0.5</div>
+<div><b>C.</b> 0.2</div>
+<div><b>D.</b> 0.01</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">两个同方向同频率的简谐振动，其合振动的振幅为 20cm，合振动与第一个简谐振动的 相位差为 φ −𝜑 = (cid:3095)。若第一个简谐振动的振幅为10√3 cm，则第二个简谐振动的振幅为 (cid:2869) (cid:2870) (cid:2874) （ A）m。 （A） 0.1 （B） 0.5 （C） 0.2 （D） 0.01</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="LEGACY_OPTION_TEXT_DIFF_REVIEW,OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q36</span>
+<span class="tag">PDF p.22</span>
+<span class="tag">答案 B / PDF B</span>
+<span class="tag warn">LEGACY_OPTION_TEXT_DIFF_REVIEW</span><span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 两个质点各自作简谐振动，它们的振幅相同、周期相同。第一个质点的振动方程为 $ x_{1} = A \cos(\omega t + \alpha) $，当第一个质点从相对于其平衡位置的正位移处回到平衡位置时，第二个质点正在最大正位移处。则第二个质点的振动方程为（ ）。</p>
+<div class="opts">
+<div><b>A.</b> $ x_{2}=A\cos\left(\omega t+\alpha+\frac{1}{2}\pi\right) $</div>
+<div><b>B.</b> $ x_{2}=A\cos\left(\omega t+\alpha-\frac{1}{2}\pi\right) $</div>
+<div><b>C.</b> $ x_{2}=A\cos\left(\omega t+\alpha-\frac{3}{2}\pi\right) $</div>
+<div><b>D.</b> $ x_{2}=A\cos\left(\omega t+\alpha+\pi\right) $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">两个质点各自作简谐振动,它们的振幅相同、周期相同。第一个质点的振动方程为 𝑥 = (cid:2869) 𝐴𝑐𝑜𝑠(cid:4666)𝜔𝑡+𝛼(cid:4667) ，当第一个质点从相对于其平衡位置的正位移处回到平衡位置时,第二个质点 正在最大正位移处。则第二个质点的振动方程为( B )。 （A） 𝑥 =𝐴𝑐𝑜𝑠(cid:4672)𝜔𝑡+𝛼+ (cid:2869) 𝜋(cid:4673) （B）𝑥 =𝐴𝑐𝑜𝑠(cid:4672)𝜔𝑡+𝛼− (cid:2869) 𝜋(cid:4673) (cid:2870) (cid:2870) (cid:2870) (cid:2870) （C） 𝑥 =𝐴𝑐𝑜𝑠(cid:4672)𝜔𝑡+𝛼− (cid:2871) 𝜋(cid:4673) （D）𝑥 =𝐴𝑐𝑜𝑠(cid:4666)𝜔𝑡+𝛼+𝜋(cid:4667) (cid:2870) (cid:2870) (cid:2870)</div>
+</div>
+</div>
+</section>
+</main>
+</body>
+</html>

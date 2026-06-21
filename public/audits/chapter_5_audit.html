@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chapter 5 Audit</title>
+<style>
+body{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f6f7f9;color:#172033}
+main{max-width:1180px;margin:0 auto;padding:24px}
+h1{font-size:24px;margin:0 0 12px}
+.summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:16px 0 22px}
+.metric{background:white;border:1px solid #dde2ea;border-radius:8px;padding:12px}
+.metric b{display:block;font-size:20px;margin-top:4px}
+.q{background:white;border:1px solid #dde2ea;border-radius:8px;margin:14px 0;padding:14px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tag{font-size:12px;border-radius:999px;padding:3px 8px;background:#edf2f7}
+.bad{background:#ffe8e8;color:#8a1f1f}.warn{background:#fff4cc;color:#765700}.ok{background:#e7f6ec;color:#166534}
+.gate{background:#fff;border:1px solid #dde2ea;border-radius:8px;padding:12px;margin:0 0 14px;line-height:1.55}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+button{border:1px solid #cbd5e1;background:#fff;border-radius:6px;padding:7px 10px;cursor:pointer}
+button.active{background:#172033;color:white;border-color:#172033}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.opts div{margin:6px 0;line-height:1.55}
+.pdf{font-size:13px;line-height:1.55;background:#f8fafc;border:1px solid #e2e8f0;border-radius:6px;padding:10px;white-space:pre-wrap}
+@media(max-width:780px){.grid{grid-template-columns:1fr}}
+</style>
+<script>
+window.MathJax={tex:{inlineMath:[['\\(','\\)'],['$','$']],displayMath:[['\\[','\\]'],['$$','$$']],processEscapes:true},options:{skipHtmlTags:['script','noscript','style','textarea','pre','code']}};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+function setFilter(kind){
+  document.querySelectorAll('.toolbar button').forEach(btn=>btn.classList.toggle('active',btn.dataset.filter===kind));
+  document.querySelectorAll('.q').forEach(card=>{
+    const tags=(card.dataset.review||'').split(',');
+    const show=kind==='all'||tags.includes(kind);
+    card.style.display=show?'block':'none';
+  });
+}
+window.addEventListener('DOMContentLoaded',()=>setFilter('all'));
+</script>
+</head>
+<body>
+<main>
+<h1>第 5 章审核：第五章：气体动理论</h1>
+<div class="summary">
+<div class="metric">题数<b>30</b></div>
+<div class="metric">PDF 对照<b>30</b></div>
+<div class="metric">硬问题<b>0</b></div>
+<div class="metric">人工复核<b>15</b></div>
+<div class="metric">自动门<b>PASS</b></div>
+</div>
+<div class="gate">
+<b>人工状态：待放行。</b>
+自动门只证明题数、答案、旧库选项顺序、JSON 和 MathJax 配置没有硬错误；本页仍需人工确认公式视觉渲染、图题含义和 PDF 摘录中的可疑排版。确认本章通过后，才开始下一章。
+</div>
+<div class="toolbar">
+<button data-filter="all" onclick="setFilter('all')">全部待审</button>
+<button data-filter="DIAGRAM_NEEDS_VISUAL_REVIEW" onclick="setFilter('DIAGRAM_NEEDS_VISUAL_REVIEW')">图题</button>
+<button data-filter="OPTION_ORDER_PARTIAL_MATCH" onclick="setFilter('OPTION_ORDER_PARTIAL_MATCH')">选项弱匹配</button>
+<button data-filter="OPTION_ORDER_NEEDS_MANUAL_REVIEW" onclick="setFilter('OPTION_ORDER_NEEDS_MANUAL_REVIEW')">选项需人工</button>
+<button data-filter="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK" onclick="setFilter('PDF_OPTION_ORDER_CONFLICT_LEGACY_OK')">PDF/旧库冲突</button>
+</div>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q3</span>
+<span class="tag">PDF p.22</span>
+<span class="tag">答案 B / PDF B</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> $ 1 \, mol $ 空气（视为理想气体），在温度为 $ T $ 时，其分子具有的平动动能为（ ）</p>
+<div class="opts">
+<div><b>A.</b> $ 5 \, RT/2 $</div>
+<div><b>B.</b> $ 3 \, RT/2 $</div>
+<div><b>C.</b> $ 2 \, RT/2 $</div>
+<div><b>D.</b> $ RT/2 $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">1mol 空气（视为理想气体），在温度为T 时，其分子具有的平动动能为( B ) 5RT /2 3RT/2 2RT/2 RT/2 (A) (B) (C) (D)</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q4</span>
+<span class="tag">PDF p.23</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 对于室温下的双原子分子理想气体，在等压膨胀的情况下，系统对外所作的功与系统内能的变化之比等于（ ）</p>
+<div class="opts">
+<div><b>A.</b> $ 2/5 $</div>
+<div><b>B.</b> $ 1/2 $</div>
+<div><b>C.</b> $ 2/3 $</div>
+<div><b>D.</b> $ 2/7 $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">对于室温下的双原子分子理想气体，在等压膨胀的情况下，系统对外所作的功与系统内 能的变化之比等于 ( A ) （A） 2/5； （B） 1/2； （C） 2/3； （D） 2/7。</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="DIAGRAM_NEEDS_VISUAL_REVIEW">
+<div class="meta">
+<span class="tag warn">Q6</span>
+<span class="tag">PDF p.23</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">DIAGRAM_NEEDS_VISUAL_REVIEW</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 如图所示，两个大小不同的容器用均匀的细管相连，管中有一水银滴作为活塞，大容器装有氧气，小容器装有氢气. 当温度相同时，水银滴静止于细管中央，则此时这两种气体中（ ） （图题，以原 PDF 图为准）</p>
+<div class="opts">
+<div><b>A.</b> 氧气的分子数密度较大.</div>
+<div><b>B.</b> 氢气的分子数密度较大.</div>
+<div><b>C.</b> 分子数密度一样大.</div>
+<div><b>D.</b> 那种的分子数密度较大是无法判断的.</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">如图所示，两个大小不同的容器用均匀的细管相连，管中有一水银滴作为活塞，大容器 装有氧气，小容器装有氢气. 当温度相同时，水银滴静止于细管中央，则此时这两种气体中 （ C ） （A） 氧气的分子数密度较大． （B） 氢气的分子数密度较大． （C） 分子数密度一样大． （D） 那种的分子数密度较大是无法判断的.</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q7</span>
+<span class="tag">PDF p.23</span>
+<span class="tag">答案 B / PDF B</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 压强为 p、体积为 V 的氦气的内能为（ ）</p>
+<div class="opts">
+<div><b>A.</b> $ \frac{5}{2} $ pV.</div>
+<div><b>B.</b> $ \frac{3}{2} $ pV.</div>
+<div><b>C.</b> pV.</div>
+<div><b>D.</b> $ \frac{1}{2} $ pV.</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">压强为p、体积为V的氦气的内能为（ B ） 5 3 1 (A) 2 pV ． (B) 2 pV． (C) pV ． (D) 2 pV．</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q10</span>
+<span class="tag">PDF p.24</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 压强为 p、体积为 V 的氢气（视为刚性分子理想气体）的内能为（ ）：</p>
+<div class="opts">
+<div><b>A.</b> $ 5pV/2. $</div>
+<div><b>B.</b> $ 3pV/2. $</div>
+<div><b>C.</b> pV.</div>
+<div><b>D.</b> $ pV/2. $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">压强为p、体积为V的氢气（视为刚性分子理想气体）的内能为（ A ）： (A) 5pV/2 ． (B) 3pV/2． (C) pV ． (D) pV/2．</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q11</span>
+<span class="tag">PDF p.24</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一瓶单原子分子理想气体的压强、体积、温度与另一瓶刚性双原子分子理想气体的压强、体积、温度完全相同，则两瓶理想气体的（ ）</p>
+<div class="opts">
+<div><b>A.</b> 摩尔数相同，内能不同</div>
+<div><b>B.</b> 摩尔数不同，内能不同</div>
+<div><b>C.</b> 摩尔数相同，内能相同</div>
+<div><b>D.</b> 摩尔数不同，内能相同</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一瓶单原子分子理想气体的压强、体积、温度与另一瓶刚性双原子分子理想气体的压强、 体积、温度完全相同，则两瓶理想气体的（ A ） （A）摩尔数相同，内能不同 （B）摩尔数不同，内能不同 （C）摩尔数相同，内能相同 （D）摩尔数不同，内能相同</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q12</span>
+<span class="tag">PDF p.24</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 1mol 氢气，在温度为 $ 27^{\circ} $C 时的内能是（普适气体常量 $ R=8.31\,\text{J}\cdot\text{mol}\cdot\text{K}^{-1} $）（ ）</p>
+<div class="opts">
+<div><b>A.</b> 6232.5J;</div>
+<div><b>B.</b> 3789.5J;</div>
+<div><b>C.</b> 2493.0J;</div>
+<div><b>D.</b> 7479.0J。</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">1mol氢气，在温度为27℃ 时的内能是 （普适气体常量R=8.31 J∙mol∙K-1） ( A ) (A) 6232.5J； (B) 3789.5J； (C) 2493.0J； (D) 7479.0J。</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="PDF_OPTION_ORDER_CONFLICT_LEGACY_OK">
+<div class="meta">
+<span class="tag warn">Q16</span>
+<span class="tag">PDF p.24</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">PDF_OPTION_ORDER_CONFLICT_LEGACY_OK</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 两瓶不同类的气体,设分子平均平动动能相同,但气体的密度不同,则下列说法正确的是（ ）。</p>
+<div class="opts">
+<div><b>A.</b> 它们的温度相同，压强不同。</div>
+<div><b>B.</b> 它们的温度不同，压强不同。</div>
+<div><b>C.</b> 它们的温度相同，压强相同。</div>
+<div><b>D.</b> 它们的温度不同，压强相同。</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">两瓶不同类的气体,设分子平均平动动能相同,但气体的密度不同,则下列说法正确的是 ( A )。 (A) 它们的温度相同，压强不同。 (B) 它们的温度不同，压强不同。 (C) 它们的温度相同，压强相同。 (D) 它们的温度不同，压强相同。</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q19</span>
+<span class="tag">PDF p.25</span>
+<span class="tag">答案 D / PDF D</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一定量的理想气体储于某一容器中，温度为 $ T $，气体分子的质量为 $ m $。根据理想气体的分子模型和统计假设，分子速度在 x 方向的分量平方的平均值（ ）。</p>
+<div class="opts">
+<div><b>A.</b> $ \overline{\nu_x^2} = \sqrt{\frac{3kT}{m}} $</div>
+<div><b>B.</b> $ \overline{\nu_x^2} = \frac{1}{3} \sqrt{\frac{3kT}{m}} $</div>
+<div><b>C.</b> $ \overline{\nu_x^2} = 3kT / m $</div>
+<div><b>D.</b> $ \overline{\nu_x^2} = kT / m $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一定量的理想气体储于某一容器中，温度为T，气体分子的质量为m．根据理想气体的 分子模型和统计假设，分子速度在x方向的分量平方的平均值（ D ）. 3kT 1 3kT (A) v2 = (B) v2 = (C) v2 =3kT /m (D) v2 =kT /m x m x 3 m x x</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q20</span>
+<span class="tag">PDF p.25</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 一个容器内同时储有 1 mol 氢气和 1 mol 氦气，若两种气体各自对器壁产生的压强分别为 $ p_1 $ 和 $ p_2 $，则两者的大小关系是（ ）.</p>
+<div class="opts">
+<div><b>A.</b> $ p_1 &gt; p_2 $</div>
+<div><b>B.</b> $ p_1 &lt; p_2 $</div>
+<div><b>C.</b> $ p_1 = p_2 $</div>
+<div><b>D.</b> 不确定的</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">一个容器内同时储有1 mol氢气和1 mol氦气，若两种气体各自对器壁产生的压强分别 为p 和p ，则两者的大小关系是( C ). 1 2 (A) p &gt; p (B) p &lt; p (C) p ＝p (D) 不确定的 1 2 1 2 1 2</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q22</span>
+<span class="tag">PDF p.25</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 温度、压强相同的氦气和氧气，它们分子的平均动能 $ \varepsilon_{k} $ 和平均平动动能 $ \overline{w} $ 有如下关系（ ）. 有如下关系(C).</p>
+<div class="opts">
+<div><b>A.</b> $ \bar{\varepsilon}_{k} $ 和 $ \overline{w} $ 都相等</div>
+<div><b>B.</b> $ \bar{\varepsilon}_{k} $ 相等，而 $ \overline{w} $ 不相等</div>
+<div><b>C.</b> $ \overline{w} $ 相等，而 $ \bar{\varepsilon}_{k} $ 不相等</div>
+<div><b>D.</b> $ \bar{\varepsilon}_{k} $ 和 $ \overline{w} $ 都不相等</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">温度、压强相同的氦气和氧气，它们分子的平均动能 k和平均平动动能 有如下关系（ C ）. ε ε w w (A) k和 都相等 (B) k相等，而 不相等 ε ε w w (C) 相等，而 k不相等 (D) k和 都不相等</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q23</span>
+<span class="tag">PDF p.26</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 1 mol 刚性双原子分子理想气体，当温度为 T 时，其内能为（ ）</p>
+<div class="opts">
+<div><b>A.</b> $ \frac{3}{2}RT $</div>
+<div><b>B.</b> $ \frac{3}{2}kT $</div>
+<div><b>C.</b> $ \frac{5}{2}RT $</div>
+<div><b>D.</b> $ \frac{5}{2}kT $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">1 mol刚性双原子分子理想气体，当温度为T时，其内能为（ C ） 3 3 5 5 (A) RT (B) kT (C) RT (D) kT 2 2 2 2</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="LEGACY_OPTION_TEXT_DIFF_REVIEW,OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q25</span>
+<span class="tag">PDF p.26</span>
+<span class="tag">答案 C / PDF C</span>
+<span class="tag warn">LEGACY_OPTION_TEXT_DIFF_REVIEW</span><span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 将一滴墨水滴入一杯清水中，过一会儿，整杯水都变黑了，那么下面说法正确的是（ ）:</p>
+<div class="opts">
+<div><b>A.</b> 如果水的温度越低，整杯水变黑所需要的时间越短</div>
+<div><b>B.</b> 如果水的温度为 $ 0^{\circ} $C，则不会发生这种现象</div>
+<div><b>C.</b> 这是一种扩散现象，说明分子是不停运动着</div>
+<div><b>D.</b> 这是一种扩散现象，说明物质分子可发生变化</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">将一滴墨水滴入一杯清水中，过一会儿，整杯水都变黑了，那么下面说法正确的是 ( C )： (A) 如果水的温度越低，整杯水变黑所需要的时间越短 (B) 如果水的温度为0℃，则不会发生这种现象 (C) 这是一种扩散现象，说明分子是不停运动着 (D) 这是一种扩散现象，说明物质分子可发生变化</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q27</span>
+<span class="tag">PDF p.26</span>
+<span class="tag">答案 A / PDF A</span>
+<span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 下列对于气体分子热运动服从统计规律理解正确的是（ ）</p>
+<div class="opts">
+<div><b>A.</b> 大量无序运动的气体分子组成的系统在总体上所呈现的规律性，称为统计规律</div>
+<div><b>B.</b> 统计规律对所含分子数极少的系统仍然适用</div>
+<div><b>C.</b> 统计规律可以由数学方法推导出来</div>
+<div><b>D.</b> 对某些量进行统计平均时，分子数越多，出现的涨落现象越明显</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">下列对于气体分子热运动服从统计规律理解正确的是 ( A ) (A) 大量无序运动的气体分子组成的系统在总体上所呈现的规律性，称为统计规律 (B) 统计规律对所含分子数极少的系统仍然适用 (C) 统计规律可以由数学方法推导出来 (D) 对某些量进行统计平均时，分子数越多，出现的涨落现象越明显</div>
+</div>
+</div>
+</section>
+<section class="q" data-review="LEGACY_OPTION_TEXT_DIFF_REVIEW,OPTION_ORDER_PARTIAL_MATCH">
+<div class="meta">
+<span class="tag warn">Q29</span>
+<span class="tag">PDF p.27</span>
+<span class="tag">答案 D / PDF D</span>
+<span class="tag warn">LEGACY_OPTION_TEXT_DIFF_REVIEW</span><span class="tag warn">OPTION_ORDER_PARTIAL_MATCH</span>
+</div>
+<div class="grid">
+<div>
+<p><b>题干</b> 在相同的温度和压强下，各为单位体积的氢气（视为刚性双原子分子体）与氢气的内能之比为___、各为单位质量的氢气和氦气的内能之比为___。（ ）</p>
+<div class="opts">
+<div><b>A.</b> $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{3} $, $ \frac{E_{H_2}}{E_{H_e}} = 5 $</div>
+<div><b>B.</b> $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{2} $, $ \frac{E_{H_2}}{E_{H_e}} = \frac{10}{3} $</div>
+<div><b>C.</b> $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{3} $, $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{3} $</div>
+<div><b>D.</b> $ \frac{E_{H_2}}{E_{H_e}} = \frac{5}{3} $, $ \frac{E_{H_2}}{E_{H_e}} = \frac{10}{3} $</div>
+</div>
+</div>
+<div>
+<b>PDF 摘录</b>
+<div class="pdf">在相同的温度和压强下，各为单位体积的氢气(视为刚性双原子分子体)与氦气的内能之 比为________、各为单位质量的氢气和氦气的内能之比为________。 （ D ） (A) (cid:3006)(cid:3257)(cid:3118) = (cid:2873) , (cid:3006)(cid:3257)(cid:3118) = 5 (B) (cid:3006)(cid:3257)(cid:3118) = (cid:2873) , (cid:3006)(cid:3257)(cid:3118) = (cid:2869)(cid:2868) (cid:3006)(cid:3257)(cid:3280) (cid:2871) (cid:3006)(cid:3257)(cid:3280) (cid:3006)(cid:3257)(cid:3280) (cid:2870) (cid:3006)(cid:3257)(cid:3280) (cid:2871) (C) (cid:3006)(cid:3257)(cid:3118) = (cid:2873) , (cid:3006)(cid:3257)(cid:3118) = (cid:2873) (D) (cid:3006)(cid:3257)(cid:3118) = (cid:2873) , (cid:3006)(cid:3257)(cid:3118) = (cid:2869)(cid:2868) (cid:3006)(cid:3257)(cid:3280) (cid:2871) (cid:3006)(cid:3257)(cid:3280) (cid:2871) (cid:3006)(cid:3257)(cid:3280) (cid:2871) (cid:3006)(cid:3257)(cid:3280) (cid:2871)</div>
+</div>
+</div>
+</section>
+</main>
+</body>
+</html>

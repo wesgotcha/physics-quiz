@@ -1,0 +1,113 @@
+# Chapter 9 Audit - 第九章：波动光学
+
+- Questions: DB 26 / public 26 / legacy 26 / PDF rows 26
+- Automatic hard issues: 0
+- Manual review items: 11
+- MathJax config issues: none
+- Automatic gate: PASS
+
+## Hard Issues
+
+None.
+
+## Manual Review Queue
+
+- Q4 PDF p.59: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 在杨氏双缝干涉实验中，与屏上条纹宽度成反比的是（ ）
+  - A: 双缝间距
+  - B: 双缝所在平面到屏的距离
+  - C: 光源波长
+  - D: 以上都不是
+  - PDF excerpt: 在杨氏双缝干涉实验中，与屏上条纹宽度成反比的是 ( A ) （A） 双缝间距 （B） 双缝所在平面到屏的距离 （C） 光源波长 （D） 以上都不是
+- Q5 PDF p.60: PDF_OPTION_ORDER_CONFLICT_LEGACY_OK
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 一条光路中，放入一折射率为 n，厚度为 d 的透明薄片，放入后，这条光路的光程改变了（ ）
+  - A: $ (n-1)d $
+  - B: $ 2nd $
+  - C: $ 2(n-1)d+\lambda/2 $
+  - D: $ nd $
+  - PDF excerpt: 一条光路中，放入一折射率为n，厚度为d的透明薄片，放入后，这条光路的光程改变了 （ A ） (A) (n-1) d (B) 2nd (C) 2(n-1)d+λ/2 (D) nd
+- Q8 PDF p.60: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 一束光强为 $ I_{0} $ 的自然光垂直穿过两个偏振片，且此两偏振片的偏振化方向成 $ 45^{\circ} $ 角，则穿过两个偏振片后的光强 I 为 （ ）
+  - A: $ I_{0}/4\sqrt{2} $
+  - B: $ I_{0}/4 $
+  - C: $ I_{0}/2 $
+  - D: $ \sqrt{2}I_{0}/2 $
+  - PDF excerpt: 一束光强为I 的自然光垂直穿过两个偏振片，且此两偏振片的偏振化方向成45°角，则穿 0 过两个偏振片后的光强I为 ( B ) (A) I /4 2 (B) I /4 (C) I /2 (D) 2I /2 0 0 0 0
+- Q9 PDF p.60: PDF_OPTION_ORDER_CONFLICT_LEGACY_OK
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 把双缝干涉实验装置放在折射率为 n 的水中，两缝间距离为 d，双缝到屏的距离为 D (D>>d)，所用单色光在真空中的波长为 $ \lambda $，则屏上干涉条纹中相邻的明纹之间的距离 （ ）
+  - A: $ \lambda D/(nd) $
+  - B: $ n\lambda D/d $
+  - C: $ \lambda d/(nD) $
+  - D: $ \lambda D/(2nd) $
+  - PDF excerpt: 把双缝干涉实验装置放在折射率为 n 的水中，两缝间距离为 d，双缝到屏的距离为 D (D>>d)，所用单色光在真空中的波长为λ，则屏上干涉条纹中相邻的明纹之间的距离 ( A ) （A）λD/(nd) （B）nλD/d （C）λd/(nD) （D）λD/(2nd)
+- Q12 PDF p.60: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 一束波长为 $ \lambda $ 的单色光由空气垂直入射到折射率为 n 的透明薄膜上，透明薄膜放在空气中，要使反射光得到干涉加强，则薄膜最小的厚度为（ ）
+  - A: $ \lambda/4 $
+  - B: $ \lambda/(4n) $
+  - C: $ \lambda/2 $
+  - D: $ \lambda/(2n) $
+  - PDF excerpt: 一束波长为 的单色光由空气垂直入射到折射率为n的透明薄膜上，透明薄膜放在空气 中，要使反射光得到干涉加强，则薄膜最小的厚度为( B ) λ/4 λ/(4n) λ/2 λ/(2n) (A) (B) (C) (D)
+- Q14 PDF p.61: DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 在双缝干涉实验中，若单色光源 S 到两缝 S1 和 S2 的距离相等，则观察屏上中央明条纹位于图中 O 处，现将光源 S 向下移动到示意图中的 S' 位置，则（ ） （图题，以原 PDF 图为准）
+  - A: 中央明纹向上移动，且条纹间距增大
+  - B: 中央明纹向上移动，且条纹间距不变
+  - C: 中央明纹向下移动，且条纹间距增大
+  - D: 中央明纹向下移动，且条纹间距不变
+  - PDF excerpt: 在双缝干涉实验中，若单色光源S到两缝S1和S2的距离相等，则观察屏上中央明条纹 位于图中O处， 现将光源S向下移动到示意图中的S´位置，则 （ B ） (A) 中央明纹向上移动，且条纹间距增大 (B) 中央明纹向上移动，且条纹间距不变 (C) 中央明纹向下移动，且条纹间距增大 (D) 中央明纹向下移动，且条纹间距不变 3
+- Q15 PDF p.61: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 光以 $ 60^{\circ} $的入射角由空气照射到折射率为 $ \sqrt{3} $的介质时，可知折射角为（ ）。(A) $ 30^{\circ} $ (B) $ 45^{\circ} $ (C) $ 15^{\circ} $ (D) 条件不足，无法判断
+  - A: 30°
+  - B: 45°
+  - C: 15°
+  - D: 条件不足，无法判断
+  - PDF excerpt: 光以60°的入射角由空气照射到折射率为 的介质时，可知折射角为( A )。 (A) 30° (B) 45° (C) 15° (D) 条件不足，无法判断
+- Q16 PDF p.61: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 杨氏双缝的间距为 0.3mm，双缝距离屏幕 1500mm，若第四到第七明纹距离为 7.5mm，则入射光波长是（ ）
+  - A: 500nm
+  - B: 450nm
+  - C: 550nm
+  - D: 480nm
+  - PDF excerpt: 杨氏双缝的间距为 0.3mm，双缝距离屏幕 1500mm，若第四到第七明纹距离为 7.5mm， 则入射光波长是( A ) （A）500nm （B）450nm （C）550nm （D）480nm
+- Q21 PDF p.62: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 一束白光在真空中通过双缝后在屏上观察到的干涉条纹，除中央白色亮纹外，两侧还有彩色条纹，其原因是（ ）:
+  - A: 各色光的波长不同，因而各色光分别产生的干涉条纹的间距不同
+  - B: 各色光的速度不同，因而各色光分别产生的干涉条纹的间距不同
+  - C: 各色光的强度不同，因而各色光分别产生的干涉条纹的间距不同
+  - D: 上述说法都不正确
+  - PDF excerpt: 一束白光在真空中通过双缝后在屏上观察到的干涉条纹，除中央白色亮纹外，两侧还有 彩色条纹，其原因是( A ): (A) 各色光的波长不同，因而各色光分别产生的干涉条纹的间距不同 (B) 各色光的速度不同，因而各色光分别产生的干涉条纹的间距不同 (C) 各色光的强度不同，因而各色光分别产生的干涉条纹的间距不同 (D) 上述说法都不正确
+- Q22 PDF p.62: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 在空气中,一束波长为 $ \lambda $ 的平行单色光垂直照射到薄膜上,经上、下两表面反射的光束发生干涉。若薄膜的厚度为 d，其折射率 $ n_1 > 1 $，则两束反射光在相遇点的光程差为 （ ）
+  - A: $ 2n_1d $
+  - B: $ 2n_1d + \lambda $
+  - C: $ 2n_1d + \lambda/2 $
+  - D: 条件不足无法计算
+  - PDF excerpt: 在空气中,一束波长为λ的平行单色光垂直照射到薄膜上,经上、下两表面反射的光束发 生干涉。若薄膜的厚度为d，其折射率 n > 1，则两束反射光在相遇点的光程差为( C ) 1 (A) 2n 𝑑 (B) 2n 𝑑+𝜆 (C) 2n 𝑑+𝜆/2 (D) 条件不足无法计算 (cid:2869) (cid:2869) (cid:2869)
+- Q25 PDF p.63: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 薄膜干涉属于（ ）干涉
+  - A: 分振幅法
+  - B: 分波阵面法
+  - C: 分频率法
+  - D: 分波长法
+  - PDF excerpt: 薄膜干涉属于（ A ）干涉 (A) 分振幅法 (B) 分波阵面法 (C) 分频率法 (D) 分波长法

@@ -15,7 +15,8 @@
 <script>
 window.MathJax = {
   tex: {
-    inlineMath: [['\\(', '\\)']],
+    inlineMath: [['\\(', '\\)'], ['$', '$']],
+    displayMath: [['\\[', '\\]'], ['$$', '$$']],
     processEscapes: true
   },
   options: {
@@ -58,7 +59,9 @@ function renderMathText(s){
   return escapeHtml(s);
 }
 function typesetMath(root=document.body){
-  if(window.MathJax?.typesetPromise) MathJax.typesetPromise([root]).catch(console.warn);
+  if(window.MathJax?.typesetPromise) return MathJax.typesetPromise([root]).catch(console.warn);
+  if(window.MathJax?.startup?.promise) return MathJax.startup.promise.then(()=>MathJax.typesetPromise([root])).catch(console.warn);
+  setTimeout(()=>typesetMath(root), 50);
 }
 function toggleChapter(id){document.querySelector(`.chapterBox[data-ch="${id}"]`).classList.toggle('open');}
 function selectChapter(id,checked){document.querySelectorAll(`.pick[data-ch="${id}"]`).forEach(x=>x.checked=checked); updateSelectedCount();}
@@ -109,8 +112,7 @@ function backToSetup(){clearTimeout(jumpTimer); document.getElementById('practic
 async function loadDatabase(){
   try{
     document.getElementById('scoreLine').textContent='加载题库中';
-    let res=await fetch('/api/db');
-    if(!res.ok) res=await fetch('data/physics_quiz_db.json');
+    const res=await fetch('data/physics_quiz_db.json', {cache:'no-store'});
     if(!res.ok) throw new Error('HTTP '+res.status);
     DB=await res.json();
     initPicker();

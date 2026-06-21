@@ -1,0 +1,320 @@
+# Chapter 7 Audit - 第七章：静电场
+
+- Questions: DB 63 / public 63 / legacy 63 / PDF rows 63
+- Automatic hard issues: 0
+- Manual review items: 34
+- MathJax config issues: none
+- Automatic gate: PASS
+
+## Hard Issues
+
+None.
+
+## Manual Review Queue
+
+- Q3 PDF p.37: OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 如图所示,在一电场中有 A、B 两点,下列说法正确的是 （ ） （图题，以原 PDF 图为准）
+  - A: 由 E = F/q 可知，在 A 点放入的电荷电量越大，A 点的场强越小
+  - B: B 点场强大于 A 点场强
+  - C: A 点场强是确定的,与放入电荷无关
+  - D: A 点场强大于 B 点场强,且方向相同。
+  - PDF excerpt: 如图所示,在一电场中有A、B两点,下列说法正确的是 ( C ) A （A）由E＝F/q可知，在A点放入的电荷电量越大，A点的场强越小 （B）B点场强大于A点场强 B （C）A点场强是确定的,与放入电荷无关 （D）A点场强大于B点场强,且方向相同。 
+- Q4 PDF p.37: OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 电场的场强为 $ \vec{E} $，其方向平行于半径为 $ R $ 的半球面的轴，如图所示。则通过此半球面的电场强度通量 $ \Phi_e $ 为 （ ） （图题，以原 PDF 图为准）
+  - A: $ \pi R^2 E $；
+  - B: $ 2\pi R^2 E $；
+  - C: $ \frac{1}{2}\pi R^2 E $；
+  - D: $ \sqrt{2}\pi R^2 E $
+  - PDF excerpt:  电场的场强为E，其方向平行于半径为R的半球面的轴，如图所示。 则通过此半球面的电场强度通量Φ 为 （ A ） e 1 πR2E （A） πR2E ; （B） 2πR2E ; （C） 2 ; （D） 2πR2E
+- Q5 PDF p.37: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 一点电荷 q 位于边长为 d 的立方体体心上，则通过任意一个侧面的电通量是（ ）
+  - A: $ q/\varepsilon_0 $
+  - B: $ q/(6\varepsilon_0) $
+  - C: $ q/(8\varepsilon_0) $
+  - D: $ q/(12\varepsilon_0) $
+  - PDF excerpt: 一点电荷 q 位于边长为 d 的立方体体心上，则通过任意一个侧面的电通量是（ B ） q/ε q/(6ε) q/(8ε) q/(12ε) （A） 0 （B） 0 （C） 0 （D） 0
+- Q6 PDF p.37: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 静电场中某点电势的数值等于（ ）
+  - A: 试验电荷 $ q_0 $ 置于该点时具有的电势能
+  - B: 单位试验电荷置于该点时具有的电势能
+  - C: 单位正电荷置于该点时具有的电势能
+  - D: 把单位正电荷从该点移到电势零点外力所作的功
+  - PDF excerpt: 静电场中某点电势的数值等于（ C ） （A）试验电荷 q 置于该点时具有的电势能 0 （B）单位试验电荷置于该点时具有的电势能 （C）单位正电荷置于该点时具有的电势能 （D）把单位正电荷从该点移到电势零点外力所作的功
+- Q11 PDF p.38: DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 如图示，a、b 为静电场中一条电场线上的两点，一个带正电的检验电荷只在电场力作用下从 a 点沿直线运动到 b 点．下列说法中正确的是（ ） （图题，以原 PDF 图为准）
+  - A: b 点的电场强度比 a 点的电场强度大
+  - B: b 点的电势比 a 点的电势高
+  - C: 检验电荷在 b 点的电势能比在 a 点的电势能大
+  - D: 检验电荷在 b 点的速度比在 a 点的速度大
+  - PDF excerpt: 如图示，a、b 为静电场中一条电场线上的两点，一个带正电的检验电荷只在电场力作 用下从a 点沿直线运动到b 点．下列说法中正确的是（ D ） （A）b点的电场强度比a点的电场强度大 （B）b点的电势比a点的电势高 （C）检验电荷在b点的电势能比在a点的电势能大 （D）检验电荷在b点的速度比在a点的速度大   q E⋅dS = ε
+- Q12 PDF p.39: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 对于高斯定理， $ \oint_S \vec{E} \cdot d\vec{S} = \frac{q}{\varepsilon_0} $，以下说法正确的是（ ）。
+  - A: 高斯面上的场强 $ E $ 仅由高斯面内的电荷所产生
+  - B: 若 $ s $ $ \oint \vec{E} \cdot d\vec{S} = 0 $，高斯面内必无任何电荷分布
+  - C: 高斯面内净电荷等于零，则高斯面上的场强也必等于零
+  - D: 高斯面上场强 $ E $ 处处为零，则高斯面内无净电荷
+  - PDF excerpt: 对于高斯定理，S 0 ，以下说法正确的是( D )。 （A）高斯面上的场强E仅由高斯面内的电荷所产生   E⋅dS =0 （B）若S ，高斯面内必无任何电荷分布 （C）高斯面内净电荷等于零，则高斯面上的场强也必等于零 （D）高斯面上场强E处处为零，则高斯面内无净电荷
+- Q13 PDF p.39: OPTION_ORDER_NEEDS_MANUAL_REVIEW
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 点电荷+q 的电场中，若取图中 P 点处为电势零点，则 M 点的电势为（ ）：
+  - A: $ \frac{q}{4\pi\varepsilon_{0}a} $.
+  - B: $ \frac{q}{8\pi\varepsilon_{0}a} $.
+  - C: $ \frac{-q}{4\pi\varepsilon_{0}a} $.
+  - D: $ \frac{-q}{8\pi\varepsilon_{0}a} $.
+  - PDF excerpt: 点电荷+q的电场中，若取图中P点处为电势零点, 则M点的电势为（ D ）: ( ) q ( ) q A . B . 4πεa 8πεa 0 0 ( ) −q ( ) −q C . D . 4πεa 8πεa 0 0
+- Q15 PDF p.39: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 电量均为 q 的四个点电荷，放在一个边长为 a 的正方形的四个顶点上。若在正方形中心放置一电荷为 Q 的点电荷，使得这五个点电荷均保持力学平衡，则 Q 的取值应该是 （ ）
+  - A: $ -q(\sqrt{2}+\frac{1}{2}) $
+  - B: $ -q(\frac{\sqrt{2}}{2}+\frac{1}{2}) $
+  - C: $ -q(\sqrt{2}+\frac{1}{4}) $
+  - D: $ -q(\frac{\sqrt{2}}{2}+\frac{1}{4}) $。
+  - PDF excerpt: 电量均为q的四个点电荷，放在一个边长为a的正方形的四个顶点上。若在正方形中心 放置一电荷为Q的点电荷，使得这五个点电荷均保持力学平衡，则Q的取值应该是 ( D ) 1 2 1 −q( 2 + ) −q( + ) 2 2 2 (A) (B) 1 2 1 −q( 2 + ) −q( + ) (C) 4 (D) 2 4 。
+- Q19 PDF p.40: DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 某电场中的一条电场线，若一带负电的粒子（带电量较小，可看作点电荷）从 A 点移到 B 点过程中，电场力做正功，则可判定（ ） （图题，以原 PDF 图为准）
+  - A: A 点的场强一定小于 B 点
+  - B: 电场线的方向一定由 B 指向 A
+  - C: A 点的电势一定高于 B 点
+  - D: A 点的电场线密度比 B 点大
+  - PDF excerpt: 某电场中的一条电场线，若一带负电的粒子（带电量较 小，可看作点电荷）从A点移到B点过程中，电场力做正 功，则可判定（ B ） （A）A点的场强一定小于B点 （B）电场线的方向一定由B指向A （C）A点的电势一定高于B点 （D）A点的电场线密度比B点大
+- Q20 PDF p.40: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 一个未带电的空腔导体球壳，外半径为 R。在腔内球心固定一点电荷 q。选无穷远处为电势零点，则球壳的电势为（ ）：
+  - A: 0
+  - B: $ -q/(4\pi\varepsilon_{0}R) $
+  - C: 无法确定
+  - D: $ q/(4\pi\varepsilon_{0}R) $
+  - PDF excerpt: 一个未带电的空腔导体球壳，外半径为 R。在腔内球心固定一点电荷 q。选无穷远处为 电势零点，则球壳的电势为（ D ）： −q/(4πεR) （A) 0 （B） 0 q/(4πεR) （C) 无法确定 （D） 0
+- Q22 PDF p.41: DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 如图所示，AB 是某个点电荷的一根电场线，在电场线上 O 点由静止释放一个负电荷，它仅在电场力作用下沿电场线向 B 运动，下列判断正确的是（ ）。 （图题，以原 PDF 图为准）
+  - A: 电场线由 B 指向 A，该电荷做加速运动，加速度越来越小
+  - B: 电场线由 B 指向 A，该电荷做加速运动，其加速度大小变化 因题设条件不能确定
+  - C: 电场线由 A 指向 B，电荷做匀加速运动
+  - D: 电场线由 B 指向 A，电荷做加速运动，加速度越来越大。
+  - PDF excerpt: 如图所示，AB 是某个点电荷的一根电场线，在电场线上 O 点由静 止释放一个负电荷，它仅在电场力作用下沿电场线向 B 运动，下列判断 正确的是（ D ）。 (A) 电场线由 B 指向 A，该电荷做加速运动，加速度越来越小 (B) 电场线由 B 指向 A，该电荷做加速运动，其加速度大小变化 因题设条件不能确定 (C) 电场线由 A 指向 B，电荷做匀加速运动 (D) 电场线由 B 指向 A，电荷做加速运动，加速度越来越大。
+- Q23 PDF p.41: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 在已知静电场分布的条件下，任意两点 $ P_{1} $ 和 $ P_{2} $ 之间的电势差决定于（ ）
+  - A: $ P_{1} $ 和 $ P_{2} $ 两点的位置。
+  - B: $ P_{1} $ 和 $ P_{2} $ 两点处的电场强度的大小和方向。
+  - C: 试验电荷所带电荷的正负。
+  - D: 试验电荷的电荷量。
+  - PDF excerpt: 在已知静电场分布的条件下，任意两点 P 和P 之间的电势差决定于 ( A ) 1 2 (A) P 和P 两点的位置。 1 2 (B) P 和P 两点处的电场强度的大小和方向。 1 2 (C) 试验电荷所带电荷的正负。 (D) 试验电荷的电荷量。
+- Q25 PDF p.41: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 在静电场中，电场均匀的区域内，在电场线方向上任意两点的电场强度 $ E $ 和电势 $ U $ 相比较（ ）：
+  - A: $ \vec{E} $ 相同， $ U $ 不同
+  - B: $ \vec{E} $ 不同， $ U $ 相同
+  - C: $ \vec{E} $ 不同， $ U $ 不同
+  - D: $ \vec{E} $ 相同， $ U $ 相同。
+  - PDF excerpt: 在静电场中，电场均匀的区域内，在电场线方向上任意两点的电场强度E和电势 U 相 比较（ A ）：   （A）E相同， U 不同 （B）E不同， U 相同   （C）E不同， U 不同 （D）E相同， U 相同。
+- Q27 PDF p.42: OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 在场强为 E，方向竖直向下的匀强电场中，有两个质量均为 m 的带电小球，电量分别为 +2q 和 -q。用长为 l 的绝缘细线相连，另用绝缘细线系住带正电的小球悬挂于 O 处，处于平衡状态，如右图所示，重力加速度为 g，则细线对 O 点的作用力等于（ ）： （图题，以原 PDF 图为准）
+  - A: 2mg+qE
+  - B: 2mg
+  - C: 2mg+3qE
+  - D: qE
+  - PDF excerpt: 在场强为E，方向竖直向下的匀强电场中，有两个质量均为m的带电小球， 电量分别为+2q和－q.用长为l 的绝缘细线相连，另用绝缘细线系住带正电的 小球悬挂于O处，处于平衡状态，如右图所示，重力加速度为g，则细线对O 点的作用力等于（ A ）： （A）2mg+qE （B）2mg （C）2mg+3qE （D）qE   E = F Q q q Q q
+- Q28 PDF p.42: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 设源电荷与试探电荷分别为 $ Q $、 $ q $，则定义式 $ \bar{E}=F/q $ 对 $ Q $、 $ q $ 的要求为（ ）：
+  - A: 二者必须是点电荷。
+  - B: $ Q $ 为任意电荷， $ q $ 必须为正电荷。
+  - C: $ Q $ 为任意电荷， $ q $ 是点电荷，且可正可负。
+  - D: $ Q $ 为任意电荷， $ q $ 必须是单位正点电荷。
+  - PDF excerpt: 设源电荷与试探电荷分别为 、 ，则定义式 对 、 的要求为（ C ）： （A）二者必须是点电荷。 Q q （B） 为任意电荷， 必须为正电荷。 Q q （C） 为任意电荷， 是点电荷，且可正可负。 Q q （D） 为任意电荷， 必须是单位正点电荷。
+- Q29 PDF p.42: PDF_OPTION_ORDER_CONFLICT_LEGACY_OK
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 真空中有一半径为 R，面电荷密度为 $ \sigma $ 的均匀带电球面。若在球面上挖去一小块带电面 $ \Delta S $，则球心处场强大小为 $ E = （ ） $。
+  - A: $ \sigma \Delta S / 4\pi \varepsilon_0 R^2 $
+  - B: $ \sigma \Delta S / 4\pi \varepsilon_0 R^4 $
+  - C: $ \sigma \Delta S / \varepsilon_0 (4\pi R^2)^2 $
+  - D: 0
+  - PDF excerpt: 真空中有一半径为 R，面电荷密度为 σ 的均匀带电球面。若在球面上挖去一小块带电 面△S，则球心处场强大小为 E=（ A ）。 (A) σ△S/4πε R2 (B) σ△S/4πε R4 (C) σ△S/ε (4πR2)2 (D) 0 0 0 0
+- Q30 PDF p.42: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 在不带电金属球壳外距离球心 d 处放置一点电荷 q，以无穷远处为电势零点，则球心处电势为（ ）。
+  - A: 0
+  - B: $ q/4\pi\varepsilon_{0}d^{2} $
+  - C: $ q/4\pi\varepsilon_{0}d $
+  - D: $ -q/4\pi\varepsilon_{0}d $
+  - PDF excerpt: 在不带电金属球壳外距离球心d处放置一点电荷q，以无穷远处为电势零点，则球心处 电势为（ C ）。 (A) 0 (B) q/4πε d2 (C) q/4πε d (D) -q/4πε d 0 0 0    E⋅dS =0
+- Q32 PDF p.42: DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 点电荷 Q 被曲面 S 所包围 ， 从无穷远处引入另一点电荷 q 至曲面外一点，如图所示，则引入前后（ ）. （图题，以原 PDF 图为准）
+  - A: 曲面 S 的电场强度通量不变，曲面上各点电场强度不变
+  - B: 曲面 S 的电场强度通量变化，曲面上各点电场强度不变
+  - C: 曲面 S 的电场强度通量变化，曲面上各点电场强度变化
+  - D: 曲面 S 的电场强度通量不变，曲面上各点电场强度变化
+  - PDF excerpt: 点电荷Q被曲面S所包围 ， 从无穷远处引入另一点电荷q至曲面外一点，如图所示， 则引入前后（ D ）. (A) 曲面S的电场强度通量不变，曲面上各点电场强度不变 (B) 曲面S的电场强度通量变化，曲面上各点电场强度不变 Q q (C) 曲面S的电场强度通量变化，曲面上各点电场强度变化 S (D) 曲面S的电场强度通量不变，曲面上各点电场强度变化
+- Q33 PDF p.43: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 两个同心均匀带电球面，半径分别为 $ R_a $ 和 $ R_b $ ( $ R_a < R_b $)，所带电荷分别为 $ Q_a $ 和 $ Q_b $。设某点与球心相距 $ r $，当 $ R_a < r < R_b $ 时，该点的电场强度的大小为（ ）。
+  - A: $ \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q_a + Q_b}{r^2} $
+  - B: $ \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q_a - Q_b}{r^2} $
+  - C: $ \frac{1}{4\pi\varepsilon_0} \cdot \left( \frac{Q_a}{r^2} + \frac{Q_b}{R_b^2} \right) $
+  - D: $ \frac{1}{4\pi\varepsilon_0} \cdot \frac{Q_a}{r^2} $
+  - PDF excerpt: 两个同心均匀带电球面，半径分别为 R 和 R (R ＜R ), 所带电荷分别为 Q 和 Q ．设 a b a b a b 某点与球心相距r，当R ＜r＜R 时，该点的电场强度的大小为（ D ）. a b 1 Q +Q 1 Q −Q (A) ⋅ a b (B) ⋅ a b 4πε r2 4πε r2 0 0 1 Q Q  1 Q (C) ⋅  a + b  (D) ⋅ a 4πε r2 R2 4πε r2   0 b 0
+- Q35 PDF p.43: OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 如图所示，两个点电荷+q 和-3q，相距为 d. 试问在它们的连线上电场强度 E 等于零的点的坐标是? （ ） （图题，以原 PDF 图为准）
+  - A: $ \left(-\frac{1+\sqrt{3}}{2},\quad0\right) $
+  - B: $ \left(\frac{\sqrt{3}-1}{2},\quad0\right) $
+  - C: $ \left(\frac{1+\sqrt{3}}{2},\quad0\right) $
+  - D: $ \left(\frac{1-\sqrt{3}}{2},\quad0\right) $
+  - PDF excerpt: 如图所示，两个点电荷＋q 和－3q，相距为 d. 试问在它们的连线上电场强度 E 等于零 的点的坐标是？( A ) (A) (cid:3436)− 1+√3 , 0(cid:3440) (B) (cid:4672) √(cid:2871)(cid:2879)(cid:2869) , 0(cid:4673) (C) (cid:4672) (cid:2869)(cid:2878)√(cid:2871) , 0(cid:4673) (D) (cid:4672) (cid:2869)(cid:2879)√(cid:2871) , 0(cid:4673) 2 (cid:2870) (cid:2870) (cid:2870)
+- Q40 PDF p.44: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 一半径为 R 的带有一缺口的细圆环, 缺口长度为 d (d 远小于 R)。环上均匀带有正电, 电荷为 q, 如图所示。则圆心 O 处的场强大小 （ ）。 （图题，以原 PDF 图为准）
+  - A: E = $ \frac{qd}{4\pi^{2}\varepsilon_{0}R^{3}} $
+  - B: E = $ \frac{2qd}{5\pi^{2}\varepsilon_{0}R^{3}} $
+  - C: E = $ \frac{qd}{8\pi^2\varepsilon_0R^3} $
+  - D: E = $ \frac{qd}{6\pi^{2}\varepsilon_{0}R^{3}} $
+  - PDF excerpt: 一半径为R的带有一缺口的细圆环,缺口长度为d (d远小于R)。 环上均匀带有正电,电 荷为q,如图所示。则圆心O处的场强大小( C )。 (cid:3044)(cid:3031) (cid:2870)(cid:3044)(cid:3031) (A) E = (B) E = (cid:2872)(cid:3095)(cid:3118)(cid:3084) (cid:3019)(cid:3119) (cid:2873)(cid:3095)(cid:3118)(cid:3084) (cid:3019)(cid:3119) (cid:3116) (cid:3116) (cid:3044)(cid:3031) (cid:3044)(cid:3031) (C) E = (D) E = (cid:2876)(cid:3095
+- Q41 PDF p.44: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: B; PDF answer: B
+  - Legacy answer: B
+  - Stem: 如图所示, 点电荷 q 位于正立方体的 A 角上, 则通过侧面 abcd 的电通量（ ）。 （图题，以原 PDF 图为准）
+  - A: $ \Phi_{i} = q/12\varepsilon_{0} $
+  - B: $ \Phi_{i}=q/24\varepsilon_{0} $
+  - C: $ \Phi_{i}=q/8\varepsilon_{0} $
+  - D: $ \Phi_{i}=q/36\varepsilon_{0} $
+  - PDF excerpt: 如图所示,点电荷q位于正立方体的A角上,则通过侧面abcd的电通量( B )。 (A) Φ =𝑞/12𝜀 (B) Φ =𝑞/24𝜀 (cid:3036) (cid:2868) (cid:3036) (cid:2868) (C) Φ =𝑞/8𝜀 (D) Φ =𝑞/36𝜀 (cid:3036) (cid:2868) (cid:3036) (cid:2868)
+- Q42 PDF p.45: OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 如图所示的曲线表示一种球对称性电场的场强大小 E 的分布, r 表示离对称中心的距离。这是由（ ）产生的电场。 （图题，以原 PDF 图为准）
+  - A: 半径为 R 均匀带电的球体产生的电场;
+  - B: 半径为 R 均匀带电的球壳产生的电场;
+  - C: 半径为 R 均匀带电的圆柱体产生的电场;
+  - D: 半径为 R 均匀带电的平板的产生的电场;
+  - PDF excerpt: 如图所示的曲线表示一种球对称性电场的场强大小E的分布, r表示离对称中心的距离。 这是由( A )产生的电场。 (A) 半径为R均匀带电的球体产生的电场; (B) 半径为R均匀带电的球壳产生的电场; (C) 半径为R均匀带电的圆柱体产生的电场; (D) 半径为R均匀带电的平板的产生的电场;
+- Q43 PDF p.45: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 真空中两块互相平行的无限大均匀带电平面。其电荷密度分别为 $ \sigma $ 和 $ 2\sigma $，两板之间的距离为 d，两板间的电场强度大小（ ）：
+  - A: 0;
+  - B: $ 3\sigma/2\varepsilon_{0} $
+  - C: $ \sigma/\varepsilon_{0} $
+  - D: $ \sigma/2\varepsilon_{0} $
+  - PDF excerpt: 真空中两块互相平行的无限大均匀带电平面。其电荷密度分别为 σ 和 2σ，两板之间的 距离为d，两板间的电场强度大小 ( D )： (A) 0； (B) 3σ/2ε (C) σ/ε (D) σ/2ε (cid:2868) (cid:2868) (cid:2868)
+- Q44 PDF p.45: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 下面关于高斯定理的表述正确的是（ ）
+  - A: 适用于任何静电场；
+  - B: 只适用于真空中的静电场；
+  - C: 只适用于具有球对称性、轴对称性和平面对称性的静电场；
+  - D: 只适用于虽然不具有选项 C 中所述的对称性，但可以找到合适的高斯面的静电场。
+  - PDF excerpt: 下面关于高斯定理的表述正确的是（ A ） (A) 适用于任何静电场； (B) 只适用于真空中的静电场； (C) 只适用于具有球对称性、轴对称性和平面对称性的静电场； (D) 只适用于虽然不具有选项C中所述的对称性，但可以找到合适的高斯面的静电场。
+- Q45 PDF p.45: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 空中电量分别为 $ q_1 $ 和 $ q_2 $ 的两个点电荷，当它们相距为 $ r $ 时，该电荷系统的相互作用电势能（ ）。(设当两个点电荷相距无穷远时电势能为零)。
+  - A: $$ W=\frac{q_{1}q_{2}}{4\pi\varepsilon_{0}r} $$
+  - B: $$ \mathrm{W}=\frac{q_{1}q_{2}}{4\pi\varepsilon_{0}r^{2}} $$
+  - C: $$ \mathrm{W}=\frac{q_{1}q_{2}}{2\pi\varepsilon_{0}r} $$
+  - D: $$ \mathrm{W}=\frac{q_{1}q_{2}}{2\pi\varepsilon_{0}r^{2}} $$
+  - PDF excerpt: 空中电量分别为 q 和 q 的两个点电荷，当它们相距为 r 时，该电荷系统的相互作用电 1 2 势能( A )。(设当两个点电荷相距无穷远时电势能为零)。 (A)W = (cid:3044)(cid:3117)(cid:3044)(cid:3118) (B) W = (cid:3044)(cid:3117)(cid:3044)(cid:3118) (C) W = (cid:3044)(cid:3117)(cid:3044)(cid:3118) (D) W = (cid:3044)(cid:3117)(cid:3044)(cid:3118) (cid:2872)(cid:3095)(cid:3084)(cid:3116)(cid:3045) (cid:2872)(cid:3095)(cid:3084)(cid:3
+- Q47 PDF p.46: OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 如图所示，边长为 a 的等边三角形的三个顶点上，放置着三个正的点电荷，电量分别为 q、2q 和 3q。若将另一正点电荷 Q 从无穷远处移到三角形的中心 O 处，外力所作的功为（ ）： （图题，以原 PDF 图为准）
+  - A: $ \frac{2\sqrt{3}qQ}{4\pi\varepsilon_{0}a} $;
+  - B: $ \frac{4\sqrt{3}qQ}{4\pi\varepsilon_{0}a} $
+  - C: $ \frac{6\sqrt{3}qQ}{4\pi\varepsilon_{0}a}; $
+  - D: $ \frac{8\sqrt{3}qQ}{4\pi\varepsilon_{0}a} $
+  - PDF excerpt: 如图所示，边长为a的等边三角形的三个顶点上，放置着三个正的点电荷，电量分别为 q、2q和3q。若将另一正点电荷Q从无穷远处移到三角形的中心O处，外力所作的功为（ C ）： (cid:2870)√(cid:2871)(cid:3044)(cid:3018) (cid:2872)√(cid:2871)(cid:3044)(cid:3018) (A) ； (B) (cid:2872)(cid:3095)(cid:3084) (cid:3028) (cid:2872)(cid:3095)(cid:3084) (cid:3028) (cid:3116) (cid:3116) (cid:2874)√(cid:2871)(cid:3044)(cid:3018) (cid:2876)√(cid:2871)(cid:3044)(
+- Q48 PDF p.46: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 半径为 r 的均匀带电球面 1，带电量为 q；其外有一同心的半径为 R 的均匀带电球面 2，带电量为 Q，则此两球面之间的电势差（ ）
+  - A: $ \frac{q}{4\pi\varepsilon_{0}}\left(\frac{1}{r}-\frac{1}{R}\right) $
+  - B: $ \frac{Q}{4\pi\varepsilon_{0}}\left(\frac{1}{R}-\frac{1}{r}\right) $
+  - C: $ \frac{1}{4\pi\varepsilon_{0}}\left(\frac{q}{r}-\frac{Q}{R}\right) $
+  - D: $ \frac{q}{4\pi\varepsilon_{0}r} $
+  - PDF excerpt: 半径为r的均匀带电球面1，带电量为q；其外有一同心的半径为R的均匀带电球面2， 带电量为Q，则此两球面之间的电势差( A ) (cid:3044) (cid:2869) (cid:2869) (cid:3018) (cid:2869) (cid:2869) (cid:2869) (cid:3044) (cid:3018) (cid:3044) (A) (cid:4672) − (cid:4673) (B) (cid:4672) − (cid:4673) (C) (cid:4672) − (cid:4673) (D) (cid:2872)(cid:3095)(cid:3084)(cid:3116) (cid:3045) (cid:3019) (cid:2872)(cid:3095)(cid:3084)(cid:3
+- Q49 PDF p.46: LEGACY_OPTION_TEXT_DIFF_REVIEW, OPTION_ORDER_PARTIAL_MATCH, DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 在带电量为 q 的点电荷的静电场中，将一带电量为 q_{0} 的试验电荷从 a 点经任意路径移动到 b 点，外力所做的功（ ） （图题，以原 PDF 图为准）
+  - A: $ A_{l} = \frac{qq_{0}}{4\pi\varepsilon_{0}}\left(\frac{2}{r_{a}} - \frac{1}{r_{b}}\right) $
+  - B: $ A_{l} = \frac{qq_{0}}{2\pi\varepsilon_{0}}\left(\frac{1}{r_{a}} - \frac{1}{r_{b}}\right) $
+  - C: $ A_{l} = \frac{qq_{0}}{4\pi\varepsilon_{0}}\left(\frac{1}{r_{b}} - \frac{1}{r_{a}}\right) $
+  - D: $ A_{l} = \frac{qq_{0}}{4\pi\varepsilon_{0}}\left(\frac{2}{r_{b}} - \frac{1}{2r_{a}}\right) $
+  - PDF excerpt: 在带电量为q的点电荷的静电场中，将一带电量为q 的试验电荷从a点经任意路径移动 0 到b点，外力所做的功( C ) (cid:3044)(cid:3044) (cid:2870) (cid:2869) (cid:3044)(cid:3044) (cid:2869) (cid:2869) (A) A = (cid:3116) (cid:4672) − (cid:4673) (B) A = (cid:3116) (cid:4672) − (cid:4673) (cid:3039) (cid:3039) (cid:2872)(cid:3095)(cid:3084) (cid:3045) (cid:3045) (cid:2870)(cid:3095)(cid:3084) (cid:3045) (cid:3045) (c
+- Q52 PDF p.47: PDF_OPTION_ORDER_CONFLICT_LEGACY_OK
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 两个同心簿金属球壳，半径分别为 $ R_1 $ 和 $ R_2 $ ( $ R_2 > R_1 $)。若分别带上电量为 $ q_1 $ 和 $ q_2 $ 的电荷，则两者的电势分别为 $ U_1 $ 和 $ U_2 $ (选无穷远处为电势零点)。现用导线将两球壳相连接，则它们的电势为（ ）：
+  - A: $ U_2 $
+  - B: $ U_1 + U_2 $
+  - C: $ (U_1 + U_2)/2 $
+  - D: $ U_1 $
+  - PDF excerpt: 两个同心簿金属球壳，半径分别为 R 和 R （R >R ）。若分别带上电量为 q 和 q 的电 1 2 2 1 1 2 荷，则两者的电势分别为 U 和 U (选无穷远处为电势零点)。现用导线将两球壳相连接，则 1 2 它们的电势为( A )： (A) U (B) U +U (C) (U +U )/2 (D) U 2 1 2 1 2 1
+- Q54 PDF p.47: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 一个平行板电容器，充电后与电源断开，当用绝缘手柄将电容器两极板间距离拉大，则两极板间的电势差、电场强度的大小 E 将发生如下变化（ ）:
+  - A: $ U_{12} $ 减小， E 减小.
+  - B: $ U_{12} $ 减小，E 不变.
+  - C: $ U_{12} $ 增大，E 增大.
+  - D: $ U_{12} $ 增大，E 不变.
+  - PDF excerpt: 一个平行板电容器，充电后与电源断开，当用绝缘手柄将电容器两极板间距离拉大， 则两极板间的电势差、电场强度的大小E将发生如下变化( D )： (A) U 减小， E减小. 12 (B) U 减小， E不变. 12 (C) U 增大， E增大. 12 (D) U 增大， E不变. 12
+- Q56 PDF p.48: OPTION_ORDER_PARTIAL_MATCH
+  - DB answer: A; PDF answer: A
+  - Legacy answer: A
+  - Stem: 要使真空中的两个点电荷间的库仑力增大到原来的4倍，下列方法中可行的是：（ ）
+  - A: 每个点电荷的带电量都增大到原来的 2 倍，电荷间的距离不变
+  - B: 保持点电荷的带电量不变，使两个电荷间的距离增大到原来的2倍
+  - C: 使一个点电荷的电荷量加倍，另一个点电荷的电荷量保持不变，同时将两个点电荷间的距离减小到原来的 1/2
+  - D: 保持点电荷的电荷量不变，将两个点电荷间的距离减小到原来的 1/4
+  - PDF excerpt: 要使真空中的两个点电荷间的库仑力增大到原来的4倍，下列方法中可行的是：（ A ） (A) 每个点电荷的带电量都增大到原来的2倍，电荷间的距离不变 (B) 保持点电荷的带电量不变，使两个电荷间的距离增大到原来的2 倍 (C) 使一个点电荷的电荷量加倍，另一个点电荷的电荷量保持不变，同时将两个点电荷间的 距离减小到原来的1/2 (D) 保持点电荷的电荷量不变，将两个点电荷间的距离减小到原来的1/4
+- Q62 PDF p.49: DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: C; PDF answer: C
+  - Legacy answer: C
+  - Stem: 某导体置于电场后周围的电场分布情况如图所示，图中虚线表示等势面，A、B、C为电场中的三个点。下列说法错误的是（ ） （图题，以原 PDF 图为准）
+  - A: A 点的电场强度小于 B 点的电场强度
+  - B: A 点的电势高于 B 点的电势
+  - C: 将负电荷从 A 点移到 B 点，电场力做正功
+  - D: 将正电荷从 A 点移到 C 点，电场力做功为零
+  - PDF excerpt: 某导体置于电场后周围的电场分布情况如图所示，图中虚线表示电场线，实线表示等 等势面，A、B、C为电场中的三个点。下列说法错误的是（ C ） (A) A点的电场强度小于B点的电场强度 (B) A点的电势高于B点的电势 (C) 将负电荷从A点移到B点，电场力做正功 (D) 将正电荷从A点移到C点，电场力做功为零
+- Q63 PDF p.49: DIAGRAM_NEEDS_VISUAL_REVIEW
+  - DB answer: D; PDF answer: D
+  - Legacy answer: D
+  - Stem: 把一个带正电的小球 A，放入带绝缘支架不带电的空心球壳 B 内，但不与 B 的内壁接 触，如图所示，达到静电平衡后，下列说法正确的是（ ） （图题，以原 PDF 图为准）
+  - A: 球壳 B 内空腔处的场强为零
+  - B: 球壳外部空间的场强为零
+  - C: 球壳 B 的内表面上无感应电荷
+  - D: 若将球壳 B 接地则 B 带负电
+  - PDF excerpt: 把一个带正电的小球 A，放入带绝缘支架不带电的空心球壳 B 内，但不与 B 的内壁接 触，如图所示，达到静电平衡后，下列说法正确的是（ D ） (A) 球壳B内空腔处的场强为零 (B) 球壳外部空间的场强为零 (C) 球壳B的内表面上无感应电荷 (D) 若将球壳B接地则B带负电  
