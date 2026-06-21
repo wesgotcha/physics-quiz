@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>大学物理C 选择题题库测验</title>
+<style>
+:root {--bg:#f4f6fb;--card:#fff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--chip:#eef2ff}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Arial,sans-serif;color:var(--text);line-height:1.55}.app{max-width:920px;margin:0 auto;min-height:100vh;padding:14px}.top{position:sticky;top:0;z-index:3;background:rgba(244,246,251,.96);backdrop-filter:blur(8px);padding:10px 0 12px}.title{font-size:1.2rem;font-weight:900;margin-bottom:8px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}.small{font-size:.88rem;color:var(--muted);font-weight:650}.progressWrap{height:10px;background:#e5e7eb;border-radius:999px;overflow:hidden}.progress{height:100%;width:0;background:var(--accent);transition:.25s}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px;margin-top:12px;box-shadow:0 8px 24px rgba(15,23,42,.06)}h2{margin:0 0 10px}.row{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.hint{color:var(--muted);font-size:.9rem}button{border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px 12px;font-weight:800;cursor:pointer}button.primary{background:var(--accent);border-color:var(--accent);color:white}.chapterBox{border:1px solid var(--line);border-radius:16px;background:#fff;margin:12px 0;overflow:hidden}.chapterHead{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:14px 14px;border-bottom:1px solid var(--line)}.chapterTitle{font-weight:900}.chapterBtns{display:flex;gap:8px;flex-wrap:wrap}.questionList{display:none;max-height:440px;overflow:auto;padding:10px;background:#fafafa}.chapterBox.open .questionList{display:block}.qselect{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;padding:10px;border:1px solid var(--line);border-radius:12px;background:white;margin:8px 0}.qselect input{margin-top:4px;transform:scale(1.15)}.qpreview{font-size:.94rem}.qpreview .no{font-weight:900;color:#3730a3}.qmeta{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-weight:700;margin-bottom:12px}.chip{display:inline-block;background:var(--chip);color:#3730a3;border-radius:999px;padding:2px 9px;font-size:.82rem;font-weight:900}.qtext{font-size:1.16rem;font-weight:900;margin-bottom:18px}.option{width:100%;text-align:left;border:1.5px solid var(--line);border-radius:16px;background:#fff;padding:13px 14px;margin:10px 0;cursor:pointer;font-size:1rem;display:flex;gap:10px;align-items:flex-start}.option:hover{border-color:#bfdbfe;background:#eff6ff}.option:disabled{cursor:default;opacity:1}.letter{font-weight:900;min-width:26px;height:26px;border-radius:50%;background:#f3f4f6;display:inline-flex;align-items:center;justify-content:center}.option.correct{border-color:#86efac;background:#f0fdf4;color:#166534}.option.wrong{border-color:#fecaca;background:#fef2f2;color:#991b1b}.option.dim{opacity:.58}.feedback{min-height:48px;margin-top:15px;border-radius:16px;padding:12px 14px;border:1px solid var(--line);background:#f9fafb;color:#374151;font-weight:800}.feedback.ok{border-color:#bbf7d0;background:#ecfdf5;color:#166534}.feedback.bad{border-color:#fecaca;background:#fef2f2;color:#991b1b}.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}button.action{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff;font-weight:900;cursor:pointer;font-size:1rem}button.action.primary{background:var(--accent);border-color:var(--accent);color:white}.hidden{display:none!important}.scoreBig{font-size:2.2rem;font-weight:1000;margin:8px 0}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(46px,1fr));gap:8px;margin-top:14px}.dot{border-radius:12px;padding:9px 0;text-align:center;font-weight:900;border:1px solid var(--line);background:#fff;cursor:pointer}.dot.ok{background:#ecfdf5;color:#166534;border-color:#bbf7d0}.dot.bad{background:#fef2f2;color:#991b1b;border-color:#fecaca}@media(max-width:560px){.qtext{font-size:1.06rem}.card{padding:16px}.actions{grid-template-columns:1fr}.chapterHead{align-items:flex-start;flex-direction:column}.questionList{max-height:58vh}}
+</style>
+<style>
+.math-text .mjx-container{display:inline-block;margin:0 .08em}
+.option .mjx-container{font-size:1.02em}
+</style>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(', '\\)']],
+    processEscapes: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+<div class="app">
+  <div class="top"><div class="title"><span>大学物理C 选择题题库</span><span class="small" id="scoreLine">未开始</span></div><div class="progressWrap"><div class="progress" id="progress"></div></div></div>
+  <section class="card" id="setupCard"><h2>选题测验</h2><div class="hint">点击章节可以展开，直接看到题目内容并逐题勾选。选项顺序固定为 A、B、C、D，选完自动进入下一题。</div><div class="row"><button class="primary" onclick="startQuiz()">开始测验</button><button onclick="selectEveryQuestion()">全选题库</button><button onclick="clearEveryQuestion()">清空题库</button><span class="small" id="selectedCount"></span></div><div id="chapterPicker"></div></section>
+  <section class="card hidden" id="practiceCard"><div class="qmeta"><span id="countText"></span><span id="sourceText"></span></div><div class="qtext" id="qtext"></div><div id="options"></div><div class="feedback" id="feedback">请选择答案</div><div class="actions"><button class="action" onclick="prevQuestion()" id="prevBtn">上一题</button><button class="action primary" onclick="nextQuestion()" id="nextBtn">跳过/下一题</button></div><div class="row"><button onclick="backToSetup()">返回选题</button><button onclick="restartCurrent()">重做本轮</button><button onclick="startWrongOnly()">只刷错题</button></div></section>
+  <section class="card hidden" id="summary"><h2>本轮完成</h2><div class="scoreBig" id="finalScore"></div><div id="finalText" class="small"></div><div class="actions"><button class="action" onclick="startWrongOnly()">重刷错题</button><button class="action primary" onclick="restartCurrent()">再来一遍</button></div><div class="row"><button onclick="backToSetup()">重新选题</button></div><div class="grid" id="reviewGrid"></div></section>
+</div>
+<script>
+let DB={};
+let allItems=[], pool=[], basePool=[], pos=0, answered={}, wrongSet=new Set(), jumpTimer=null;
+function initPicker(){
+  const root=document.getElementById('chapterPicker'); root.innerHTML='';
+  Object.entries(DB).forEach(([id,ch], idx)=>{
+    const box=document.createElement('div'); box.className='chapterBox'+(idx===0?' open':''); box.dataset.ch=id;
+    const head=document.createElement('div'); head.className='chapterHead';
+    head.innerHTML=`<div><div class="chapterTitle">${ch.name}</div><div class="small" id="chCount_${id}"></div></div><div class="chapterBtns"><button onclick="toggleChapter('${id}')">展开/收起</button><button onclick="selectChapter('${id}',true)">本章全选</button><button onclick="selectChapter('${id}',false)">本章清空</button></div>`;
+    const list=document.createElement('div'); list.className='questionList';
+    ch.questions.forEach((q,i)=>{
+      const label=document.createElement('label'); label.className='qselect';
+      const input=document.createElement('input'); input.type='checkbox'; input.className='pick'; input.dataset.ch=id; input.dataset.no=i+1; input.checked=true; input.onchange=updateSelectedCount;
+      const div=document.createElement('div'); div.className='qpreview math-text'; div.innerHTML=`<span class="no">${i+1}.</span> ${renderMathText(q.q)}`;
+      label.appendChild(input); label.appendChild(div); list.appendChild(label);
+    });
+    box.appendChild(head); box.appendChild(list); root.appendChild(box);
+  });
+  updateSelectedCount();
+  typesetMath(root);
+}
+function escapeHtml(s){return String(s ?? '').replace(/[&<>]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function renderMathText(s){
+  return escapeHtml(s);
+}
+function typesetMath(root=document.body){
+  if(window.MathJax?.typesetPromise) MathJax.typesetPromise([root]).catch(console.warn);
+}
+function toggleChapter(id){document.querySelector(`.chapterBox[data-ch="${id}"]`).classList.toggle('open');}
+function selectChapter(id,checked){document.querySelectorAll(`.pick[data-ch="${id}"]`).forEach(x=>x.checked=checked); updateSelectedCount();}
+function selectEveryQuestion(){document.querySelectorAll('.pick').forEach(x=>x.checked=true); updateSelectedCount();}
+function clearEveryQuestion(){document.querySelectorAll('.pick').forEach(x=>x.checked=false); updateSelectedCount();}
+function updateSelectedCount(){
+  const selected=[...document.querySelectorAll('.pick:checked')].length;
+  document.getElementById('selectedCount').textContent=`已选 ${selected} 题`;
+  Object.keys(DB).forEach(id=>{const total=DB[id].questions.length; const n=document.querySelectorAll(`.pick[data-ch="${id}"]:checked`).length; const el=document.getElementById(`chCount_${id}`); if(el) el.textContent=`已选 ${n}/${total} 题`;});
+}
+function buildItems(){
+  const items=[];
+  document.querySelectorAll('.pick:checked').forEach(input=>{
+    const chId=input.dataset.ch; const n=parseInt(input.dataset.no,10); const ch=DB[chId]; const q=ch.questions[n-1];
+    items.push({...q, chapterId:chId, chapterName:ch.name, originalNo:n});
+  });
+  return items;
+}
+function startQuiz(){
+  allItems=buildItems();
+  if(allItems.length===0){alert('请先勾选题目。');return;}
+  basePool=allItems.map((_,i)=>i); pool=[...basePool]; pos=0; answered={};
+  document.getElementById('setupCard').classList.add('hidden'); document.getElementById('summary').classList.add('hidden'); document.getElementById('practiceCard').classList.remove('hidden'); render();
+}
+function render(){
+  clearTimeout(jumpTimer); document.getElementById('summary').classList.add('hidden'); document.getElementById('practiceCard').classList.remove('hidden');
+  const item=allItems[pool[pos]];
+  document.getElementById('countText').innerHTML=`第 ${pos+1} / ${pool.length} 题 <span class="chip">${item.chapterName}</span>`;
+  document.getElementById('sourceText').textContent=`原题 ${item.originalNo}`;
+  const qtext=document.getElementById('qtext'); qtext.className='qtext math-text'; qtext.innerHTML=renderMathText(item.q);
+  const options=document.getElementById('options'); options.innerHTML='';
+  for(const key of ['A','B','C','D']){const val=item.opts[key]; const btn=document.createElement('button'); btn.className='option'; const letter=document.createElement('span'); letter.className='letter'; letter.textContent=key; const text=document.createElement('span'); text.className='math-text'; text.innerHTML=renderMathText(val); btn.appendChild(letter); btn.appendChild(text); btn.onclick=()=>choose(pool[pos],key); options.appendChild(btn);}
+  const fb=document.getElementById('feedback'); fb.className='feedback'; fb.textContent='请选择答案';
+  document.getElementById('prevBtn').disabled=pos===0; document.getElementById('nextBtn').textContent=pos===pool.length-1?'查看成绩':'跳过/下一题';
+  if(answered[pool[pos]]) showChoice(pool[pos], answered[pool[pos]].choice);
+  updateTop();
+  typesetMath(document.getElementById('practiceCard'));
+}
+function choose(idx,choice){if(answered[idx]) return; const item=allItems[idx]; const ok=choice===item.ans; answered[idx]={choice,ok}; if(ok) wrongSet.delete(idx); else wrongSet.add(idx); showChoice(idx,choice); updateTop(); jumpTimer=setTimeout(()=>nextQuestion(),850);}
+function showChoice(idx,choice){const item=allItems[idx], ok=choice===item.ans; [...document.querySelectorAll('.option')].forEach(btn=>{const letter=btn.querySelector('.letter').textContent; btn.disabled=true; if(letter===item.ans) btn.classList.add('correct'); else if(letter===choice) btn.classList.add('wrong'); else btn.classList.add('dim');}); const fb=document.getElementById('feedback'); fb.className='feedback '+(ok?'ok':'bad'); fb.textContent=ok?'答对了，马上进入下一题。':`答错了，正确答案：${item.ans}，马上进入下一题。`;}
+function nextQuestion(){clearTimeout(jumpTimer); if(pos<pool.length-1){pos++; render();} else showSummary();}
+function prevQuestion(){clearTimeout(jumpTimer); if(pos>0){pos--; render();}}
+function updateTop(){const done=pool.filter(i=>answered[i]).length; const ok=pool.filter(i=>answered[i]?.ok).length; document.getElementById('scoreLine').textContent=`${ok} 对 / ${done} 题`; document.getElementById('progress').style.width=`${pool.length?done/pool.length*100:0}%`;}
+function showSummary(){document.getElementById('practiceCard').classList.add('hidden'); document.getElementById('summary').classList.remove('hidden'); const ok=pool.filter(i=>answered[i]?.ok).length; document.getElementById('finalScore').textContent=`${ok} / ${pool.length}`; document.getElementById('finalText').textContent=`正确率 ${Math.round(ok/pool.length*100)}%。错题数：${pool.length-ok}。`; const grid=document.getElementById('reviewGrid'); grid.innerHTML=''; pool.forEach((idx,i)=>{const b=document.createElement('button'); b.className='dot '+(answered[idx]?.ok?'ok':'bad'); b.textContent=i+1; b.onclick=()=>{pos=i; render();}; grid.appendChild(b);}); updateTop();}
+function restartCurrent(){clearTimeout(jumpTimer); pool=[...basePool]; pos=0; answered={}; document.getElementById('summary').classList.add('hidden'); document.getElementById('practiceCard').classList.remove('hidden'); render();}
+function startWrongOnly(){clearTimeout(jumpTimer); const w=[...wrongSet].filter(i=>allItems[i]).sort((a,b)=>a-b); if(w.length===0){alert('目前没有错题。'); return;} basePool=[...w]; pool=[...w]; pos=0; answered={}; document.getElementById('summary').classList.add('hidden'); document.getElementById('practiceCard').classList.remove('hidden'); render();}
+function backToSetup(){clearTimeout(jumpTimer); document.getElementById('practiceCard').classList.add('hidden'); document.getElementById('summary').classList.add('hidden'); document.getElementById('setupCard').classList.remove('hidden'); document.getElementById('progress').style.width='0%'; document.getElementById('scoreLine').textContent='未开始'; updateSelectedCount();}
+async function loadDatabase(){
+  try{
+    document.getElementById('scoreLine').textContent='加载题库中';
+    let res=await fetch('/api/db');
+    if(!res.ok) res=await fetch('data/physics_quiz_db.json');
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    DB=await res.json();
+    initPicker();
+    document.getElementById('scoreLine').textContent='未开始';
+  }catch(err){
+    console.error(err);
+    document.getElementById('scoreLine').textContent='题库加载失败';
+    alert('题库加载失败，请确认题库数据文件可访问。');
+  }
+}
+loadDatabase();</script>
+</body>
+</html>
