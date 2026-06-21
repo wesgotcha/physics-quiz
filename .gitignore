@@ -1,0 +1,18 @@
+# Dependencies and runtime output
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local temp files and logs
+tmp/
+*.log
+*.tmp
+
+# Source PDFs and OCR/input artifacts
+*.pdf
+
+# Legacy/generated files kept locally for reference
+physics_quiz_database(2).html
+physics_quiz_db (1).json
