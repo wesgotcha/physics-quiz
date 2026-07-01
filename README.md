@@ -36,7 +36,7 @@ npm start
 
 ## 编辑模式 (admin.html) — 本地专属
 
-> ⚠️ 编辑模式需要本地 Node.js 服务器，**不部署到 GitHub Pages**。
+> ⚠️ 编辑模式需要本地 Node.js 服务器
 
 ### 启动
 
@@ -83,17 +83,6 @@ npm start
 
 文件名由编辑器自动生成，不需要手动输入。
 
-## 部署到 GitHub Pages
-
-```bash
-# 1. 构建部署文件到 public/ 目录
-npm run build:public
-
-# 2. 将 public/ 推送到 gh-pages 分支
-git subtree push --prefix public origin gh-pages
-```
-
-> `build:public` 会自动排除 admin.html（编辑模式不上线）。
 
 ## 项目结构
 
