@@ -11,6 +11,10 @@
 <style>
 .math-text .mjx-container{display:inline-block;margin:0 .08em}
 .option .mjx-container{font-size:1.02em}
+.qimg-wrap{text-align:center;margin:0 0 18px}
+.qimg{max-width:50%;max-height:300px;border-radius:12px;border:1px solid var(--line);display:block;margin:0 auto;cursor:pointer;transition:max-width .25s,max-height .25s}
+.qimg.expanded{max-width:100%;max-height:80vh}
+@media(max-width:560px){.qimg{max-width:100%;max-height:240px}.qimg.expanded{max-width:100%;max-height:80vh}}
 </style>
 <script>
 window.MathJax = {
@@ -91,7 +95,7 @@ function render(){
   const item=allItems[pool[pos]];
   document.getElementById('countText').innerHTML=`第 ${pos+1} / ${pool.length} 题 <span class="chip">${item.chapterName}</span>`;
   document.getElementById('sourceText').textContent=`原题 ${item.originalNo}`;
-  const qtext=document.getElementById('qtext'); qtext.className='qtext math-text'; qtext.innerHTML=renderMathText(item.q);
+  const qtext=document.getElementById('qtext'); qtext.className='qtext math-text'; let imgHtml=''; if(item.img){const src=/^https?:\/\//.test(item.img)?item.img:`images/${item.img}`; imgHtml=`<div class="qimg-wrap"><img src="${escapeHtml(src)}" alt="题目附图 点击放大" class="qimg" onclick="this.classList.toggle('expanded')" /></div>`;} qtext.innerHTML=imgHtml+renderMathText(item.q);
   const options=document.getElementById('options'); options.innerHTML='';
   for(const key of ['A','B','C','D']){const val=item.opts[key]; const btn=document.createElement('button'); btn.className='option'; const letter=document.createElement('span'); letter.className='letter'; letter.textContent=key; const text=document.createElement('span'); text.className='math-text'; text.innerHTML=renderMathText(val); btn.appendChild(letter); btn.appendChild(text); btn.onclick=()=>choose(pool[pos],key); options.appendChild(btn);}
   const fb=document.getElementById('feedback'); fb.className='feedback'; fb.textContent='请选择答案';

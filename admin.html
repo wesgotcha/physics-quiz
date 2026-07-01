@@ -5,85 +5,512 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>题库管理</title>
 <style>
-:root{--bg:#f7f7fb;--card:#fff;--line:#d9dce5;--text:#151822;--muted:#667085;--accent:#2563eb;--bad:#b42318}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Arial,sans-serif}.wrap{max-width:1180px;margin:0 auto;padding:18px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}.title{font-weight:900;font-size:1.25rem}.small{color:var(--muted);font-weight:650}.toolbar{display:flex;gap:8px;flex-wrap:wrap}button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 12px;font-weight:800;cursor:pointer}button.primary{background:var(--accent);border-color:var(--accent);color:#fff}.panel{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px}textarea{width:100%;height:calc(100vh - 170px);min-height:480px;border:1px solid var(--line);border-radius:8px;padding:12px;font:14px/1.5 Consolas,"SFMono-Regular",Menlo,monospace;resize:vertical;background:#fff;color:#111827}.status{min-height:24px;margin-top:8px;color:var(--muted);font-weight:700}.status.bad{color:var(--bad)}a{color:var(--accent);font-weight:800;text-decoration:none}@media(max-width:700px){.top{align-items:flex-start;flex-direction:column}textarea{height:65vh}}
+:root{--bg:#f4f6fb;--card:#fff;--text:#111827;--muted:#6b7280;--line:#e5e7eb;--accent:#2563eb;--bad:#b42318;--chip:#eef2ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1280px;margin:0 auto;padding:14px;height:100vh;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:10px;flex-shrink:0}
+.top h1{font-size:1.2rem;font-weight:900;margin:0}
+.topBtns{display:flex;gap:8px;flex-wrap:wrap}
+button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 14px;font-weight:800;cursor:pointer;font-size:.92rem}
+button:hover{background:#f9fafb}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button.primary:hover{opacity:.9}
+button.danger{color:var(--bad);border-color:var(--bad)}
+button.small{padding:4px 8px;font-size:.8rem;border-radius:6px}
+.main{display:flex;gap:12px;flex:1;min-height:0;overflow:hidden}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.panelLeft{width:320px;flex-shrink:0}
+.panelRight{flex:1}
+.panelHead{padding:12px 14px;border-bottom:1px solid var(--line);font-weight:900;font-size:.95rem;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.panelBody{flex:1;overflow-y:auto;padding:8px}
+.chapterNode{border:1px solid var(--line);border-radius:10px;margin:6px 0;overflow:hidden}
+.chapterHead{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:10px 12px;cursor:pointer;user-select:none;background:#fafbfc}
+.chapterHead:hover{background:#f0f2f5}
+.chapterHead .name{font-weight:900;font-size:.93rem}
+.chapterHead .count{color:var(--muted);font-size:.82rem;white-space:nowrap}
+.qlist{display:none;max-height:360px;overflow-y:auto}
+.chapterNode.open .qlist{display:block}
+.qRow{display:flex;align-items:center;gap:8px;padding:7px 12px;cursor:pointer;border-top:1px solid var(--line);font-size:.9rem;transition:background .1s}
+.qRow:hover{background:#f0f4ff}
+.qRow.active{background:#eef2ff;color:#3730a3;font-weight:800}
+.qRow .no{font-weight:900;min-width:32px;color:var(--muted)}
+.qRow .preview{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.qRow .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.qRow .dot.dirty{background:#f59e0b}
+.qRow .dot.saved{background:#10b981}
+.field{margin-bottom:14px}
+.fieldLabel{font-weight:900;font-size:.88rem;margin-bottom:4px;display:flex;gap:8px;align-items:center}
+.fieldLabel .letter{display:inline-flex;width:22px;height:22px;border-radius:50%;background:var(--chip);color:#3730a3;align-items:center;justify-content:center;font-size:.78rem;font-weight:900}
+textarea.fieldInput{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:10px;font:14px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",Arial,sans-serif;resize:vertical;min-height:42px;background:#fff;color:var(--text)}
+textarea.fieldInput:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px rgba(37,99,235,.1)}
+.previewBox{border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:36px;background:#fafbfc;margin-top:4px;font-size:.95rem}
+.previewBox.math-text{line-height:1.7}
+.ansRow{display:flex;gap:8px;margin-top:6px}
+.ansChip{padding:8px 16px;border:2px solid var(--line);border-radius:10px;cursor:pointer;font-weight:900;transition:all .15s}
+.ansChip:hover{border-color:#bfdbfe;background:#eff6ff}
+.ansChip.chosen{border-color:var(--accent);background:var(--chip);color:#3730a3}
+.imgSection{border:2px dashed var(--line);border-radius:14px;padding:14px;text-align:center;margin-top:4px}
+.imgSection.hasImg{border-style:solid;border-color:var(--line)}
+.imgPreview{margin-bottom:10px}
+.imgPreview img{max-width:100%;max-height:200px;border-radius:8px;border:1px solid var(--line)}
+.imgName{font-weight:800;font-size:.88rem;color:var(--text);margin-bottom:8px}
+.imgName .auto{color:var(--muted);font-weight:650;font-size:.82rem}
+.imgActions{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.fileInput{display:none}
+.footer{display:flex;gap:10px;justify-content:space-between;align-items:center;padding:12px 14px;border-top:1px solid var(--line);flex-shrink:0;background:#fafbfc}
+.footer .status{font-weight:800;font-size:.88rem}
+.footer .status.ok{color:#166534}
+.footer .status.err{color:var(--bad)}
+.footer .status.info{color:var(--muted)}
+#legacyEditor{display:none;flex-direction:column}
+#legacyEditor.show{display:flex}
+#legacyEditor textarea{flex:1;border:1px solid var(--line);border-radius:10px;padding:12px;font:14px/1.5 Consolas,"SFMono-Regular",Menlo,monospace;resize:none;background:#fff;color:#111827}
+#richEditor{display:flex;flex-direction:column}
+#richEditor.hidden{display:none}
+#emptyState{display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-weight:700;font-size:1rem}
+@media(max-width:760px){
+  .main{flex-direction:column}.panelLeft{width:100%;max-height:40vh}.wrap{height:auto}.panelRight{min-height:60vh}
+}
 </style>
+<style>
+.math-text .mjx-container{display:inline-block;margin:0 .08em}
+</style>
+<script>
+window.MathJax = {
+  tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]'], ['$$', '$$']], processEscapes: true },
+  options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
 <div class="wrap">
   <div class="top">
-    <div>
-      <div class="title">题库管理</div>
-      <div class="small">编辑后保存到 <code>data/physics_quiz_db.json</code></div>
-    </div>
-    <div class="toolbar">
-      <button onclick="loadDb()">重新加载</button>
-      <button onclick="formatJson()">格式化</button>
-      <button class="primary" onclick="saveDb()">保存</button>
+    <h1>题库管理</h1>
+    <div class="topBtns">
+      <button onclick="toggleLegacy()" id="legacyBtn">切换到原始JSON编辑器</button>
       <button onclick="location.href='/'">返回刷题</button>
     </div>
   </div>
-  <div class="panel">
-    <textarea id="editor" spellcheck="false"></textarea>
-    <div class="status" id="status"></div>
+  <div class="main">
+    <!-- Left: Chapter Tree -->
+    <div class="panel panelLeft">
+      <div class="panelHead">📚 章节列表 <button class="small" onclick="reloadDb()">刷新</button></div>
+      <div class="panelBody" id="chapterNav"><div style="padding:20px;text-align:center;color:var(--muted)">加载中...</div></div>
+    </div>
+    <!-- Right: Editor -->
+    <div class="panel panelRight" id="editorPanel">
+      <!-- Rich Editor -->
+      <div id="richEditor" style="flex:1;display:flex;flex-direction:column;min-height:0">
+        <div class="panelHead" id="editorTitle">请从左侧选择题目</div>
+        <div class="panelBody" id="editorBody" style="flex:1">
+          <div id="emptyState">← 从左侧章节列表中选择一道题目开始编辑</div>
+          <div id="editorForm" class="hidden">
+            <div class="field">
+              <div class="fieldLabel">题干</div>
+              <textarea class="fieldInput" id="fQ" rows="2" oninput="onFieldChange('q')"></textarea>
+              <div class="previewBox math-text" id="preQ"></div>
+            </div>
+            <div class="field">
+              <div class="fieldLabel"><span class="letter">A</span> 选项 A</div>
+              <textarea class="fieldInput" id="fA" rows="2" oninput="onFieldChange('A')"></textarea>
+              <div class="previewBox math-text" id="preA"></div>
+            </div>
+            <div class="field">
+              <div class="fieldLabel"><span class="letter">B</span> 选项 B</div>
+              <textarea class="fieldInput" id="fB" rows="2" oninput="onFieldChange('B')"></textarea>
+              <div class="previewBox math-text" id="preB"></div>
+            </div>
+            <div class="field">
+              <div class="fieldLabel"><span class="letter">C</span> 选项 C</div>
+              <textarea class="fieldInput" id="fC" rows="2" oninput="onFieldChange('C')"></textarea>
+              <div class="previewBox math-text" id="preC"></div>
+            </div>
+            <div class="field">
+              <div class="fieldLabel"><span class="letter">D</span> 选项 D</div>
+              <textarea class="fieldInput" id="fD" rows="2" oninput="onFieldChange('D')"></textarea>
+              <div class="previewBox math-text" id="preD"></div>
+            </div>
+            <div class="field">
+              <div class="fieldLabel">正确答案</div>
+              <div class="ansRow" id="ansRow">
+                <span class="ansChip" data-ans="A" onclick="setAns('A')">A</span>
+                <span class="ansChip" data-ans="B" onclick="setAns('B')">B</span>
+                <span class="ansChip" data-ans="C" onclick="setAns('C')">C</span>
+                <span class="ansChip" data-ans="D" onclick="setAns('D')">D</span>
+              </div>
+            </div>
+            <div class="field">
+              <div class="fieldLabel">题目图片 <span style="color:var(--muted);font-weight:650">(可选)</span></div>
+              <div class="imgSection" id="imgSection">
+                <div class="imgPreview hidden" id="imgPreview"><img id="imgThumb" src="" alt="题目图片预览" /></div>
+                <div class="imgName hidden" id="imgName"></div>
+                <div style="color:var(--muted);font-size:.82rem;margin-bottom:8px" id="imgHint">将自动命名为 <code id="imgAutoName" style="font-weight:900">-</code></div>
+                <div class="imgActions">
+                  <input type="file" class="fileInput" id="filePicker" accept="image/png,image/jpeg,image/gif,image/svg+xml,image/webp" onchange="onFilePicked()" />
+                  <button onclick="document.getElementById('filePicker').click()" id="imgPickBtn">选择文件</button>
+                  <button class="primary" onclick="uploadImage()" id="imgUploadBtn" disabled>上传图片</button>
+                  <button class="danger small hidden" onclick="removeImage()" id="imgRemoveBtn">删除图片</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <span class="status info" id="saveStatus">选择题目开始编辑</span>
+          <div style="display:flex;gap:8px">
+            <button onclick="revertQuestion()" id="revertBtn" disabled>撤销修改</button>
+            <button class="primary" onclick="saveQuestion()" id="saveBtn" disabled>💾 保存 (Ctrl+S)</button>
+          </div>
+        </div>
+      </div>
+      <!-- Legacy Editor -->
+      <div id="legacyEditor">
+        <div class="panelHead">原始 JSON 编辑器</div>
+        <textarea id="legacyTextarea" spellcheck="false"></textarea>
+        <div class="footer">
+          <span class="status info" id="legacyStatus"></span>
+          <div style="display:flex;gap:8px">
+            <button onclick="formatLegacy()">格式化</button>
+            <button class="primary" onclick="saveLegacy()">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 <script>
-const editor=document.getElementById('editor');
-const statusEl=document.getElementById('status');
+// ── State ──
+let DB = {}, activeChapter = null, activeIndex = null, originalQuestion = null, dirty = false, pendingImgFile = null, pendingImgExt = '';
 
-function setStatus(text,bad=false){
-  statusEl.textContent=text;
-  statusEl.className='status'+(bad?' bad':'');
+// ── Helpers ──
+function escapeHtml(s){return String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));}
+function typesetMath(root){if(window.MathJax?.typesetPromise)return MathJax.typesetPromise([root]).catch(()=>{});if(window.MathJax?.startup?.promise)return MathJax.startup.promise.then(()=>MathJax.typesetPromise([root])).catch(()=>{});setTimeout(()=>typesetMath(root),50);}
+function setStatus(text,type){const el=document.getElementById('saveStatus');el.textContent=text;el.className='status '+(type||'info');}
+let debounceTimers={};
+function debounceTypeset(fieldId,preId){
+  clearTimeout(debounceTimers[fieldId]);
+  debounceTimers[fieldId]=setTimeout(()=>{
+    const pre=document.getElementById(preId);
+    pre.innerHTML=escapeHtml(document.getElementById(fieldId).value);
+    typesetMath(pre);
+  },400);
 }
 
-async function loadDb(){
+// ── Chapter Tree ──
+function buildChapterTree(){
+  const nav=document.getElementById('chapterNav');
+  nav.innerHTML='';
+  Object.entries(DB).forEach(([chId,ch],idx)=>{
+    const node=document.createElement('div');node.className='chapterNode'+(idx===0?' open':'');
+    const head=document.createElement('div');head.className='chapterHead';
+    head.innerHTML=`<span class="name">${escapeHtml(ch.name)}</span><span class="count">${ch.questions.length} 题</span>`;
+    head.onclick=e=>{e.stopPropagation();node.classList.toggle('open');};
+    const list=document.createElement('div');list.className='qlist';
+    ch.questions.forEach((q,i)=>{
+      const row=document.createElement('div');row.className='qRow';
+      row.innerHTML=`<span class="no">${i+1}</span><span class="preview">${escapeHtml((q.q||'').replace(/\\[\(\[]|\\[\)\]]|\$|[\(\)]/g,'').substring(0,40))}</span><span class="dot saved"></span>`;
+      row.onclick=e=>{e.stopPropagation();selectQuestion(chId,i);};
+      list.appendChild(row);
+    });
+    node.appendChild(head);node.appendChild(list);nav.appendChild(node);
+  });
+}
+
+function updateQRow(chId,idx,hasDirty){
+  const nav=document.getElementById('chapterNav');
+  const node=nav.children[Object.keys(DB).indexOf(chId)];
+  if(!node)return;
+  const rows=node.querySelectorAll('.qRow');
+  const row=rows[idx];if(!row)return;
+  const dot=row.querySelector('.dot');
+  dot.className='dot '+(hasDirty?'dirty':'saved');
+}
+
+// ── Question Selection & Editing ──
+function selectQuestion(chId,idx){
+  if(dirty&&!confirm('当前题目有未保存的修改，是否放弃？'))return;
+  activeChapter=chId;activeIndex=idx;dirty=false;pendingImgFile=null;
+  const q=DB[chId].questions[idx];
+  originalQuestion=JSON.parse(JSON.stringify(q));
+  // Highlight row
+  document.querySelectorAll('.qRow.active').forEach(r=>r.classList.remove('active'));
+  const nav=document.getElementById('chapterNav');
+  const node=nav.children[Object.keys(DB).indexOf(chId)];
+  if(node){const rows=node.querySelectorAll('.qRow');if(rows[idx])rows[idx].classList.add('active');}
+  // Populate form
+  document.getElementById('emptyState').classList.add('hidden');
+  document.getElementById('editorForm').classList.remove('hidden');
+  document.getElementById('editorTitle').textContent=`第 ${chId} 章 · 第 ${idx+1} 题`;
+  document.getElementById('fQ').value=q.q||'';
+  document.getElementById('fA').value=(q.opts&&q.opts.A)||'';
+  document.getElementById('fB').value=(q.opts&&q.opts.B)||'';
+  document.getElementById('fC').value=(q.opts&&q.opts.C)||'';
+  document.getElementById('fD').value=(q.opts&&q.opts.D)||'';
+  setAns(q.ans);
+  refreshAllPreviews();
+  updateImgDisplay(q.img);
+  dirty=false;setStatus('题目已加载','info');
+  document.getElementById('saveBtn').disabled=false;
+  document.getElementById('revertBtn').disabled=false;
+}
+
+function setAns(a){
+  document.querySelectorAll('#ansRow .ansChip').forEach(c=>c.classList.toggle('chosen',c.dataset.ans===a));
+  if(activeChapter&&activeIndex!=null)DB[activeChapter].questions[activeIndex].ans=a;
+  markDirty();
+}
+
+function onFieldChange(field){
+  if(activeChapter==null||activeIndex==null)return;
+  const val=document.getElementById('f'+field).value;
+  if(field==='q')DB[activeChapter].questions[activeIndex].q=val;
+  else DB[activeChapter].questions[activeIndex].opts[field]=val;
+  markDirty();
+  debounceTypeset('f'+field,'pre'+field);
+}
+
+function refreshAllPreviews(){
+  ['Q','A','B','C','D'].forEach(f=>{
+    const el=document.getElementById('pre'+f);
+    el.innerHTML=escapeHtml(document.getElementById('f'+f).value);
+    typesetMath(el);
+  });
+}
+
+function markDirty(){
+  dirty=true;
+  if(activeChapter!=null&&activeIndex!=null)updateQRow(activeChapter,activeIndex,true);
+  setStatus('有未保存的修改','info');
+}
+
+// ── Save & Revert ──
+async function saveQuestion(){
+  if(activeChapter==null||activeIndex==null)return;
+  const q=DB[activeChapter].questions[activeIndex];
+  // Ensure opts exists
+  if(!q.opts)q.opts={};
+  q.q=document.getElementById('fQ').value;
+  q.opts.A=document.getElementById('fA').value;
+  q.opts.B=document.getElementById('fB').value;
+  q.opts.C=document.getElementById('fC').value;
+  q.opts.D=document.getElementById('fD').value;
+  // Re-read ans from DOM
+  const chosen=document.querySelector('#ansRow .ansChip.chosen');
+  if(chosen)q.ans=chosen.dataset.ans;
   try{
-    setStatus('加载中...');
-    const res=await fetch('/api/db');
-    if(!res.ok) throw new Error('HTTP '+res.status);
-    const db=await res.json();
-    editor.value=JSON.stringify(db,null,2);
-    setStatus('已加载。');
-  }catch(err){
-    setStatus('加载失败：'+err.message,true);
-  }
-}
-
-function parseEditor(){
-  try{
-    return JSON.parse(editor.value);
-  }catch(err){
-    setStatus('JSON 格式错误：'+err.message,true);
-    throw err;
-  }
-}
-
-function formatJson(){
-  const db=parseEditor();
-  editor.value=JSON.stringify(db,null,2);
-  setStatus('已格式化。');
-}
-
-async function saveDb(){
-  try{
-    const db=parseEditor();
-    setStatus('保存中...');
-    const res=await fetch('/api/db',{
-      method:'PUT',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(db)
+    setStatus('保存中...','info');
+    const url=`/api/chapters/${encodeURIComponent(activeChapter)}/questions/${activeIndex+1}`;
+    const res=await fetch(url,{
+      method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(q)
     });
     const body=await res.json().catch(()=>({}));
-    if(!res.ok) throw new Error(body.error || ('HTTP '+res.status));
-    editor.value=JSON.stringify(db,null,2);
-    setStatus('已保存。');
+    if(!res.ok)throw new Error(body.error||'HTTP '+res.status);
+    originalQuestion=JSON.parse(JSON.stringify(q));
+    dirty=false;updateQRow(activeChapter,activeIndex,false);
+    setStatus('✅ 已保存','ok');
   }catch(err){
-    setStatus('保存失败：'+err.message,true);
+    const msg=err.message||String(err);
+    if(msg==='Failed to fetch'||msg.includes('fetch')){
+      setStatus('❌ 无法连接服务器，请确认已运行 npm start','err');
+    }else{
+      setStatus('❌ 保存失败: '+msg,'err');
+    }
   }
 }
 
-loadDb();
+function revertQuestion(){
+  if(!originalQuestion)return;
+  if(!confirm('确认撤销所有未保存的修改？'))return;
+  DB[activeChapter].questions[activeIndex]=JSON.parse(JSON.stringify(originalQuestion));
+  const q=originalQuestion;
+  document.getElementById('fQ').value=q.q||'';
+  document.getElementById('fA').value=(q.opts&&q.opts.A)||'';
+  document.getElementById('fB').value=(q.opts&&q.opts.B)||'';
+  document.getElementById('fC').value=(q.opts&&q.opts.C)||'';
+  document.getElementById('fD').value=(q.opts&&q.opts.D)||'';
+  setAns(q.ans);
+  refreshAllPreviews();
+  updateImgDisplay(q.img);
+  dirty=false;updateQRow(activeChapter,activeIndex,false);
+  pendingImgFile=null;
+  setStatus('已撤销修改','info');
+}
+
+// ── Image Management ──
+function updateImgDisplay(img){
+  const section=document.getElementById('imgSection');
+  const preview=document.getElementById('imgPreview');
+  const name=document.getElementById('imgName');
+  const thumb=document.getElementById('imgThumb');
+  const pickBtn=document.getElementById('imgPickBtn');
+  const uploadBtn=document.getElementById('imgUploadBtn');
+  const removeBtn=document.getElementById('imgRemoveBtn');
+  const hint=document.getElementById('imgHint');
+  const autoName=document.getElementById('imgAutoName');
+  const filePicker=document.getElementById('filePicker');
+
+  // Auto-suggested name
+  if(activeChapter!=null&&activeIndex!=null){
+    let ext=pendingImgExt;
+    if(!ext&&img&&img.includes('.'))ext='.'+img.split('.').pop().toLowerCase();
+    if(!ext)ext='.png';
+    autoName.textContent=activeChapter+'-q'+(activeIndex+1)+ext;
+  }
+
+  pendingImgFile=null;filePicker.value='';
+  if(img){
+    section.classList.add('hasImg');
+    preview.classList.remove('hidden');name.classList.remove('hidden');
+    const src=/^https?:\/\//.test(img)?img:'images/'+img;
+    thumb.src=src;name.innerHTML=`当前图片: <code>${escapeHtml(img)}</code>`;
+    pickBtn.textContent='更换文件';uploadBtn.textContent='上传替换';removeBtn.classList.remove('hidden');
+    hint.classList.add('hidden');
+  }else{
+    section.classList.remove('hasImg');
+    preview.classList.add('hidden');name.classList.add('hidden');
+    thumb.src='';name.innerHTML='';
+    pickBtn.textContent='选择文件';uploadBtn.textContent='上传图片';removeBtn.classList.add('hidden');
+    hint.classList.remove('hidden');
+    uploadBtn.disabled=true;
+  }
+}
+
+function onFilePicked(){
+  const fp=document.getElementById('filePicker');
+  if(!fp.files||!fp.files.length)return;
+  pendingImgFile=fp.files[0];
+  pendingImgExt=pendingImgFile.name.includes('.')?'.'+pendingImgFile.name.split('.').pop().toLowerCase():'.png';
+  const uploadBtn=document.getElementById('imgUploadBtn');
+  uploadBtn.disabled=false;
+  uploadBtn.textContent='上传 '+pendingImgFile.name;
+  // Update auto-name
+  const autoName=document.getElementById('imgAutoName');
+  if(activeChapter!=null&&activeIndex!=null)autoName.textContent=activeChapter+'-q'+(activeIndex+1)+pendingImgExt;
+  document.getElementById('imgHint').classList.remove('hidden');
+}
+
+async function uploadImage(){
+  if(!pendingImgFile||activeChapter==null||activeIndex==null)return;
+  const targetFilename=activeChapter+'-q'+(activeIndex+1)+pendingImgExt;
+  const form=new FormData();
+  form.append('file',pendingImgFile);
+  form.append('targetFilename',targetFilename);
+  try{
+    setStatus('上传图片中...','info');
+    const res=await fetch('/api/upload',{method:'POST',body:form});
+    const body=await res.json().catch(()=>({}));
+    if(!res.ok)throw new Error(body.error||'HTTP '+res.status);
+    const q=DB[activeChapter].questions[activeIndex];
+    const oldImg=q.img;
+    q.img=body.filename;
+    // Delete old image if different name
+    if(oldImg&&oldImg!==body.filename){
+      fetch('/api/images/'+encodeURIComponent(oldImg),{method:'DELETE'}).catch(()=>{});
+    }
+    updateImgDisplay(q.img);
+    markDirty();
+    setStatus('✅ 图片已上传: '+body.filename+' (还需保存题目)','info');
+  }catch(err){setStatus('❌ 上传失败: '+err.message,'err');}
+}
+
+function removeImage(){
+  if(!confirm('确认删除此题目的配图？'))return;
+  if(activeChapter==null||activeIndex==null)return;
+  const q=DB[activeChapter].questions[activeIndex];
+  q.img=undefined;
+  pendingImgFile=null;
+  document.getElementById('filePicker').value='';
+  document.getElementById('imgUploadBtn').disabled=true;
+  updateImgDisplay(undefined);
+  markDirty();
+  setStatus('图片已移除 (还需保存题目)','info');
+}
+
+</script>
+<script>
+// ── Legacy Editor ──
+let legacyDirty=false;
+function toggleLegacy(){
+  const rich=document.getElementById('richEditor');
+  const legacy=document.getElementById('legacyEditor');
+  const btn=document.getElementById('legacyBtn');
+  if(legacy.classList.contains('show')){
+    legacy.classList.remove('show');rich.classList.remove('hidden');
+    btn.textContent='切换到原始JSON编辑器';
+  }else{
+    if(dirty&&!confirm('当前题目有未保存的修改，放弃并切换？'))return;
+    rich.classList.add('hidden');legacy.classList.add('show');
+    btn.textContent='返回可视化编辑器';
+    loadLegacy();
+  }
+}
+async function loadLegacy(){
+  try{
+    document.getElementById('legacyStatus').textContent='加载中...';document.getElementById('legacyStatus').className='status info';
+    const res=await fetch('/api/db');
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    const db=await res.json();
+    document.getElementById('legacyTextarea').value=JSON.stringify(db,null,2);
+    document.getElementById('legacyStatus').textContent='已加载，可编辑JSON。';
+    legacyDirty=false;
+  }catch(err){
+    document.getElementById('legacyStatus').textContent='加载失败: '+err.message;
+    document.getElementById('legacyStatus').className='status err';
+  }
+}
+function formatLegacy(){
+  try{
+    const db=JSON.parse(document.getElementById('legacyTextarea').value);
+    document.getElementById('legacyTextarea').value=JSON.stringify(db,null,2);
+    document.getElementById('legacyStatus').textContent='已格式化。';
+    legacyDirty=true;
+  }catch(err){
+    document.getElementById('legacyStatus').textContent='JSON格式错误: '+err.message;
+    document.getElementById('legacyStatus').className='status err';
+  }
+}
+async function saveLegacy(){
+  try{
+    const db=JSON.parse(document.getElementById('legacyTextarea').value);
+    document.getElementById('legacyStatus').textContent='保存中...';document.getElementById('legacyStatus').className='status info';
+    const res=await fetch('/api/db',{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(db)});
+    const body=await res.json().catch(()=>({}));
+    if(!res.ok)throw new Error(body.error||'HTTP '+res.status);
+    DB=db;buildChapterTree();
+    document.getElementById('legacyStatus').textContent='✅ 已保存。';document.getElementById('legacyStatus').className='status ok';
+    legacyDirty=false;
+  }catch(err){
+    document.getElementById('legacyStatus').textContent='❌ 保存失败: '+err.message;
+    document.getElementById('legacyStatus').className='status err';
+  }
+}
+
+// ── Init ──
+async function reloadDb(){
+  try{
+    const res=await fetch('/api/db');
+    if(!res.ok)throw new Error('HTTP '+res.status);
+    DB=await res.json();
+    buildChapterTree();
+    setStatus('题库已刷新','info');
+  }catch(err){setStatus('加载失败: '+err.message,'err');}
+}
+reloadDb();
+
+// ── Keyboard Shortcuts ──
+document.addEventListener('keydown',e=>{
+  if((e.ctrlKey||e.metaKey)&&e.key==='s'){
+    e.preventDefault();
+    const legacy=document.getElementById('legacyEditor');
+    if(legacy.classList.contains('show')){saveLegacy();}else{saveQuestion();}
+  }
+});
+
+// ── Before Unload ──
+window.addEventListener('beforeunload',e=>{
+  if(dirty||legacyDirty){e.preventDefault();e.returnValue='';}
+});
 </script>
 </body>
 </html>
