@@ -15,10 +15,11 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - run: node scripts/build-public.js
+      - run: |
+          mkdir -p public/data public/audits
+          cp index.html public/index.html
+          cp data/physics_quiz_db.json public/data/physics_quiz_db.json
+          cp audits/*.html public/audits/ 2>/dev/null || true
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
