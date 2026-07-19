@@ -5,7 +5,9 @@ server.js
 package.json
 start-quiz.bat
 start-quiz.ps1
-public/
+public/*
+!public/images/
+!public/images/*.png
 data/audits/
 data/*.md
 data/physics_quiz_db_electric.*
