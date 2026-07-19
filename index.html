@@ -32,6 +32,26 @@ window.MathJax = {
   <section class="card" id="setupCard"><h2>选题测验</h2><div class="hint">点击章节可以展开，直接看到题目内容并逐题勾选。选项顺序固定为 A、B、C、D，选完自动进入下一题。</div><div class="row"><button class="primary" onclick="startQuiz()">开始测验</button><button onclick="selectEveryQuestion()">全选题库</button><button onclick="clearEveryQuestion()">清空题库</button><span class="small" id="selectedCount"></span></div><div id="chapterPicker"></div></section>
   <section class="card hidden" id="practiceCard"><div class="qmeta"><span id="countText"></span><span id="sourceText"></span></div><div class="qtext" id="qtext"></div><div id="options"></div><div class="feedback" id="feedback">请选择答案</div><div class="actions"><button class="action" onclick="prevQuestion()" id="prevBtn">上一题</button><button class="action primary" onclick="nextQuestion()" id="nextBtn">跳过/下一题</button></div><div class="row"><button onclick="backToSetup()">返回选题</button><button onclick="restartCurrent()">重做本轮</button><button onclick="startWrongOnly()">只刷错题</button></div></section>
   <section class="card hidden" id="summary"><h2>本轮完成</h2><div class="scoreBig" id="finalScore"></div><div id="finalText" class="small"></div><div class="actions"><button class="action" onclick="startWrongOnly()">重刷错题</button><button class="action primary" onclick="restartCurrent()">再来一遍</button></div><div class="row"><button onclick="backToSetup()">重新选题</button></div><div class="grid" id="reviewGrid"></div></section>
+  <!-- 2. 徽章展示容器（使用 Flex 布局居中对齐） -->
+  <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 20px;">
+    
+    <!-- PV (Page Views 页面浏览量) 徽章 -->
+    <span id="busuanzi_container_site_pv" style="display: none;">
+      <span style="height: 20px; box-sizing: border-box; display: inline-flex; align-items: center; border: 1px solid rgba(226, 232, 240, 0.8); border-radius: 8px; overflow: hidden; font-family: sans-serif; font-size: 11px; vertical-align: middle;">
+        <span style="background: rgba(226, 232, 240, 0.8); color: #475569; padding: 0 8px; height: 100%; display: flex; align-items: center; font-weight: 500;">PV</span>
+        <span id="busuanzi_value_site_pv" style="background: #ffffff; color: #0f172a; padding: 0 8px; height: 100%; display: flex; align-items: center; font-weight: 600;"></span>
+      </span>
+    </span>
+
+    <!-- UV (Unique Visitors 独立访客数) 徽章 -->
+    <span id="busuanzi_container_site_uv" style="display: none;">
+      <span style="height: 20px; box-sizing: border-box; display: inline-flex; align-items: center; border: 1px solid rgba(226, 232, 240, 0.8); border-radius: 8px; overflow: hidden; font-family: sans-serif; font-size: 11px; vertical-align: middle;">
+        <span style="background: rgba(226, 232, 240, 0.8); color: #475569; padding: 0 8px; height: 100%; display: flex; align-items: center; font-weight: 500;">UV</span>
+        <span id="busuanzi_value_site_uv" style="background: #ffffff; color: #0f172a; padding: 0 8px; height: 100%; display: flex; align-items: center; font-weight: 600;"></span>
+      </span>
+    </span>
+    
+  </div>
 </div>
 <script>
 let DB={};
@@ -123,6 +143,24 @@ async function loadDatabase(){
     alert('题库加载失败，请确认题库数据文件可访问。');
   }
 }
-loadDatabase();</script>
+loadDatabase();
+// 本地预览占位符：如果在本地运行且不蒜子脚本未成功加载/显示，则展示模拟数据供 Review
+if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
+  setTimeout(() => {
+    const pvContainer = document.getElementById('busuanzi_container_site_pv');
+    const uvContainer = document.getElementById('busuanzi_container_site_uv');
+    if (pvContainer && pvContainer.style.display === 'none') {
+      pvContainer.style.display = 'inline';
+      document.getElementById('busuanzi_value_site_pv').textContent = '9999';
+    }
+    if (uvContainer && uvContainer.style.display === 'none') {
+      uvContainer.style.display = 'inline';
+      document.getElementById('busuanzi_value_site_uv').textContent = '8888';
+    }
+  }, 1000);
+}
+</script>
+<!-- 1. 引入不蒜子官方统计 JS 脚本（推荐放在页脚或 </body> 之前） -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
