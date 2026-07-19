@@ -148,23 +148,51 @@ async function loadDatabase(){
   }
 }
 loadDatabase();
-// 本地预览占位符：如果在本地运行且不蒜子脚本未成功加载/显示，则展示模拟数据供 Review
+// 独立的 Vercount 计数逻辑，使用自定义的独立 URL 隔离统计数据
 if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
-  setTimeout(() => {
-    const pvContainer = document.getElementById('busuanzi_container_site_pv');
-    const uvContainer = document.getElementById('busuanzi_container_site_uv');
-    if (pvContainer && pvContainer.style.display === 'none') {
-      pvContainer.style.display = 'inline';
-      document.getElementById('busuanzi_value_site_pv').textContent = '9999';
+  const pvValue = document.getElementById("busuanzi_value_site_pv");
+  const uvValue = document.getElementById("busuanzi_value_site_uv");
+  const pvContainer = document.getElementById("busuanzi_container_site_pv");
+  const uvContainer = document.getElementById("busuanzi_container_site_uv");
+  if (pvValue) pvValue.textContent = "9999";
+  if (uvValue) uvValue.textContent = "8888";
+  if (pvContainer) pvContainer.style.display = "inline";
+  if (uvContainer) uvContainer.style.display = "inline";
+} else {
+  (function() {
+    const fakeUrl = "https://wesgotcha-physics-quiz.github.io/";
+    const cookieKey = "vercount_uv_physics_quiz";
+    
+    const isNewUv = !document.cookie.split("; ").find(row => row.startsWith(cookieKey + "="));
+    if (isNewUv) {
+      document.cookie = `${cookieKey}=1; path=/; max-age=31536000; samesite=lax`;
     }
-    if (uvContainer && uvContainer.style.display === 'none') {
-      uvContainer.style.display = 'inline';
-      document.getElementById('busuanzi_value_site_uv').textContent = '8888';
-    }
-  }, 1000);
+
+    fetch("https://events.vercount.one/api/v2/log", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url: fakeUrl, isNewUv: isNewUv })
+    })
+    .then(res => res.json())
+    .then(res => {
+      if (res && res.data) {
+        const sitePv = res.data.site_pv || 0;
+        const siteUv = res.data.site_uv || 0;
+        const pvValue = document.getElementById("busuanzi_value_site_pv");
+        const uvValue = document.getElementById("busuanzi_value_site_uv");
+        const pvContainer = document.getElementById("busuanzi_container_site_pv");
+        const uvContainer = document.getElementById("busuanzi_container_site_uv");
+        if (pvValue) pvValue.textContent = sitePv;
+        if (uvValue) uvValue.textContent = siteUv;
+        if (pvContainer) pvContainer.style.display = "inline";
+        if (uvContainer) uvContainer.style.display = "inline";
+      }
+    })
+    .catch(err => {
+      console.error("Vercount statistics failed:", err);
+    });
+  })();
 }
 </script>
-<!-- 1. 引入不蒜子官方统计 JS 脚本（推荐放在页脚或 </body> 之前） -->
-<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>
